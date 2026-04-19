@@ -1,0 +1,404 @@
+[
+  {
+    "id": "acid_base_intro",
+    "title": "Neutralisation simple",
+    "description": "Becher + HCl + NaOH avec agitation.",
+    "requiredItems": ["beaker_250ml", "stirrer_basic", "hcl", "naoh"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 310, "y": 222 },
+      { "itemId": "stirrer_basic", "x": 550, "y": 322 }
+    ]
+  },
+  {
+    "id": "precipitate_demo",
+    "title": "Cuivre et nitrate d argent",
+    "description": "Lame de cuivre immergee dans AgNO3 avec depot metallique visible.",
+    "experimentId": "cuivre_nitrate_argent",
+    "requiredItems": ["erlenmeyer_250ml", "metal_strip", "agno3", "copper_sample"],
+    "initialLayout": [
+      { "itemId": "erlenmeyer_250ml", "x": 320, "y": 226, "instanceKey": "reactor" },
+      { "itemId": "metal_strip", "x": 362, "y": 188, "instanceKey": "strip" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "agno3", "volumeMl": 18, "delayMs": 220 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1500, "actionId": "inspect", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "precipitation_solution_demo",
+    "title": "Precipitation en solution",
+    "description": "AgNO3 et CuSO4 melanges dans un becher pour faire apparaitre un precipite visible.",
+    "experimentId": "precipitation_solution_sels",
+    "requiredItems": ["beaker_250ml", "pipette_basic", "agno3", "cuso4"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 326, "y": 220, "instanceKey": "reactor" },
+      { "itemId": "pipette_basic", "x": 520, "y": 160, "instanceKey": "pipette" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "agno3", "volumeMl": 18, "delayMs": 220 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1200, "actionId": "add-chemical", "instanceKey": "reactor", "chemicalId": "cuso4", "volumeMl": 14 },
+      { "delayMs": 2200, "actionId": "stir", "instanceKey": "reactor" },
+      { "delayMs": 3100, "actionId": "inspect", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "heat_water_intro",
+    "title": "Chauffage de l eau",
+    "description": "Tube a essai + eau + bruleur + thermometre.",
+    "requiredItems": ["test_tube_standard", "thermometer_basic", "bunsen_burner_basic", "h2o"],
+    "initialLayout": [
+      { "itemId": "test_tube_standard", "x": 344, "y": 178 },
+      { "itemId": "thermometer_basic", "x": 476, "y": 184 },
+      { "itemId": "bunsen_burner_basic", "x": 338, "y": 358 }
+    ]
+  },
+  {
+    "id": "salt_dissolution_intro",
+    "title": "Dissolution du sel",
+    "description": "Becher + eau + chlorure de sodium + agitation.",
+    "requiredItems": ["beaker_250ml", "stirrer_basic", "h2o", "nacl_solid"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 306, "y": 224 },
+      { "itemId": "stirrer_basic", "x": 526, "y": 314 }
+    ]
+  },
+  {
+    "id": "cuso4_dissolution_intro",
+    "title": "Dissolution du sulfate de cuivre",
+    "description": "Becher + eau + sulfate de cuivre solide.",
+    "requiredItems": ["beaker_250ml", "stirrer_basic", "h2o", "cuso4_solid"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 306, "y": 224 },
+      { "itemId": "stirrer_basic", "x": 530, "y": 314 }
+    ]
+  },
+  {
+    "id": "water_sand_intro",
+    "title": "Eau et sable",
+    "description": "Becher + eau + sable pour observer un melange heterogene.",
+    "requiredItems": ["beaker_250ml", "stirrer_basic", "h2o", "sand"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 312, "y": 224 },
+      { "itemId": "stirrer_basic", "x": 532, "y": 316 }
+    ]
+  },
+  {
+    "id": "exothermic_flash_demo",
+    "title": "Oxydation exothermique",
+    "description": "Becher + permanganate + glycerol pour une demonstration visuelle exothermique.",
+    "requiredItems": ["beaker_250ml", "bunsen_burner_basic", "thermometer_basic", "kmno4_solid", "glycerol"],
+    "experimentId": "oxydation_exothermique_showcase",
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 322, "y": 214, "instanceKey": "reactor" },
+      { "itemId": "thermometer_basic", "x": 476, "y": 188, "instanceKey": "thermometer" },
+      { "itemId": "bunsen_burner_basic", "x": 326, "y": 358, "instanceKey": "burner" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "kmno4_solid", "volumeMl": 8, "delayMs": 280 }
+    ],
+    "demoSequence": [
+      { "delayMs": 720, "actionId": "heat", "instanceKey": "burner" },
+      { "delayMs": 1420, "actionId": "inspect", "instanceKey": "reactor" },
+      { "delayMs": 2200, "actionId": "add-chemical", "instanceKey": "reactor", "chemicalId": "glycerol", "volumeMl": 14 },
+      { "delayMs": 3300, "actionId": "inspect", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "decantation_simple",
+    "title": "Decantation simple",
+    "description": "Melange eau-sable, repos puis versement guide.",
+    "experimentId": "decantation_simple",
+    "requiredItems": ["beaker_250ml", "erlenmeyer_250ml", "funnel_simple", "h2o", "sand"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 248, "y": 220, "instanceKey": "source" },
+      { "itemId": "funnel_simple", "x": 454, "y": 176, "instanceKey": "funnel" },
+      { "itemId": "erlenmeyer_250ml", "x": 566, "y": 224, "instanceKey": "target" }
+    ],
+    "initialContents": [
+      { "instanceKey": "source", "chemicalId": "h2o", "volumeMl": 24, "delayMs": 200 },
+      { "instanceKey": "source", "chemicalId": "sand", "volumeMl": 10, "delayMs": 520 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1200, "actionId": "inspect", "instanceKey": "source" },
+      { "delayMs": 2200, "actionId": "pour", "sourceInstanceKey": "source", "targetInstanceKey": "target", "volumeMl": 12 },
+      { "delayMs": 3400, "message": "Le liquide clair est transfere alors que le depot reste visible.", "kind": "journal", "level": "success" }
+    ]
+  },
+  {
+    "id": "reconnaissance_ions_intro",
+    "title": "Reconnaissance d ions",
+    "description": "Tube a essai avec formation rapide d un precipite.",
+    "experimentId": "reconnaissance_ions_intro",
+    "requiredItems": ["test_tube_standard", "pipette_basic", "solution_ionique_a", "reactif_b"],
+    "initialLayout": [
+      { "itemId": "test_tube_standard", "x": 360, "y": 178, "instanceKey": "reactor" },
+      { "itemId": "pipette_basic", "x": 528, "y": 168, "instanceKey": "pipette" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "solution_ionique_a", "volumeMl": 18, "delayMs": 220 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1600, "actionId": "add-chemical", "instanceKey": "reactor", "chemicalId": "reactif_b", "volumeMl": 10 },
+      { "delayMs": 2600, "actionId": "inspect", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "combustion_hydrocarbure",
+    "title": "Combustion d un hydrocarbure",
+    "description": "Coupelle chauffee avec flamme visible.",
+    "experimentId": "combustion_hydrocarbure",
+    "requiredItems": ["combustion_cup", "bunsen_burner_basic", "alcane_sample"],
+    "initialLayout": [
+      { "itemId": "combustion_cup", "x": 348, "y": 246, "instanceKey": "reactor" },
+      { "itemId": "bunsen_burner_basic", "x": 354, "y": 376, "instanceKey": "burner" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "alcane_sample", "volumeMl": 10, "delayMs": 200 }
+    ],
+    "demoSequence": [
+      { "delayMs": 760, "actionId": "heat", "instanceKey": "burner" },
+      { "delayMs": 1800, "actionId": "heat", "instanceKey": "reactor" },
+      { "delayMs": 3000, "actionId": "inspect", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "test_insaturation_alcene",
+    "title": "Test d insaturation",
+    "description": "Decoloration rapide du reactif de test.",
+    "experimentId": "test_insaturation_alcene",
+    "requiredItems": ["test_tube_standard", "pipette_basic", "alcene_sample", "reactif_insaturation"],
+    "initialLayout": [
+      { "itemId": "test_tube_standard", "x": 350, "y": 180, "instanceKey": "reactor" },
+      { "itemId": "pipette_basic", "x": 532, "y": 166, "instanceKey": "pipette" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "alcene_sample", "volumeMl": 12, "delayMs": 240 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1500, "actionId": "add-chemical", "instanceKey": "reactor", "chemicalId": "reactif_insaturation", "volumeMl": 10 },
+      { "delayMs": 2600, "actionId": "inspect", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "oxydation_metal_solution",
+    "title": "Oxydation metal et solution",
+    "description": "Depot metallique visible sur un solide.",
+    "experimentId": "oxydation_metal_solution",
+    "requiredItems": ["beaker_250ml", "metal_strip", "solution_ionique", "metal_reducteur"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 326, "y": 218, "instanceKey": "reactor" },
+      { "itemId": "metal_strip", "x": 496, "y": 190, "instanceKey": "strip" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "solution_ionique", "volumeMl": 20, "delayMs": 200 },
+      { "instanceKey": "reactor", "chemicalId": "metal_reducteur", "volumeMl": 8, "delayMs": 620 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1700, "actionId": "inspect", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "fer_solution_cuivre",
+    "title": "Fer et solution cuivreuse",
+    "description": "Un depot cuivrique apparait sur le fer.",
+    "experimentId": "fer_solution_cuivre",
+    "requiredItems": ["beaker_250ml", "metal_strip", "iron_sample", "cuso4"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 330, "y": 218, "instanceKey": "reactor" },
+      { "itemId": "metal_strip", "x": 500, "y": 190, "instanceKey": "strip" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "cuso4", "volumeMl": 20, "delayMs": 200 },
+      { "instanceKey": "reactor", "chemicalId": "iron_sample", "volumeMl": 8, "delayMs": 620 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1700, "actionId": "inspect", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "pile_daniell",
+    "title": "Pile Daniell",
+    "description": "Montage guide avec deux bechers, pont salin et voltmetre.",
+    "experimentId": "pile_daniell",
+    "requiredItems": ["beaker_250ml", "salt_bridge", "electrode_zinc", "electrode_copper", "voltmeter_simple", "znso4", "cuso4"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 246, "y": 224, "instanceKey": "cellA" },
+      { "itemId": "beaker_250ml", "x": 556, "y": 224, "instanceKey": "cellB" },
+      { "itemId": "salt_bridge", "x": 336, "y": 126, "instanceKey": "bridge" },
+      { "itemId": "electrode_zinc", "x": 280, "y": 118, "instanceKey": "zinc" },
+      { "itemId": "electrode_copper", "x": 594, "y": 118, "instanceKey": "copper" },
+      { "itemId": "voltmeter_simple", "x": 342, "y": 20, "instanceKey": "meter" }
+    ],
+    "initialContents": [
+      { "instanceKey": "cellA", "chemicalId": "znso4", "volumeMl": 22, "delayMs": 200 },
+      { "instanceKey": "cellB", "chemicalId": "cuso4", "volumeMl": 22, "delayMs": 420 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1400, "message": "Le circuit est ferme entre les deux demi-piles.", "kind": "journal", "level": "success" },
+      { "delayMs": 2100, "actionId": "inspect", "instanceKey": "meter" },
+      { "delayMs": 2900, "message": "Le voltmetre indique une tension pedagogique proche de 1,1 V.", "kind": "journal", "level": "info" }
+    ]
+  },
+  {
+    "id": "electrolyse_solution",
+    "title": "Electrolyse d une solution",
+    "description": "Bulles localisees dans une cuve d electrolyse.",
+    "experimentId": "electrolyse_solution",
+    "requiredItems": ["electrolysis_tank", "electrode_pair", "power_source", "h2o", "electrolyte_support"],
+    "initialLayout": [
+      { "itemId": "electrolysis_tank", "x": 318, "y": 212, "instanceKey": "cell" },
+      { "itemId": "electrode_pair", "x": 330, "y": 88, "instanceKey": "electrodes" },
+      { "itemId": "power_source", "x": 310, "y": 368, "instanceKey": "source" }
+    ],
+    "initialContents": [
+      { "instanceKey": "cell", "chemicalId": "h2o", "volumeMl": 30, "delayMs": 200 },
+      { "instanceKey": "cell", "chemicalId": "electrolyte_support", "volumeMl": 12, "delayMs": 520 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1200, "actionId": "heat", "instanceKey": "source" },
+      { "delayMs": 2100, "actionId": "heat", "instanceKey": "cell" },
+      { "delayMs": 3200, "actionId": "inspect", "instanceKey": "cell" }
+    ]
+  },
+  {
+    "id": "corrosion_fer",
+    "title": "Corrosion du fer",
+    "description": "Formation d une couche de corrosion visible.",
+    "experimentId": "corrosion_fer",
+    "requiredItems": ["beaker_250ml", "metal_strip", "iron_sample", "water_corrosive_medium"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 332, "y": 220, "instanceKey": "reactor" },
+      { "itemId": "metal_strip", "x": 504, "y": 192, "instanceKey": "strip" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "water_corrosive_medium", "volumeMl": 22, "delayMs": 180 },
+      { "instanceKey": "reactor", "chemicalId": "iron_sample", "volumeMl": 8, "delayMs": 500 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1700, "actionId": "inspect", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "oxydation_douce_alcool",
+    "title": "Oxydation douce d un alcool",
+    "description": "Chauffage doux avec changement de couleur du milieu.",
+    "experimentId": "oxydation_douce_alcool",
+    "requiredItems": ["test_tube_standard", "thermometer_basic", "bunsen_burner_basic", "alcool_simple", "oxydant_generique"],
+    "initialLayout": [
+      { "itemId": "test_tube_standard", "x": 346, "y": 176, "instanceKey": "reactor" },
+      { "itemId": "thermometer_basic", "x": 474, "y": 184, "instanceKey": "thermo" },
+      { "itemId": "bunsen_burner_basic", "x": 340, "y": 356, "instanceKey": "burner" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "alcool_simple", "volumeMl": 12, "delayMs": 220 }
+    ],
+    "demoSequence": [
+      { "delayMs": 900, "actionId": "add-chemical", "instanceKey": "reactor", "chemicalId": "oxydant_generique", "volumeMl": 10 },
+      { "delayMs": 1800, "actionId": "heat", "instanceKey": "burner" },
+      { "delayMs": 2500, "actionId": "heat", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "test_aldehyde",
+    "title": "Test aldehyde",
+    "description": "Precipite signature apres ajout du reactif de test.",
+    "experimentId": "test_aldehyde",
+    "requiredItems": ["test_tube_standard", "pipette_basic", "bunsen_burner_basic", "aldehyde_sample", "reactif_test_aldehyde"],
+    "initialLayout": [
+      { "itemId": "test_tube_standard", "x": 346, "y": 176, "instanceKey": "reactor" },
+      { "itemId": "pipette_basic", "x": 526, "y": 166, "instanceKey": "pipette" },
+      { "itemId": "bunsen_burner_basic", "x": 340, "y": 356, "instanceKey": "burner" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "aldehyde_sample", "volumeMl": 10, "delayMs": 220 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1300, "actionId": "add-chemical", "instanceKey": "reactor", "chemicalId": "reactif_test_aldehyde", "volumeMl": 10 },
+      { "delayMs": 2400, "actionId": "inspect", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "test_cetone",
+    "title": "Test cetone",
+    "description": "Exemple pedagogique d absence de reaction visible.",
+    "experimentId": "test_cetone",
+    "requiredItems": ["test_tube_standard", "pipette_basic", "cetone_sample", "reactif_test_aldehyde"],
+    "initialLayout": [
+      { "itemId": "test_tube_standard", "x": 346, "y": 176, "instanceKey": "reactor" },
+      { "itemId": "pipette_basic", "x": 526, "y": 166, "instanceKey": "pipette" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "cetone_sample", "volumeMl": 10, "delayMs": 220 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1300, "actionId": "add-chemical", "instanceKey": "reactor", "chemicalId": "reactif_test_aldehyde", "volumeMl": 10 },
+      { "delayMs": 2500, "message": "Le test reste negatif: aucune reaction visible n est attendue.", "kind": "journal", "level": "info" }
+    ]
+  },
+  {
+    "id": "acide_carboxylique_base",
+    "title": "Acide carboxylique et base",
+    "description": "Neutralisation avec indicateur colore.",
+    "experimentId": "acide_carboxylique_base",
+    "requiredItems": ["beaker_250ml", "stirrer_basic", "pipette_basic", "acide_carboxylique_simple", "naoh", "indicateur_acide_base"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 320, "y": 220, "instanceKey": "reactor" },
+      { "itemId": "stirrer_basic", "x": 532, "y": 314, "instanceKey": "stirrer" },
+      { "itemId": "pipette_basic", "x": 522, "y": 158, "instanceKey": "pipette" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "acide_carboxylique_simple", "volumeMl": 12, "delayMs": 200 },
+      { "instanceKey": "reactor", "chemicalId": "indicateur_acide_base", "volumeMl": 5, "delayMs": 520 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1600, "actionId": "add-chemical", "instanceKey": "reactor", "chemicalId": "naoh", "volumeMl": 12 },
+      { "delayMs": 2600, "actionId": "stir", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "esterification_simplifiee",
+    "title": "Esterification simplifiee",
+    "description": "Melange organique chauffe avec catalyseur.",
+    "experimentId": "esterification_simplifiee",
+    "requiredItems": ["erlenmeyer_250ml", "stirrer_basic", "bunsen_burner_basic", "alcool_simple", "acide_carboxylique_simple", "catalyseur_simplifie"],
+    "initialLayout": [
+      { "itemId": "erlenmeyer_250ml", "x": 320, "y": 220, "instanceKey": "reactor" },
+      { "itemId": "stirrer_basic", "x": 536, "y": 314, "instanceKey": "stirrer" },
+      { "itemId": "bunsen_burner_basic", "x": 326, "y": 358, "instanceKey": "burner" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "alcool_simple", "volumeMl": 12, "delayMs": 220 },
+      { "instanceKey": "reactor", "chemicalId": "acide_carboxylique_simple", "volumeMl": 12, "delayMs": 520 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1200, "actionId": "add-chemical", "instanceKey": "reactor", "chemicalId": "catalyseur_simplifie", "volumeMl": 5 },
+      { "delayMs": 1900, "actionId": "heat", "instanceKey": "burner" },
+      { "delayMs": 2600, "actionId": "heat", "instanceKey": "reactor" }
+    ]
+  },
+  {
+    "id": "fabrication_savon",
+    "title": "Fabrication d un savon",
+    "description": "Melange huile-base avec agitation et chauffage.",
+    "experimentId": "fabrication_savon",
+    "requiredItems": ["beaker_250ml", "stirrer_basic", "bunsen_burner_basic", "huile_sample", "naoh"],
+    "initialLayout": [
+      { "itemId": "beaker_250ml", "x": 320, "y": 220, "instanceKey": "reactor" },
+      { "itemId": "stirrer_basic", "x": 536, "y": 314, "instanceKey": "stirrer" },
+      { "itemId": "bunsen_burner_basic", "x": 326, "y": 358, "instanceKey": "burner" }
+    ],
+    "initialContents": [
+      { "instanceKey": "reactor", "chemicalId": "huile_sample", "volumeMl": 18, "delayMs": 220 }
+    ],
+    "demoSequence": [
+      { "delayMs": 1100, "actionId": "add-chemical", "instanceKey": "reactor", "chemicalId": "naoh", "volumeMl": 12 },
+      { "delayMs": 2000, "actionId": "stir", "instanceKey": "reactor" },
+      { "delayMs": 2800, "actionId": "heat", "instanceKey": "burner" },
+      { "delayMs": 3500, "actionId": "heat", "instanceKey": "reactor" }
+    ]
+  }
+]

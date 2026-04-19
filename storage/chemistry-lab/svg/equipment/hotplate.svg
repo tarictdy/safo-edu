@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" fill="none">
+  <defs>
+    <linearGradient id="hotplate-body" x1="90" y1="18" x2="90" y2="108" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#334a5f"/>
+      <stop offset="1" stop-color="#172532"/>
+    </linearGradient>
+  </defs>
+  <g id="hotplate-shell">
+    <rect x="18" y="30" width="144" height="70" rx="18" fill="url(#hotplate-body)" stroke="#d8edf9" stroke-width="2.6"/>
+    <rect x="34" y="18" width="112" height="34" rx="14" fill="#4a5f70" stroke="#d8edf9" stroke-width="2.2"/>
+    <ellipse cx="90" cy="35" rx="42" ry="11" fill="#10171d"/>
+    <ellipse cx="90" cy="35" rx="31" ry="7" fill="#2f3941"/>
+    <circle cx="56" cy="76" r="11" fill="#ebc36d"/>
+    <circle cx="56" cy="76" r="5" fill="#364957"/>
+    <circle cx="126" cy="76" r="11" fill="#89e1d0"/>
+    <circle cx="126" cy="76" r="5" fill="#364957"/>
+    <path d="M46 76h8" stroke="#4f6573" stroke-linecap="round" stroke-width="2"/>
+    <path d="M126 68v8" stroke="#4f6573" stroke-linecap="round" stroke-width="2"/>
+  </g>
+  <g id="hotplate-effect-zone" data-zone="effect-zone"></g>
+</svg>

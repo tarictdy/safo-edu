@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 220" fill="none">
+  <defs>
+    <linearGradient id="metalStrip" x1="20" x2="50" y1="18" y2="202" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#edf4fb"/>
+      <stop offset="0.55" stop-color="#97a9bc"/>
+      <stop offset="1" stop-color="#425568"/>
+    </linearGradient>
+  </defs>
+  <g id="metal-strip-shell">
+    <rect x="22" y="18" width="26" height="184" rx="8" fill="url(#metalStrip)" stroke="#dbe7f1" stroke-width="2.4"/>
+    <path d="M28 26v166" stroke="#fff" stroke-linecap="round" stroke-width="2" opacity="0.34"/>
+  </g>
+  <g id="metal-strip-effect-zone" data-zone="effect-zone"></g>
+</svg>
+

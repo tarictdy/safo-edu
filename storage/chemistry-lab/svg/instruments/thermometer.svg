@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 230" fill="none">
+  <defs>
+    <linearGradient id="thermoGlass" x1="23" x2="47" y1="18" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fcfeff" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#dff2ff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#88c2e9" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="thermoMercury" x1="35" x2="35" y1="34" y2="197" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffb691"/>
+      <stop offset="0.4" stop-color="#ff7d4f"/>
+      <stop offset="1" stop-color="#d94d2d"/>
+    </linearGradient>
+  </defs>
+
+  <g id="thermometer-shell">
+    <rect x="24" y="18" width="22" height="150" rx="11" fill="url(#thermoGlass)" stroke="#c9e7fa" stroke-width="3"/>
+    <circle cx="35" cy="186" r="18" fill="url(#thermoGlass)" stroke="#c9e7fa" stroke-width="3"/>
+    <path d="M29 28v130" stroke="#ffffff" stroke-linecap="round" stroke-width="3" opacity="0.36"/>
+  </g>
+
+  <g id="thermometer-heat-zone" data-zone="heat-zone">
+    <rect x="31" y="34" width="8" height="124" rx="4" fill="url(#thermoMercury)" opacity="0.92"/>
+    <circle cx="35" cy="186" r="11" fill="url(#thermoMercury)"/>
+    <path d="M34 38v116" stroke="#ffd6c5" stroke-linecap="round" stroke-width="2" opacity="0.44"/>
+  </g>
+
+  <g id="thermometer-marks" stroke="#acc8dc" stroke-width="2" opacity="0.9">
+    <path d="M47 44h11"/>
+    <path d="M47 55h7"/>
+    <path d="M47 66h11"/>
+    <path d="M47 77h7"/>
+    <path d="M47 88h11"/>
+    <path d="M47 99h7"/>
+    <path d="M47 110h11"/>
+    <path d="M47 121h7"/>
+    <path d="M47 132h11"/>
+    <path d="M47 143h7"/>
+    <path d="M47 154h11"/>
+  </g>
+</svg>

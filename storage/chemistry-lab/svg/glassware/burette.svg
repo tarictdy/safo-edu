@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 290" fill="none">
+  <g id="burette-shell">
+    <rect x="37" y="14" width="16" height="220" rx="8" fill="#f4fbff" fill-opacity="0.94" stroke="#d8edf9" stroke-width="2.4"/>
+    <rect x="34" y="8" width="22" height="12" rx="4" fill="#eff8fd" stroke="#d8edf9" stroke-width="2"/>
+    <path d="M45 234v24" stroke="#d7edf8" stroke-linecap="round" stroke-width="5.2"/>
+    <path d="M45 258c0 8-7 10-7 16 0 4 3 6 7 6s7-2 7-6c0-6-7-8-7-16Z" fill="#d0e5f2" stroke="#d7edf8" stroke-width="2"/>
+    <rect x="27" y="248" width="36" height="8" rx="4" fill="#46657b"/>
+    <circle cx="45" cy="252" r="4" fill="#ebbe62"/>
+    <g stroke="#8fb0c7" stroke-linecap="round" stroke-opacity="0.72" stroke-width="1.8">
+      <path d="M53 34h12"/>
+      <path d="M53 48h8"/>
+      <path d="M53 62h12"/>
+      <path d="M53 76h8"/>
+      <path d="M53 90h12"/>
+      <path d="M53 104h8"/>
+      <path d="M53 118h12"/>
+      <path d="M53 132h8"/>
+      <path d="M53 146h12"/>
+      <path d="M53 160h8"/>
+      <path d="M53 174h12"/>
+      <path d="M53 188h8"/>
+      <path d="M53 202h12"/>
+      <path d="M53 216h8"/>
+    </g>
+    <path d="M42 22v198" stroke="#ffffff" stroke-linecap="round" stroke-opacity="0.92" stroke-width="3"/>
+  </g>
+  <rect id="burette-liquid-zone" data-zone="liquid-zone" x="39" y="24" width="12" height="198" rx="6"/>
+  <g id="burette-effect-zone" data-zone="effect-zone"></g>
+</svg>

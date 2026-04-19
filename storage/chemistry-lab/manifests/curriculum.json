@@ -1,0 +1,123 @@
+{
+  "seconde_c": {
+    "title": "Seconde C",
+    "chimie": [
+      {
+        "lessonId": "solution_espece_chimique",
+        "title": "Matiere, espece chimique et solution",
+        "experimentIds": [
+          "dissolution_sel_eau",
+          "dissolution_cuso4",
+          "melange_eau_sable",
+          "decantation_simple",
+          "chauffage_eau"
+        ]
+      },
+      {
+        "lessonId": "classification_periodique",
+        "title": "Classification periodique et reconnaissance d ions",
+        "experimentIds": ["reconnaissance_ions_intro", "precipitation_solution_sels"]
+      }
+    ]
+  },
+  "premiere_c": {
+    "title": "Premiere C",
+    "chimie": [
+      {
+        "lessonId": "alcanes",
+        "title": "Hydrocarbures satures : alcanes",
+        "experimentIds": ["combustion_hydrocarbure"]
+      },
+      {
+        "lessonId": "alcenes_alcynes",
+        "title": "Hydrocarbures insatures : alcenes et alcynes",
+        "experimentIds": ["test_insaturation_alcene"]
+      }
+    ]
+  },
+  "premiere_d": {
+    "title": "Premiere D",
+    "chimie": [
+      {
+        "lessonId": "classification_redox_qualitative",
+        "title": "Classification qualitative des couples redox",
+        "experimentIds": ["oxydation_metal_solution"]
+      },
+      {
+        "lessonId": "classification_redox_quantitative",
+        "title": "Classification quantitative des couples redox",
+        "experimentIds": ["cuivre_nitrate_argent", "fer_solution_cuivre"]
+      },
+      {
+        "lessonId": "pile_daniell",
+        "title": "Pile Daniell",
+        "experimentIds": ["pile_daniell"]
+      },
+      {
+        "lessonId": "electrolyse",
+        "title": "Electrolyse",
+        "experimentIds": ["electrolyse_solution"]
+      },
+      {
+        "lessonId": "corrosion",
+        "title": "Corrosion et protection des metaux",
+        "experimentIds": ["corrosion_fer"]
+      }
+    ]
+  },
+  "terminale_c": {
+    "title": "Terminale C",
+    "chimie": [
+      {
+        "lessonId": "alcools",
+        "title": "Alcools",
+        "experimentIds": ["oxydation_douce_alcool"]
+      },
+      {
+        "lessonId": "composes_carbonyles",
+        "title": "Composes carbonyles",
+        "experimentIds": ["test_aldehyde", "test_cetone"]
+      },
+      {
+        "lessonId": "acides_carboxyliques",
+        "title": "Acides carboxyliques et derives",
+        "experimentIds": ["acide_carboxylique_base", "esterification_simplifiee"]
+      },
+      {
+        "lessonId": "savon",
+        "title": "Fabrication d un savon",
+        "experimentIds": ["fabrication_savon"]
+      }
+    ]
+  },
+  "terminale_d": {
+    "title": "Terminale D",
+    "chimie": [
+      {
+        "lessonId": "acides_bases",
+        "title": "Transformations acide-base",
+        "experimentIds": ["neutralisation_simple"]
+      },
+      {
+        "lessonId": "alcools",
+        "title": "Alcools",
+        "experimentIds": ["oxydation_douce_alcool"]
+      },
+      {
+        "lessonId": "composes_carbonyles",
+        "title": "Composes carbonyles",
+        "experimentIds": ["test_aldehyde", "test_cetone"]
+      },
+      {
+        "lessonId": "acides_carboxyliques",
+        "title": "Acides carboxyliques et derives",
+        "experimentIds": ["acide_carboxylique_base", "esterification_simplifiee"]
+      },
+      {
+        "lessonId": "savon",
+        "title": "Fabrication d un savon",
+        "experimentIds": ["fabrication_savon"]
+      }
+    ]
+  }
+}

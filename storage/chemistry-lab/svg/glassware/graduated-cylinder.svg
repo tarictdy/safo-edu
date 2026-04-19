@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 250" fill="none">
+  <defs>
+    <linearGradient id="cylinderGlass" x1="28" x2="78" y1="20" y2="222" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fcfeff" stop-opacity="0.96"/>
+      <stop offset="0.5" stop-color="#def3ff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#87c3ea" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <g id="cylinder-shell">
+    <path d="M34 20h42v180c0 18-9 30-21 30s-21-12-21-30V20Z" fill="url(#cylinderGlass)" stroke="#d8efff" stroke-width="4"/>
+    <rect x="22" y="226" width="66" height="12" rx="6" fill="#5b7a97"/>
+    <path d="M39 30h32" stroke="#ffffff" stroke-linecap="round" stroke-width="4" opacity="0.85"/>
+    <path d="M43 38v154" stroke="#ffffff" stroke-linecap="round" stroke-width="4" opacity="0.24"/>
+  </g>
+  <g stroke="#9ebfd6" stroke-width="1.8" opacity="0.78">
+    <path d="M76 56h10"/><path d="M72 74h14"/><path d="M76 92h10"/><path d="M72 110h14"/>
+    <path d="M76 128h10"/><path d="M72 146h14"/><path d="M76 164h10"/><path d="M72 182h14"/>
+  </g>
+  <rect id="cylinder-liquid-zone" data-zone="liquid-zone" x="38" y="48" width="34" height="160" rx="14" fill="#fff" opacity="0.06"/>
+  <g id="cylinder-effect-zone" data-zone="effect-zone"></g>
+</svg>
+

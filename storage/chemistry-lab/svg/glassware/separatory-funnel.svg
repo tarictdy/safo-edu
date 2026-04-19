@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 240" fill="none">
+  <defs>
+    <linearGradient id="sep-funnel-fill" x1="75" y1="16" x2="75" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f9fdff" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#c9e2f2" stop-opacity="0.24"/>
+    </linearGradient>
+  </defs>
+  <g id="separatory-funnel-shell">
+    <path d="M60 16h30v18c0 6 2 12 5 18 8 16 27 29 27 64 0 37-21 60-47 60s-47-23-47-60c0-35 19-48 27-64 3-6 5-12 5-18V16Z" fill="url(#sep-funnel-fill)" stroke="#d8edf9" stroke-width="2.8"/>
+    <path d="M71 176v24" stroke="#d8edf9" stroke-linecap="round" stroke-width="6"/>
+    <rect x="59" y="198" width="32" height="8" rx="4" fill="#47657b"/>
+    <path d="M75 206v10" stroke="#d8edf9" stroke-linecap="round" stroke-width="5.2"/>
+    <path d="M68 216h14" stroke="#d8edf9" stroke-linecap="round" stroke-width="4"/>
+    <path d="M66 28h18" stroke="#ffffff" stroke-linecap="round" stroke-opacity="0.94" stroke-width="4"/>
+    <path d="M96 50c10 16 15 34 15 56 0 18-3 36-10 49" stroke="#8fb0c8" stroke-opacity="0.2" stroke-width="8"/>
+  </g>
+  <rect id="separatory-funnel-liquid-zone" data-zone="liquid-zone" x="36" y="78" width="78" height="86" rx="34"/>
+  <g id="separatory-funnel-effect-zone" data-zone="effect-zone"></g>
+</svg>

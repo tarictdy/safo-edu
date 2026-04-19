@@ -1,0 +1,209 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // IMPORTANT
+    // 1. Ces regles supposent que le front utilise Firebase Auth.
+    // 2. request.auth.uid doit correspondre au document studentUid / parentUid.
+    // 3. request.auth.token.role doit valoir "student" ou "parent".
+    // 4. Le document parents/{parentUid} doit contenir linkedStudentUids: [studentUid, ...]
+    //    pour les liaisons actives uniquement.
+    // 5. Les ecritures sensibles backend (auth_meta, schedules derives, notifications, etc.)
+    //    doivent passer par l Admin SDK, pas par le SDK client.
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function hasRole(role) {
+      return signedIn() && request.auth.token.role == role;
+    }
+
+    function isStudentSelf(studentUid) {
+      return hasRole('student') && request.auth.uid == studentUid;
+    }
+
+    function isParentSelf(parentUid) {
+      return hasRole('parent') && request.auth.uid == parentUid;
+    }
+
+    function parentDoc() {
+      return get(/databases/$(database)/documents/parents/$(request.auth.uid));
+    }
+
+    function parentLinkedToStudent(studentUid) {
+      return hasRole('parent')
+        && exists(/databases/$(database)/documents/parents/$(request.auth.uid))
+        && studentUid in parentDoc().data.linkedStudentUids;
+    }
+
+    function studentCanManageOwnAccount(studentUid) {
+      return isStudentSelf(studentUid)
+        && request.resource.data.uid == resource.data.uid
+        && request.resource.data.email == resource.data.email
+        && request.resource.data.matricule == resource.data.matricule
+        && request.resource.data.birthDate == resource.data.birthDate
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.diff(resource.data).changedKeys().hasOnly([
+          'fullName',
+          'phone',
+          'classCode',
+          'schoolName',
+          'updatedAt',
+          'preferences',
+          'difficulties',
+          'fixedCourses',
+          'exams',
+          'importantDays',
+          'schoolTimetable',
+          'scheduleAdjustments',
+          'notificationSettings',
+          'assignments',
+          'missedSessions',
+          'notificationTimeline',
+          'sessionTracking',
+          'activeScheduleId',
+          'evolvingSchedule',
+          'status'
+        ]);
+    }
+
+    function parentCanManageOwnAccount(parentUid) {
+      return isParentSelf(parentUid)
+        && request.resource.data.uid == resource.data.uid
+        && request.resource.data.email == resource.data.email
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.diff(resource.data).changedKeys().hasOnly([
+          'fullName',
+          'phone',
+          'updatedAt',
+          'notificationSettings'
+        ]);
+    }
+
+    function studentOwnsSchedule() {
+      return hasRole('student') && resource.data.studentUid == request.auth.uid;
+    }
+
+    function parentCanReadSchedule() {
+      return hasRole('parent')
+        && resource.data.studentUid is string
+        && parentLinkedToStudent(resource.data.studentUid);
+    }
+
+    function studentCanReadNotification() {
+      return hasRole('student')
+        && (
+          resource.data.studentUid == request.auth.uid
+          || resource.data.ownerUid == request.auth.uid
+        );
+    }
+
+    function parentCanReadNotification() {
+      return hasRole('parent')
+        && resource.data.studentUid is string
+        && parentLinkedToStudent(resource.data.studentUid);
+    }
+
+    match /students/{studentUid} {
+      // Le compte eleve est prive: lecture directe uniquement par l eleve.
+      // Pour les parents, expose un document derive/sanitize si besoin.
+      allow read: if isStudentSelf(studentUid);
+
+      allow create: if isStudentSelf(studentUid)
+        && request.resource.data.uid == studentUid
+        && request.resource.data.role == 'student';
+
+      allow update: if studentCanManageOwnAccount(studentUid);
+
+      allow delete: if false;
+    }
+
+    match /parents/{parentUid} {
+      allow read: if isParentSelf(parentUid);
+
+      allow create: if isParentSelf(parentUid)
+        && request.resource.data.uid == parentUid
+        && request.resource.data.role == 'parent';
+
+      allow update: if parentCanManageOwnAccount(parentUid);
+
+      allow delete: if false;
+    }
+
+    match /parentStudentLinks/{linkId} {
+      allow read: if signedIn()
+        && (
+          resource.data.parentUid == request.auth.uid
+          || resource.data.studentUid == request.auth.uid
+        );
+
+      // Le parent cree uniquement une demande de liaison.
+      allow create: if hasRole('parent')
+        && request.resource.data.parentUid == request.auth.uid
+        && request.resource.data.studentUid is string
+        && request.resource.data.status == 'pending_student_confirmation';
+
+      // L eleve accepte ou rejette une demande existante.
+      allow update: if hasRole('student')
+        && resource.data.studentUid == request.auth.uid
+        && resource.data.status == 'pending_student_confirmation'
+        && request.resource.data.parentUid == resource.data.parentUid
+        && request.resource.data.studentUid == resource.data.studentUid
+        && request.resource.data.studentMatricule == resource.data.studentMatricule
+        && request.resource.data.studentName == resource.data.studentName
+        && request.resource.data.parentName == resource.data.parentName
+        && request.resource.data.relationType == resource.data.relationType
+        && (
+          request.resource.data.status == 'active'
+          || request.resource.data.status == 'rejected'
+        );
+
+      allow delete: if false;
+    }
+
+    match /schedules/{scheduleId} {
+      allow read: if studentOwnsSchedule() || parentCanReadSchedule();
+
+      // Recommande: ecriture des plannings uniquement par backend/Admin SDK.
+      allow create, update, delete: if false;
+    }
+
+    match /users_public/{uid} {
+      allow read: if signedIn();
+      allow write: if false;
+    }
+
+    match /auth_meta/{uid} {
+      allow read, write: if false;
+    }
+
+    match /academic_programs/{programId} {
+      allow read: if signedIn();
+      allow write: if false;
+    }
+
+    match /noti/{notificationId} {
+      allow read: if studentCanReadNotification() || parentCanReadNotification();
+
+      // Les reponses/acks sont mieux gerees par backend.
+      allow create, update, delete: if false;
+    }
+
+    match /missed_sessions/{sessionId} {
+      allow read: if hasRole('student') && resource.data.studentUid == request.auth.uid;
+      allow write: if false;
+    }
+
+    match /sms_dispatches/{dispatchId} {
+      allow read, write: if false;
+    }
+
+    match /telegram_dispatches/{dispatchId} {
+      allow read, write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

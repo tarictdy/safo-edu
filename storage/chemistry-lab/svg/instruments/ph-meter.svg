@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 230" fill="none">
+  <defs>
+    <linearGradient id="ph-shell-fill" x1="49" y1="14" x2="49" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#446176"/>
+      <stop offset="1" stop-color="#243848"/>
+    </linearGradient>
+  </defs>
+  <g id="ph-meter-shell">
+    <rect x="20" y="14" width="58" height="112" rx="16" fill="url(#ph-shell-fill)" stroke="#d7ebf8" stroke-width="2.6"/>
+    <rect x="26" y="26" width="46" height="30" rx="8" fill="#daf9d9"/>
+    <rect x="31" y="66" width="36" height="11" rx="5.5" fill="#7ba7bd"/>
+    <rect x="35" y="83" width="28" height="11" rx="5.5" fill="#7ba7bd"/>
+    <path d="M42 126v72" stroke="#9ec7e4" stroke-linecap="round" stroke-width="6"/>
+    <path d="M58 126v88" stroke="#9ec7e4" stroke-linecap="round" stroke-width="6"/>
+    <rect x="36" y="198" width="28" height="14" rx="7" fill="#d9edf8" stroke="#a9c6d9" stroke-width="1.8"/>
+  </g>
+  <g id="ph-meter-effect-zone" data-zone="effect-zone"></g>
+</svg>

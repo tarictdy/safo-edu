@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 70" fill="none">
+  <defs>
+    <linearGradient id="pipetteGlass" x1="28" x2="145" y1="24" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fdfefe" stop-opacity="0.95"/>
+      <stop offset="0.44" stop-color="#d8f0ff" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#95caf0" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="pipetteRubber" x1="12" x2="44" y1="21" y2="51" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3f5f8a"/>
+      <stop offset="1" stop-color="#1d3150"/>
+    </linearGradient>
+    <linearGradient id="pipetteLiquid" x1="48" x2="132" y1="32" y2="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a3ddff" stop-opacity="0.2"/>
+      <stop offset="0.4" stop-color="#62c4ff" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#a9e1ff" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <g id="pipette-body">
+    <ellipse cx="29" cy="35" rx="17" ry="16" fill="url(#pipetteRubber)"/>
+    <path d="M42 29h76c7 0 13 5 14 12l1 4c1 3 4 6 8 6h21c4 0 8 3 8 8 0 4-4 7-8 7h-21c-4 0-7-2-8-6l-2-5c-1-3-7-5-14-5H42c-7 0-12-5-12-11s5-10 12-10Z" fill="url(#pipetteGlass)" stroke="#bfe6ff" stroke-width="2.8"/>
+    <path d="M133 43h25c4 0 7-3 7-7 0-4-3-7-7-7h-25" stroke="#d6f0ff" stroke-linecap="round" stroke-width="3"/>
+    <path d="M39 35h96" stroke="#ffffff" stroke-linecap="round" stroke-width="2.6" opacity="0.56"/>
+    <path d="M60 33h58" stroke="url(#pipetteLiquid)" stroke-linecap="round" stroke-width="7.2"/>
+  </g>
+
+  <g id="pipette-tube">
+    <rect x="46" y="32" width="84" height="6" rx="3" fill="#d7efff" opacity="0.42"/>
+    <path d="M130 34h23" stroke="#f7fcff" stroke-linecap="round" stroke-width="2.8" opacity="0.88"/>
+  </g>
+
+  <g id="pipette-effect-zone" data-zone="effect-zone">
+    <path d="M160 35c0 3-2 5-4 7-3-2-4-4-4-7 0-3 2-5 4-7 2 2 4 4 4 7Z" fill="#8cd5ff" opacity="0.28"/>
+  </g>
+
+  <g id="pipette-overlay">
+    <circle cx="24" cy="29" r="5" fill="#6b86a8" opacity="0.56"/>
+    <path d="M52 29c16-3 49-3 66 0" stroke="#ffffff" stroke-linecap="round" stroke-width="2.1" opacity="0.34"/>
+  </g>
+</svg>

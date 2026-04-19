@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 260" fill="none">
+  <defs>
+    <linearGradient id="tubeGlassOuter" x1="34" x2="82" y1="18" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fcfeff" stop-opacity="0.96"/>
+      <stop offset="0.48" stop-color="#dff3ff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#74bbe9" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="tubeGlassInner" x1="45" x2="72" y1="26" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#d9eeff" stop-opacity="0.08"/>
+    </linearGradient>
+    <radialGradient id="tubeShadow" cx="0" cy="0" r="1" gradientTransform="translate(60 236) rotate(90) scale(8 26)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#476074" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#223847" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tubeSoftShadow" x="28" y="16" width="64" height="226" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#213545" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="236" rx="24" ry="8" fill="url(#tubeShadow)"/>
+  <g id="tube-shell" filter="url(#tubeSoftShadow)">
+    <path d="M39 20h42v174c0 24-10 44-21 44s-21-20-21-44V20Z" fill="url(#tubeGlassOuter)" stroke="#d8efff" stroke-width="4"/>
+    <path d="M44 30h32v165c0 17-7 32-16 32s-16-15-16-32V30Z" fill="url(#tubeGlassInner)" opacity="0.72"/>
+    <path d="M42 30h36" stroke="#ffffff" stroke-linecap="round" stroke-width="5" opacity="0.9"/>
+    <path d="M48 40v156" stroke="#fbfeff" stroke-linecap="round" stroke-width="5" opacity="0.24"/>
+    <path d="M68 44v136" stroke="#cbe8fb" stroke-linecap="round" stroke-width="3" opacity="0.14"/>
+  </g>
+  <g stroke="#a9cadf" stroke-width="1.7" opacity="0.72">
+    <path d="M77 70h9"/>
+    <path d="M77 92h9"/>
+    <path d="M77 114h9"/>
+    <path d="M77 136h9"/>
+    <path d="M77 158h9"/>
+    <path d="M77 180h9"/>
+  </g>
+  <rect id="tube-liquid-zone" data-zone="liquid-zone" x="44" y="52" width="32" height="155" rx="16" fill="#ffffff" opacity="0.06"/>
+  <g id="tube-effect-zone" data-zone="effect-zone"></g>
+  <g id="tube-overlay">
+    <path d="M46 56h28" stroke="#ffffff" stroke-linecap="round" stroke-width="2.6" opacity="0.38"/>
+    <path d="M51 218c4 4 14 4 18 0" stroke="#d4ecff" stroke-linecap="round" stroke-width="2.4" opacity="0.3"/>
+  </g>
+</svg>

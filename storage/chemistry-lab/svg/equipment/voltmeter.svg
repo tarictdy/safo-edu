@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 128" fill="none">
+  <defs>
+    <linearGradient id="volt-shell-fill" x1="95" y1="16" x2="95" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2e4558"/>
+      <stop offset="1" stop-color="#182632"/>
+    </linearGradient>
+  </defs>
+  <g id="voltmeter-shell">
+    <rect x="16" y="16" width="158" height="96" rx="20" fill="url(#volt-shell-fill)" stroke="#d8edf9" stroke-width="2.8"/>
+    <rect x="28" y="28" width="98" height="42" rx="10" fill="#d4ffda" stroke="#b8e3c0" stroke-width="2"/>
+    <path d="M145 34c14 0 24 10 24 24s-10 24-24 24-24-10-24-24 10-24 24-24Z" fill="#f2c56a"/>
+    <circle cx="145" cy="58" r="14" fill="#ffe39e" fill-opacity="0.28"/>
+    <path d="M145 58l14-11" stroke="#7a4a17" stroke-linecap="round" stroke-width="3.2"/>
+    <circle cx="62" cy="92" r="8" fill="#243744" stroke="#d8edf9" stroke-width="1.8"/>
+    <circle cx="126" cy="92" r="8" fill="#243744" stroke="#d8edf9" stroke-width="1.8"/>
+    <circle cx="62" cy="92" r="4" fill="#10191f"/>
+    <circle cx="126" cy="92" r="4" fill="#10191f"/>
+    <path d="M40 42h26" stroke="#5e8e66" stroke-linecap="round" stroke-width="4"/>
+    <path d="M40 54h44" stroke="#5e8e66" stroke-linecap="round" stroke-width="4"/>
+    <path d="M40 64h28" stroke="#5e8e66" stroke-linecap="round" stroke-width="4"/>
+  </g>
+  <g id="voltmeter-effect-zone" data-zone="effect-zone"></g>
+</svg>

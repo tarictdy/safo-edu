@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 220" fill="none">
+  <defs>
+    <linearGradient id="round-glass-fill" x1="75" y1="18" x2="75" y2="202" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8fdff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#c8e2f4" stop-opacity="0.22"/>
+    </linearGradient>
+    <linearGradient id="round-glass-stroke" x1="32" y1="34" x2="118" y2="198" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#edf8ff"/>
+      <stop offset="1" stop-color="#93b3c9"/>
+    </linearGradient>
+  </defs>
+  <g id="round-flask-shell">
+    <path d="M64 18h22c1 16 2 32 2 48 24 10 40 34 40 62 0 42-24 76-53 76S22 170 22 128c0-28 16-52 40-62 0-16 1-32 2-48Z" fill="url(#round-glass-fill)" stroke="url(#round-glass-stroke)" stroke-width="2.8"/>
+    <path d="M57 17h36v18H57z" fill="#eff8fd" fill-opacity="0.76"/>
+    <path d="M48 46h54" stroke="#e3f3ff" stroke-linecap="round" stroke-opacity="0.88" stroke-width="2.2"/>
+    <path d="M50 78c10 6 26 10 43 10 18 0 33-4 43-10" stroke="#cfe9f8" stroke-opacity="0.5" stroke-width="1.6"/>
+    <path d="M45 104c8 4 19 6 30 6" stroke="#dff2ff" stroke-linecap="round" stroke-opacity="0.84" stroke-width="6"/>
+    <path d="M101 92c10 16 16 36 16 56" stroke="#8fb0c8" stroke-opacity="0.22" stroke-width="8"/>
+  </g>
+  <rect id="round-flask-liquid-zone" data-zone="liquid-zone" x="34" y="96" width="82" height="84" rx="38"/>
+  <g id="round-flask-effect-zone" data-zone="effect-zone"></g>
+</svg>

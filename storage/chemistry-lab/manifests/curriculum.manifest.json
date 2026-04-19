@@ -1,0 +1,110 @@
+{
+  "seconde_c": {
+    "title": "Seconde C",
+    "chimie": [
+      {
+        "id": "element_chimique",
+        "title": "Element chimique",
+        "lessons": [
+          { "id": "solution_espece_chimique", "title": "Matiere, espece chimique et solution" },
+          { "id": "structure_atome", "title": "Structure de l atome" },
+          { "id": "classification_periodique", "title": "Classification periodique" }
+        ]
+      }
+    ]
+  },
+  "premiere_c": {
+    "title": "Premiere C",
+    "chimie": [
+      {
+        "id": "generalites_organiques",
+        "title": "Generalites sur les composes organiques",
+        "lessons": [
+          { "id": "alcanes", "title": "Hydrocarbures satures : alcanes" },
+          { "id": "alcenes_alcynes", "title": "Hydrocarbures insatures : alcenes et alcynes" }
+        ]
+      },
+      {
+        "id": "redox_electrochimie",
+        "title": "Oxydoreduction et electrochimie",
+        "lessons": [
+          { "id": "classification_redox_qualitative", "title": "Classification qualitative des couples redox" },
+          { "id": "classification_redox_quantitative", "title": "Classification quantitative des couples redox" },
+          { "id": "pile_daniell", "title": "Pile Daniell" },
+          { "id": "electrolyse", "title": "Electrolyse" },
+          { "id": "corrosion", "title": "Corrosion et protection des metaux" }
+        ]
+      }
+    ]
+  },
+  "premiere_d": {
+    "title": "Premiere D",
+    "chimie": [
+      {
+        "id": "generalites_organiques",
+        "title": "Generalites sur les composes organiques",
+        "lessons": [
+          { "id": "alcanes", "title": "Hydrocarbures satures : alcanes" },
+          { "id": "alcenes_alcynes", "title": "Hydrocarbures insatures : alcenes et alcynes" }
+        ]
+      },
+      {
+        "id": "redox_electrochimie",
+        "title": "Oxydoreduction et electrochimie",
+        "lessons": [
+          { "id": "classification_redox_qualitative", "title": "Classification qualitative des couples redox" },
+          { "id": "classification_redox_quantitative", "title": "Classification quantitative des couples redox" },
+          { "id": "pile_daniell", "title": "Pile Daniell" },
+          { "id": "electrolyse", "title": "Electrolyse" },
+          { "id": "corrosion", "title": "Corrosion et protection des metaux" }
+        ]
+      }
+    ]
+  },
+  "terminale_c": {
+    "title": "Terminale C",
+    "chimie": [
+      {
+        "id": "chimie_organique",
+        "title": "Transformations organiques",
+        "lessons": [
+          { "id": "alcools", "title": "Alcools" },
+          { "id": "composes_carbonyles", "title": "Composes carbonyles" },
+          { "id": "acides_carboxyliques", "title": "Acides carboxyliques et derives" },
+          { "id": "savon", "title": "Fabrication d un savon" }
+        ]
+      },
+      {
+        "id": "chimie_solution",
+        "title": "Transformations en solution",
+        "lessons": [
+          { "id": "dosage_redox", "title": "Dosage et redox en solution aqueuse" },
+          { "id": "electrolyse", "title": "Electrolyse" }
+        ]
+      }
+    ]
+  },
+  "terminale_d": {
+    "title": "Terminale D",
+    "chimie": [
+      {
+        "id": "chimie_organique",
+        "title": "Transformations organiques",
+        "lessons": [
+          { "id": "alcools", "title": "Alcools" },
+          { "id": "composes_carbonyles", "title": "Composes carbonyles" },
+          { "id": "acides_carboxyliques", "title": "Acides carboxyliques et derives" },
+          { "id": "savon", "title": "Fabrication d un savon" }
+        ]
+      },
+      {
+        "id": "chimie_solution",
+        "title": "Transformations en solution",
+        "lessons": [
+          { "id": "dosage_redox", "title": "Dosage et redox en solution aqueuse" },
+          { "id": "electrolyse", "title": "Electrolyse" }
+        ]
+      }
+    ]
+  }
+}

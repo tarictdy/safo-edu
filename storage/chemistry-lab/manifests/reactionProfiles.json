@@ -1,0 +1,122 @@
+[
+  {
+    "id": "color_transition_clear",
+    "family": "solution",
+    "description": "Transition douce du liquide vers une couleur cible avec turbulence legere.",
+    "rendererHints": {
+      "liquid": { "mixingState": 0.8, "opacity": 0.78, "meniscusCurve": 0.2 },
+      "effects": ["colorShift"],
+      "cssProfile": "liquid-color-transition"
+    }
+  },
+  {
+    "id": "precipitate_progressive",
+    "family": "precipitation",
+    "description": "Depot progressif au fond avec densite variable.",
+    "rendererHints": {
+      "liquid": { "mixingState": 0.55, "opacity": 0.8, "precipitateDensity": 0.72 },
+      "effects": ["precipitate"],
+      "cssProfile": "precipitate-grow"
+    }
+  },
+  {
+    "id": "bubbles_light",
+    "family": "gas",
+    "description": "Bulles diffuses pour neutralisation ou chauffage leger.",
+    "rendererHints": {
+      "effects": ["bubbles_light"],
+      "emitter": { "zone": "liquid-zone", "density": 0.35, "locality": "spread" }
+    }
+  },
+  {
+    "id": "bubbles_electrolysis",
+    "family": "electrolysis",
+    "description": "Bulles fines et localisees aux electrodes.",
+    "rendererHints": {
+      "effects": ["bubbles_electrolysis"],
+      "emitter": { "zone": "electrode-zone", "density": 0.5, "locality": "split" }
+    }
+  },
+  {
+    "id": "steam_light",
+    "family": "heating",
+    "description": "Vapeur faible au-dessus du recipient.",
+    "rendererHints": {
+      "effects": ["steam_light"],
+      "thermalHalo": 0.3
+    }
+  },
+  {
+    "id": "steam_hot",
+    "family": "heating",
+    "description": "Vapeur soutenue avec halo thermique renforce.",
+    "rendererHints": {
+      "effects": ["steam_hot"],
+      "thermalHalo": 0.7
+    }
+  },
+  {
+    "id": "deposit_metallic",
+    "family": "redox",
+    "description": "Depot metallique sur une surface solide ou electrode.",
+    "rendererHints": {
+      "effects": ["surfaceDepositEffect"],
+      "surfaceOverlay": { "density": 0.64, "tone": "metallic" }
+    }
+  },
+  {
+    "id": "thermal_halo_soft",
+    "family": "heating",
+    "description": "Halo thermique et deformation optique discrete autour du recipient.",
+    "rendererHints": {
+      "effects": ["thermalHalo"],
+      "thermalHalo": 0.45
+    }
+  },
+  {
+    "id": "pour_stream_standard",
+    "family": "transfer",
+    "description": "Flux de versement standard avec baisse/hausse de volume.",
+    "rendererHints": {
+      "effects": ["pourStream"],
+      "stream": { "viscosity": 0.18, "thickness": 0.38 }
+    }
+  },
+  {
+    "id": "micro_boom_pedagogique",
+    "family": "warning",
+    "description": "Petit flash, secousse et message pedagogique sans effet cartoon.",
+    "rendererHints": {
+      "effects": ["flash", "shockwave_soft"],
+      "flashIntensity": 0.42
+    }
+  },
+  {
+    "id": "viscosity_thickening",
+    "family": "transformation",
+    "description": "Augmentation de viscosite pour savon ou melange epais.",
+    "rendererHints": {
+      "liquid": { "viscosity": 0.86, "opacity": 0.88, "mixingState": 0.35 },
+      "effects": ["thickening"]
+    }
+  },
+  {
+    "id": "no_visible_reaction",
+    "family": "pedagogy",
+    "description": "Profil explicite pour les cas ou aucune reaction visible n est attendue.",
+    "rendererHints": {
+      "effects": [],
+      "liquid": { "mixingState": 0.1, "opacity": 0.72 }
+    }
+  },
+  {
+    "id": "exothermic_flash_showcase",
+    "family": "redox",
+    "description": "Degagement de chaleur visible avec changement violet vers brun, fumee, flamme breve et onde de choc pedagogique.",
+    "rendererHints": {
+      "effects": ["heatGlowStrong", "smokeReaction", "flameBurst", "shockwave_soft", "flash_strong"],
+      "thermalHalo": 0.92,
+      "liquid": { "mixingState": 0.62, "opacity": 0.88, "meniscusCurve": 0.34 }
+    }
+  }
+]

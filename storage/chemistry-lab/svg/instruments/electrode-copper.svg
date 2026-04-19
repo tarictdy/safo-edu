@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 220" fill="none">
+  <g id="electrode-copper-shell">
+    <rect x="22" y="22" width="26" height="176" rx="8" fill="#c9885a" stroke="#f1c5a6" stroke-width="2.4"/>
+    <rect x="20" y="12" width="30" height="18" rx="6" fill="#7f4d32"/>
+    <path d="M28 28v158" stroke="#fff1e8" stroke-linecap="round" stroke-width="2" opacity="0.28"/>
+  </g>
+  <g id="electrode-copper-effect-zone" data-zone="effect-zone"></g>
+</svg>
+

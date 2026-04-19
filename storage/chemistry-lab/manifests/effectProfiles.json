@@ -1,0 +1,173 @@
+[
+  {
+    "id": "liquid_color_transition_low",
+    "kind": "effect",
+    "type": "liquidColorTransition",
+    "targetZoneType": "liquidZone",
+    "durationMs": 1200,
+    "intensity": 0.35,
+    "params": { "opacity": 0.78, "mixingState": 0.65 }
+  },
+  {
+    "id": "liquid_mix_medium",
+    "kind": "effect",
+    "type": "liquidMix",
+    "targetZoneType": "liquidZone",
+    "durationMs": 900,
+    "intensity": 0.5,
+    "params": { "turbulence": 0.5, "meniscusCurve": 0.2 }
+  },
+  {
+    "id": "bubble_emitter_light",
+    "kind": "effect",
+    "type": "bubbleEmitter",
+    "targetZoneType": "effectZone",
+    "durationMs": 1800,
+    "intensity": 0.3,
+    "params": { "profile": "bubbles_light", "density": 0.35 }
+  },
+  {
+    "id": "bubble_emitter_electrolysis",
+    "kind": "effect",
+    "type": "bubbleEmitter",
+    "targetZoneType": "effectZone",
+    "durationMs": 2200,
+    "intensity": 0.58,
+    "params": { "profile": "bubbles_electrolysis", "density": 0.6, "locality": "split" }
+  },
+  {
+    "id": "steam_emitter_light",
+    "kind": "effect",
+    "type": "steamEmitter",
+    "targetZoneType": "effectZone",
+    "durationMs": 1800,
+    "intensity": 0.34,
+    "params": { "profile": "steam_light" }
+  },
+  {
+    "id": "steam_emitter_hot",
+    "kind": "effect",
+    "type": "steamEmitter",
+    "targetZoneType": "effectZone",
+    "durationMs": 2200,
+    "intensity": 0.62,
+    "params": { "profile": "steam_hot" }
+  },
+  {
+    "id": "precipitate_bottom_light",
+    "kind": "effect",
+    "type": "precipitateLayer",
+    "targetZoneType": "liquidZone",
+    "durationMs": 1500,
+    "intensity": 0.46,
+    "params": { "density": 0.5, "placement": "bottom" }
+  },
+  {
+    "id": "surface_deposit_medium",
+    "kind": "effect",
+    "type": "surfaceDeposit",
+    "targetZoneType": "shell",
+    "durationMs": 1800,
+    "intensity": 0.56,
+    "params": { "tone": "metallic", "coverage": 0.55 }
+  },
+  {
+    "id": "heat_glow_medium",
+    "kind": "effect",
+    "type": "heatGlow",
+    "targetZoneType": "heatZone",
+    "durationMs": 1800,
+    "intensity": 0.6,
+    "params": { "pulse": true, "color": "#ff8a3d" }
+  },
+  {
+    "id": "heat_glow_strong",
+    "kind": "effect",
+    "type": "heatGlow",
+    "targetZoneType": "heatZone",
+    "durationMs": 2400,
+    "intensity": 0.92,
+    "params": { "pulse": true, "color": "#ff6a1f", "radius": 1.3 }
+  },
+  {
+    "id": "heat_shimmer_medium",
+    "kind": "effect",
+    "type": "heatShimmer",
+    "targetZoneType": "effectZone",
+    "durationMs": 2200,
+    "intensity": 0.72,
+    "params": { "profile": "thermal_shimmer", "amplitude": 0.48 }
+  },
+  {
+    "id": "container_shake_light",
+    "kind": "effect",
+    "type": "containerShake",
+    "targetZoneType": "shell",
+    "durationMs": 650,
+    "intensity": 0.35,
+    "params": { "axis": "x", "distance": 4 }
+  },
+  {
+    "id": "tilt_pour_standard",
+    "kind": "effect",
+    "type": "tiltPour",
+    "targetZoneType": "liquidZone",
+    "durationMs": 950,
+    "intensity": 0.48,
+    "params": { "streamProfile": "pour_stream_standard", "angle": 22 }
+  },
+  {
+    "id": "flash_reaction_soft",
+    "kind": "effect",
+    "type": "flashReaction",
+    "targetZoneType": "effectZone",
+    "durationMs": 700,
+    "intensity": 0.4,
+    "params": { "color": "#d5fff2" }
+  },
+  {
+    "id": "flash_reaction_strong",
+    "kind": "effect",
+    "type": "flashReaction",
+    "targetZoneType": "effectZone",
+    "durationMs": 900,
+    "intensity": 0.88,
+    "params": { "color": "#ffd27a" }
+  },
+  {
+    "id": "smoke_emitter_reaction",
+    "kind": "effect",
+    "type": "smokeEmitter",
+    "targetZoneType": "effectZone",
+    "durationMs": 2600,
+    "intensity": 0.72,
+    "params": { "profile": "smoke_reaction", "density": 0.58 }
+  },
+  {
+    "id": "flame_burst_reaction",
+    "kind": "effect",
+    "type": "flameBurst",
+    "targetZoneType": "effectZone",
+    "durationMs": 1600,
+    "intensity": 0.86,
+    "params": { "profile": "reaction_flame", "color": "#ff7d1a" }
+  },
+  {
+    "id": "explosion_ring_soft",
+    "kind": "effect",
+    "type": "explosionBurst",
+    "targetZoneType": "effectZone",
+    "durationMs": 1100,
+    "intensity": 0.72,
+    "params": { "profile": "micro_boom", "ringColor": "#ffd788" }
+  },
+  {
+    "id": "foam_layer_light",
+    "kind": "effect",
+    "type": "foamLayer",
+    "targetZoneType": "liquidZone",
+    "durationMs": 1600,
+    "intensity": 0.35,
+    "params": { "thickness": 0.18 }
+  }
+]

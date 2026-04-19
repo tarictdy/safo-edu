@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 210" fill="none">
+  <defs>
+    <linearGradient id="wash-bottle-fill" x1="65" y1="18" x2="65" y2="196" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f6fbfe" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#bbd4e4" stop-opacity="0.24"/>
+    </linearGradient>
+  </defs>
+  <g id="wash-bottle-shell">
+    <path d="M52 18h26v18c0 10 8 16 16 22 10 7 14 18 14 35v52c0 28-18 49-43 49S22 173 22 145V94c0-17 4-28 14-35 8-6 16-12 16-22V18Z" fill="url(#wash-bottle-fill)" stroke="#d8edf9" stroke-width="2.8"/>
+    <path d="M73 18c0 18 6 24 18 31 12 8 18 16 24 16 5 0 7-4 7-8 0-7-4-12-14-14-10-2-17-7-24-25" stroke="#d8edf9" stroke-linecap="round" stroke-width="5"/>
+    <path d="M44 32h20" stroke="#ffffff" stroke-linecap="round" stroke-opacity="0.9" stroke-width="4"/>
+    <path d="M82 62c10 18 14 40 14 67 0 18-3 36-10 48" stroke="#8eb0c7" stroke-opacity="0.22" stroke-width="8"/>
+  </g>
+  <rect id="wash-bottle-liquid-zone" data-zone="liquid-zone" x="34" y="78" width="62" height="90" rx="24"/>
+  <g id="wash-bottle-effect-zone" data-zone="effect-zone"></g>
+</svg>

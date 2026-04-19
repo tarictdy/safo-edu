@@ -1,0 +1,503 @@
+[
+  {
+    "id": "neutralization_hcl_naoh",
+    "reactants": ["hcl", "naoh"],
+    "conditions": ["mixed"],
+    "results": ["nacl", "h2o"],
+    "effects": ["heat", "bubbles_light"],
+    "reactionProfileId": "bubbles_light",
+    "visual": {
+      "liquidColor": "#99dbff",
+      "bubbles": true,
+      "steam": false,
+      "precipitate": false,
+      "flash": false
+    },
+    "message": "Neutralisation acide-base detectee."
+  },
+  {
+    "id": "precipitation_agno3_cuso4",
+    "reactants": ["agno3", "cuso4"],
+    "conditions": ["mixed"],
+    "results": ["precipitate_white", "solution_blue"],
+    "effects": ["precipitate", "color_shift"],
+    "reactionProfileId": "precipitate_progressive",
+    "visual": {
+      "liquidColor": "#74bbff",
+      "bubbles": false,
+      "steam": false,
+      "precipitate": true,
+      "flash": false
+    },
+    "message": "Precipite detecte dans le melange."
+  },
+  {
+    "id": "copper_silver_displacement",
+    "reactionType": "redox",
+    "reactants": ["copper_sample", "agno3"],
+    "conditions": ["mixed"],
+    "results": ["silver_deposit", "cuso4"],
+    "reactionProfileId": "deposit_metallic",
+    "observables": {
+      "colorShift": "high",
+      "heatRelease": "low",
+      "bubbles": "none",
+      "steam": "none",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "high",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#5e9dff"
+    },
+    "journalMessages": [
+      "Le cuivre se couvre d un depot argente tandis que la solution bleuit."
+    ],
+    "message": "Reaction cuivre et nitrate d argent detectee."
+  },
+  {
+    "id": "heated_water_vapor",
+    "reactants": ["h2o"],
+    "conditions": ["heated"],
+    "results": ["steam"],
+    "effects": ["steam"],
+    "reactionProfileId": "steam_light",
+    "visual": {
+      "liquidColor": "#8fd6ff",
+      "bubbles": false,
+      "steam": true,
+      "precipitate": false,
+      "flash": false
+    },
+    "message": "Degagement de vapeur observe."
+  },
+  {
+    "id": "dissolution_nacl",
+    "reactants": ["h2o", "nacl_solid"],
+    "conditions": ["mixed"],
+    "results": ["solution_salee"],
+    "effects": ["color_shift"],
+    "reactionProfileId": "color_transition_clear",
+    "visual": {
+      "liquidColor": "#cfefff",
+      "bubbles": false,
+      "steam": false,
+      "precipitate": false,
+      "flash": false
+    },
+    "message": "Le chlorure de sodium se dissout et la solution reste limpide."
+  },
+  {
+    "id": "dissolution_cuso4_solid",
+    "reactants": ["h2o", "cuso4_solid"],
+    "conditions": ["mixed"],
+    "results": ["solution_cuso4"],
+    "effects": ["color_shift"],
+    "reactionProfileId": "color_transition_clear",
+    "visual": {
+      "liquidColor": "#2c8cf2",
+      "bubbles": false,
+      "steam": false,
+      "precipitate": false,
+      "flash": false
+    },
+    "message": "Le sulfate de cuivre solide colore la solution en bleu."
+  },
+  {
+    "id": "heterogeneous_water_sand",
+    "reactants": ["h2o", "sand"],
+    "conditions": ["mixed"],
+    "results": ["melange_heterogene"],
+    "effects": ["precipitate"],
+    "reactionProfileId": "precipitate_progressive",
+    "visual": {
+      "liquidColor": "#c9d9c9",
+      "bubbles": false,
+      "steam": false,
+      "precipitate": true,
+      "flash": false
+    },
+    "message": "Le sable ne se dissout pas et forme un depot visible."
+  },
+  {
+    "id": "exothermic_kmno4_glycerol",
+    "reactionType": "redox",
+    "reactants": ["kmno4_solid", "glycerol"],
+    "conditions": ["mixed"],
+    "results": ["mn_oxide_residue", "steam", "co2"],
+    "effects": ["heat", "flash", "smoke", "flame"],
+    "reactionProfileId": "exothermic_flash_showcase",
+    "observables": {
+      "colorShift": "high",
+      "heatRelease": "high",
+      "bubbles": "light",
+      "steam": "hot",
+      "smoke": "medium",
+      "precipitate": "medium",
+      "flash": "high",
+      "flameBurst": "high",
+      "explosion": "medium",
+      "surfaceDeposit": "none",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "stateChanges": {
+      "temperatureDelta": 48,
+      "mixtureType": "exothermic_reactive"
+    },
+    "visual": {
+      "liquidColor": "#8d5121",
+      "bubbles": true,
+      "steam": true,
+      "smoke": true,
+      "precipitate": true,
+      "flash": true
+    },
+    "journalMessages": [
+      "Oxydation exothermique rapide detectee.",
+      "Le melange s echauffe fortement, change de couleur et produit une flamme breve."
+    ],
+    "message": "Reaction exothermique demonstrative detectee."
+  },
+  {
+    "id": "ion_intro_precipitation",
+    "reactionType": "precipitation",
+    "reactants": ["solution_ionique_a", "reactif_b"],
+    "conditions": ["mixed"],
+    "results": ["precipite_blanc"],
+    "reactionProfileId": "precipitate_progressive",
+    "observables": {
+      "colorShift": "low",
+      "heatRelease": "none",
+      "bubbles": "none",
+      "steam": "none",
+      "smoke": "none",
+      "precipitate": "high",
+      "flash": "none",
+      "surfaceDeposit": "none",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#dae2f7",
+      "precipitate": true
+    },
+    "journalMessages": ["Le melange devient trouble et un precipite apparait."],
+    "message": "Precipitation observee."
+  },
+  {
+    "id": "combustion_alcane_visible",
+    "reactionType": "combustion",
+    "reactants": ["alcane_sample"],
+    "conditions": ["heated"],
+    "results": ["flame", "co2", "h2o"],
+    "reactionProfileId": "exothermic_flash_showcase",
+    "observables": {
+      "colorShift": "low",
+      "heatRelease": "high",
+      "bubbles": "none",
+      "steam": "light",
+      "smoke": "medium",
+      "precipitate": "none",
+      "flash": "medium",
+      "flameBurst": "high",
+      "explosion": "none",
+      "surfaceDeposit": "none",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#f3a24a",
+      "steam": true,
+      "smoke": true,
+      "flash": true
+    },
+    "journalMessages": ["L hydrocarbure s enflamme et degage une chaleur visible."],
+    "message": "Combustion observee."
+  },
+  {
+    "id": "alcene_test_decoloration",
+    "reactionType": "indicator",
+    "reactants": ["alcene_sample", "reactif_insaturation"],
+    "conditions": ["mixed"],
+    "results": ["reactif_decolore"],
+    "reactionProfileId": "color_transition_clear",
+    "observables": {
+      "colorShift": "high",
+      "heatRelease": "none",
+      "bubbles": "none",
+      "steam": "none",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "none",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#f4e5c4"
+    },
+    "journalMessages": ["Le reactif se decolore en presence de l alcene."],
+    "message": "Decoloration rapide observee."
+  },
+  {
+    "id": "generic_metal_redox",
+    "reactionType": "redox",
+    "reactants": ["solution_ionique", "metal_reducteur"],
+    "conditions": ["mixed"],
+    "results": ["depot_metallique"],
+    "reactionProfileId": "deposit_metallic",
+    "observables": {
+      "colorShift": "medium",
+      "heatRelease": "low",
+      "bubbles": "none",
+      "steam": "none",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "high",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#79b5f0"
+    },
+    "journalMessages": ["Un depot metallique se forme sur le solide."],
+    "message": "Reaction d oxydoreduction detectee."
+  },
+  {
+    "id": "iron_copper_displacement",
+    "reactionType": "redox",
+    "reactants": ["iron_sample", "cuso4"],
+    "conditions": ["mixed"],
+    "results": ["copper_deposit"],
+    "reactionProfileId": "deposit_metallic",
+    "observables": {
+      "colorShift": "medium",
+      "heatRelease": "none",
+      "bubbles": "none",
+      "steam": "none",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "high",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#6da7f2"
+    },
+    "journalMessages": ["Le fer se couvre progressivement d un depot cuivreux."],
+    "message": "Depot de cuivre observe."
+  },
+  {
+    "id": "electrolysis_support_demo",
+    "reactionType": "electrolysis",
+    "reactants": ["h2o", "electrolyte_support"],
+    "conditions": ["heated"],
+    "results": ["gas_left", "gas_right"],
+    "reactionProfileId": "bubbles_electrolysis",
+    "observables": {
+      "colorShift": "none",
+      "heatRelease": "medium",
+      "bubbles": "high",
+      "steam": "light",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "none",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#a8dcff",
+      "bubbles": true,
+      "steam": true
+    },
+    "journalMessages": ["Des bulles apparaissent au voisinage des electrodes."],
+    "message": "Electrolyse pedagogique visible."
+  },
+  {
+    "id": "corrosion_iron_demo",
+    "reactionType": "corrosion",
+    "reactants": ["iron_sample", "water_corrosive_medium"],
+    "conditions": ["mixed"],
+    "results": ["rust_layer"],
+    "reactionProfileId": "deposit_metallic",
+    "observables": {
+      "colorShift": "low",
+      "heatRelease": "none",
+      "bubbles": "none",
+      "steam": "none",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "high",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#b6c8d1"
+    },
+    "journalMessages": ["Une couche brun-orange apparait sur le fer."],
+    "message": "Corrosion progressive observee."
+  },
+  {
+    "id": "alcool_oxydation_soft",
+    "reactionType": "redox",
+    "reactants": ["alcool_simple", "oxydant_generique"],
+    "conditions": ["heated", "mixed"],
+    "results": ["compose_oxyde"],
+    "reactionProfileId": "steam_light",
+    "observables": {
+      "colorShift": "high",
+      "heatRelease": "medium",
+      "bubbles": "none",
+      "steam": "light",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "none",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#c06e4d",
+      "steam": true
+    },
+    "journalMessages": ["Le milieu oxydant change de couleur pendant le chauffage."],
+    "message": "Oxydation douce de l alcool observee."
+  },
+  {
+    "id": "aldehyde_positive_test",
+    "reactionType": "indicator",
+    "reactants": ["aldehyde_sample", "reactif_test_aldehyde"],
+    "conditions": ["mixed"],
+    "results": ["precipite_caracteristique"],
+    "reactionProfileId": "precipitate_progressive",
+    "observables": {
+      "colorShift": "medium",
+      "heatRelease": "low",
+      "bubbles": "none",
+      "steam": "none",
+      "smoke": "none",
+      "precipitate": "high",
+      "flash": "none",
+      "surfaceDeposit": "none",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#efb670",
+      "precipitate": true
+    },
+    "journalMessages": ["Le test de l aldehyde produit un depot caracteristique."],
+    "message": "Test positif pour l aldehyde."
+  },
+  {
+    "id": "ketone_negative_test",
+    "reactionType": "indicator",
+    "reactants": ["cetone_sample", "reactif_test_aldehyde"],
+    "conditions": ["mixed"],
+    "results": ["melange_stable"],
+    "reactionProfileId": "no_visible_reaction",
+    "observables": {
+      "colorShift": "none",
+      "heatRelease": "none",
+      "bubbles": "none",
+      "steam": "none",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "none",
+      "foam": "none",
+      "noVisibleReaction": "high"
+    },
+    "visual": {
+      "liquidColor": "#d8c3a8"
+    },
+    "journalMessages": ["Aucun signe positif n est observe avec la cetone."],
+    "message": "Pas de reaction visible attendue."
+  },
+  {
+    "id": "carboxylic_neutralization",
+    "reactionType": "acid_base",
+    "reactants": ["acide_carboxylique_simple", "naoh"],
+    "conditions": ["mixed"],
+    "results": ["sel_carboxylate", "h2o"],
+    "reactionProfileId": "bubbles_light",
+    "observables": {
+      "colorShift": "high",
+      "heatRelease": "medium",
+      "bubbles": "light",
+      "steam": "none",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "none",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#ca8eff",
+      "bubbles": true
+    },
+    "journalMessages": ["L indicateur change et une neutralisation est detectee."],
+    "message": "Neutralisation organique simple."
+  },
+  {
+    "id": "esterification_demo",
+    "reactionType": "heating",
+    "reactants": ["alcool_simple", "acide_carboxylique_simple"],
+    "conditions": ["heated", "mixed"],
+    "results": ["ester"],
+    "reactionProfileId": "steam_light",
+    "observables": {
+      "colorShift": "medium",
+      "heatRelease": "low",
+      "bubbles": "none",
+      "steam": "light",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "none",
+      "foam": "none",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#f4bb80",
+      "steam": true
+    },
+    "journalMessages": ["Le melange chauffe legerement et la transformation organique progresse."],
+    "message": "Esterification simplifiee en cours."
+  },
+  {
+    "id": "soap_saponification_demo",
+    "reactionType": "heating",
+    "reactants": ["huile_sample", "naoh"],
+    "conditions": ["heated", "mixed"],
+    "results": ["savon_brut"],
+    "reactionProfileId": "viscosity_thickening",
+    "observables": {
+      "colorShift": "medium",
+      "heatRelease": "medium",
+      "bubbles": "none",
+      "steam": "light",
+      "smoke": "none",
+      "precipitate": "none",
+      "flash": "none",
+      "surfaceDeposit": "none",
+      "foam": "medium",
+      "noVisibleReaction": "none"
+    },
+    "visual": {
+      "liquidColor": "#d8a354",
+      "steam": true
+    },
+    "journalMessages": ["Le melange s epaissit progressivement pendant la saponification."],
+    "message": "Formation pedagogique de savon detectee."
+  }
+]

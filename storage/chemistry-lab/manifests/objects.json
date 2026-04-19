@@ -1,0 +1,686 @@
+[
+  {
+    "id": "beaker_250ml",
+    "name": "Becher 250 mL",
+    "kind": "object",
+    "type": "container",
+    "category": "glassware",
+    "subType": "beaker",
+    "asset": "/storage/chemistry-lab/svg/glassware/beaker.svg",
+    "capacityMl": 250,
+    "acceptsChemicals": true,
+    "acceptsHeat": true,
+    "allowedActions": ["add_chemical", "stir", "tilt", "pour", "heat", "empty", "rotate", "inspect"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "beaker-shell",
+      "liquidZone": "beaker-liquid-zone",
+      "effectZone": "beaker-effect-zone",
+      "heatZone": "beaker-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": true,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 136, "height": 188 }
+  },
+  {
+    "id": "erlenmeyer_250ml",
+    "name": "Erlenmeyer 250 mL",
+    "kind": "object",
+    "type": "container",
+    "category": "glassware",
+    "subType": "erlenmeyer",
+    "asset": "/storage/chemistry-lab/svg/glassware/erlenmeyer.svg",
+    "capacityMl": 250,
+    "acceptsChemicals": true,
+    "acceptsHeat": true,
+    "allowedActions": ["add_chemical", "stir", "tilt", "pour", "heat", "empty", "rotate", "inspect"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "flask-shell",
+      "liquidZone": "flask-liquid-zone",
+      "effectZone": "flask-effect-zone",
+      "heatZone": "flask-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": true,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 132, "height": 190 }
+  },
+  {
+    "id": "test_tube_standard",
+    "name": "Tube a essai",
+    "kind": "object",
+    "type": "container",
+    "category": "glassware",
+    "subType": "test_tube",
+    "asset": "/storage/chemistry-lab/svg/glassware/test-tube.svg",
+    "capacityMl": 40,
+    "acceptsChemicals": true,
+    "acceptsHeat": true,
+    "allowedActions": ["add_chemical", "stir", "tilt", "pour", "heat", "empty", "rotate", "inspect"],
+    "attachPoints": ["support-clamp"],
+    "zones": {
+      "shell": "tube-shell",
+      "liquidZone": "tube-liquid-zone",
+      "effectZone": "tube-effect-zone",
+      "heatZone": "tube-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": true,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 92, "height": 206 }
+  },
+  {
+    "id": "graduated_cylinder_100ml",
+    "name": "Eprouvette graduee 100 mL",
+    "kind": "object",
+    "type": "container",
+    "category": "glassware",
+    "subType": "graduated_cylinder",
+    "asset": "/storage/chemistry-lab/svg/glassware/graduated-cylinder.svg",
+    "capacityMl": 100,
+    "acceptsChemicals": true,
+    "acceptsHeat": false,
+    "allowedActions": ["add_chemical", "tilt", "pour", "empty", "rotate", "inspect"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "cylinder-shell",
+      "liquidZone": "cylinder-liquid-zone",
+      "effectZone": "cylinder-effect-zone",
+      "heatZone": "cylinder-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 88, "height": 210 }
+  },
+  {
+    "id": "round_bottom_flask_250ml",
+    "name": "Ballon fond rond 250 mL",
+    "kind": "object",
+    "type": "container",
+    "category": "glassware",
+    "subType": "round_bottom_flask",
+    "asset": "/storage/chemistry-lab/svg/glassware/round-bottom-flask.svg",
+    "capacityMl": 250,
+    "acceptsChemicals": true,
+    "acceptsHeat": true,
+    "allowedActions": ["add_chemical", "stir", "tilt", "pour", "heat", "empty", "rotate", "inspect"],
+    "attachPoints": ["support-clamp"],
+    "zones": {
+      "shell": "round-flask-shell",
+      "liquidZone": "round-flask-liquid-zone",
+      "effectZone": "round-flask-effect-zone",
+      "heatZone": "round-flask-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": true,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 142, "height": 198 }
+  },
+  {
+    "id": "boiling_tube_large",
+    "name": "Tube de chauffage",
+    "kind": "object",
+    "type": "container",
+    "category": "glassware",
+    "subType": "boiling_tube",
+    "asset": "/storage/chemistry-lab/svg/glassware/boiling-tube.svg",
+    "capacityMl": 60,
+    "acceptsChemicals": true,
+    "acceptsHeat": true,
+    "allowedActions": ["add_chemical", "stir", "tilt", "pour", "heat", "empty", "rotate", "inspect"],
+    "attachPoints": ["support-clamp"],
+    "zones": {
+      "shell": "boiling-tube-shell",
+      "liquidZone": "boiling-tube-liquid-zone",
+      "effectZone": "boiling-tube-effect-zone",
+      "heatZone": "boiling-tube-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": true,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 98, "height": 214 }
+  },
+  {
+    "id": "burette_50ml",
+    "name": "Burette 50 mL",
+    "kind": "object",
+    "type": "container",
+    "category": "glassware",
+    "subType": "burette",
+    "asset": "/storage/chemistry-lab/svg/glassware/burette.svg",
+    "capacityMl": 50,
+    "acceptsChemicals": true,
+    "acceptsHeat": false,
+    "allowedActions": ["add_chemical", "tilt", "pour", "empty", "rotate", "inspect"],
+    "attachPoints": ["support-clamp"],
+    "zones": {
+      "shell": "burette-shell",
+      "liquidZone": "burette-liquid-zone",
+      "effectZone": "burette-effect-zone",
+      "heatZone": "burette-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 76, "height": 286 }
+  },
+  {
+    "id": "separatory_funnel_250ml",
+    "name": "Ampoule a decanter 250 mL",
+    "kind": "object",
+    "type": "container",
+    "category": "glassware",
+    "subType": "separatory_funnel",
+    "asset": "/storage/chemistry-lab/svg/glassware/separatory-funnel.svg",
+    "capacityMl": 250,
+    "acceptsChemicals": true,
+    "acceptsHeat": false,
+    "allowedActions": ["add_chemical", "tilt", "pour", "empty", "rotate", "inspect"],
+    "attachPoints": ["support-clamp"],
+    "zones": {
+      "shell": "separatory-funnel-shell",
+      "liquidZone": "separatory-funnel-liquid-zone",
+      "effectZone": "separatory-funnel-effect-zone",
+      "heatZone": "separatory-funnel-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 138, "height": 222 }
+  },
+  {
+    "id": "watch_glass_small",
+    "name": "Verre de montre",
+    "kind": "object",
+    "type": "container",
+    "category": "glassware",
+    "subType": "watch_glass",
+    "asset": "/storage/chemistry-lab/svg/glassware/watch-glass.svg",
+    "capacityMl": 20,
+    "acceptsChemicals": true,
+    "acceptsHeat": false,
+    "allowedActions": ["add_chemical", "tilt", "pour", "empty", "rotate", "inspect"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "watch-glass-shell",
+      "liquidZone": "watch-glass-liquid-zone",
+      "effectZone": "watch-glass-effect-zone",
+      "heatZone": "watch-glass-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 150, "height": 78 }
+  },
+  {
+    "id": "funnel_simple",
+    "name": "Entonnoir simple",
+    "kind": "object",
+    "type": "tool",
+    "category": "glassware",
+    "subType": "funnel",
+    "asset": "/storage/chemistry-lab/svg/glassware/funnel.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "funnel-shell",
+      "effectZone": "funnel-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 130, "height": 160 }
+  },
+  {
+    "id": "pipette_basic",
+    "name": "Pipette",
+    "kind": "object",
+    "type": "tool",
+    "category": "instrument",
+    "subType": "transfer_tool",
+    "asset": "/storage/chemistry-lab/svg/instruments/pipette.svg",
+    "capacityMl": 12,
+    "acceptsChemicals": true,
+    "acceptsHeat": false,
+    "allowedActions": ["pour", "rotate", "inspect"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "pipette-body",
+      "effectZone": "pipette-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 164, "height": 58 }
+  },
+  {
+    "id": "stirrer_basic",
+    "name": "Agitateur",
+    "kind": "object",
+    "type": "tool",
+    "category": "instrument",
+    "subType": "mixing_tool",
+    "asset": "/storage/chemistry-lab/svg/instruments/stirrer.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["stir", "rotate", "inspect"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "stirrer-shaft",
+      "effectZone": "stirrer-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 150, "height": 34 }
+  },
+  {
+    "id": "metal_strip",
+    "name": "Lame metallique",
+    "kind": "object",
+    "type": "tool",
+    "category": "instrument",
+    "subType": "metal_strip",
+    "asset": "/storage/chemistry-lab/svg/instruments/metal-strip.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "metal-strip-shell",
+      "effectZone": "metal-strip-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 48, "height": 188 }
+  },
+  {
+    "id": "thermometer_basic",
+    "name": "Thermometre",
+    "kind": "object",
+    "type": "sensor",
+    "category": "instrument",
+    "subType": "thermometer",
+    "asset": "/storage/chemistry-lab/svg/instruments/thermometer.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": ["support-clamp"],
+    "zones": {
+      "shell": "thermometer-shell",
+      "heatZone": "thermometer-heat-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 52, "height": 200 }
+  },
+  {
+    "id": "ph_meter_basic",
+    "name": "pH-metre",
+    "kind": "object",
+    "type": "sensor",
+    "category": "instrument",
+    "subType": "ph_meter",
+    "asset": "/storage/chemistry-lab/svg/instruments/ph-meter.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "ph-meter-shell",
+      "effectZone": "ph-meter-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 68, "height": 186 }
+  },
+  {
+    "id": "conductivity_meter_basic",
+    "name": "Conductivimetre",
+    "kind": "object",
+    "type": "sensor",
+    "category": "instrument",
+    "subType": "conductivity_meter",
+    "asset": "/storage/chemistry-lab/svg/instruments/conductivity-meter.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "conductivity-meter-shell",
+      "effectZone": "conductivity-meter-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 74, "height": 198 }
+  },
+  {
+    "id": "electrode_zinc",
+    "name": "Electrode de zinc",
+    "kind": "object",
+    "type": "electrode",
+    "category": "instrument",
+    "subType": "zinc_electrode",
+    "asset": "/storage/chemistry-lab/svg/instruments/electrode-zinc.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "electrode-zinc-shell",
+      "effectZone": "electrode-zinc-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 54, "height": 180 }
+  },
+  {
+    "id": "electrode_copper",
+    "name": "Electrode de cuivre",
+    "kind": "object",
+    "type": "electrode",
+    "category": "instrument",
+    "subType": "copper_electrode",
+    "asset": "/storage/chemistry-lab/svg/instruments/electrode-copper.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "electrode-copper-shell",
+      "effectZone": "electrode-copper-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 54, "height": 180 }
+  },
+  {
+    "id": "electrode_pair",
+    "name": "Paire d electrodes",
+    "kind": "object",
+    "type": "electrode",
+    "category": "instrument",
+    "subType": "electrode_pair",
+    "asset": "/storage/chemistry-lab/svg/instruments/electrode-pair.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "electrode-pair-shell",
+      "effectZone": "electrode-pair-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 126, "height": 164 }
+  },
+  {
+    "id": "salt_bridge",
+    "name": "Pont salin",
+    "kind": "object",
+    "type": "connector",
+    "category": "instrument",
+    "subType": "salt_bridge",
+    "asset": "/storage/chemistry-lab/svg/instruments/salt-bridge.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "salt-bridge-shell",
+      "effectZone": "salt-bridge-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 150, "height": 90 }
+  },
+  {
+    "id": "bunsen_burner_basic",
+    "name": "Bruleur Bunsen",
+    "kind": "object",
+    "type": "heater",
+    "category": "equipment",
+    "subType": "bunsen_burner",
+    "asset": "/storage/chemistry-lab/svg/equipment/bunsen-burner.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["heat", "inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "burner-base",
+      "effectZone": "burner-effect-zone",
+      "heatZone": "burner-flame-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 110, "height": 182 }
+  },
+  {
+    "id": "hotplate_basic",
+    "name": "Plaque chauffante",
+    "kind": "object",
+    "type": "heater",
+    "category": "equipment",
+    "subType": "hotplate",
+    "asset": "/storage/chemistry-lab/svg/equipment/hotplate.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["heat", "inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "hotplate-shell",
+      "effectZone": "hotplate-effect-zone",
+      "heatZone": "hotplate-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 164, "height": 108 }
+  },
+  {
+    "id": "combustion_cup",
+    "name": "Coupelle de combustion",
+    "kind": "object",
+    "type": "container",
+    "category": "equipment",
+    "subType": "combustion_cup",
+    "asset": "/storage/chemistry-lab/svg/equipment/combustion-cup.svg",
+    "capacityMl": 30,
+    "acceptsChemicals": true,
+    "acceptsHeat": true,
+    "allowedActions": ["add_chemical", "tilt", "pour", "heat", "empty", "rotate", "inspect"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "cup-shell",
+      "liquidZone": "cup-liquid-zone",
+      "effectZone": "cup-effect-zone",
+      "heatZone": "cup-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": true,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 132, "height": 132 }
+  },
+  {
+    "id": "voltmeter_simple",
+    "name": "Voltmeter simplifie",
+    "kind": "object",
+    "type": "sensor",
+    "category": "equipment",
+    "subType": "voltmeter",
+    "asset": "/storage/chemistry-lab/svg/equipment/voltmeter.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "voltmeter-shell",
+      "effectZone": "voltmeter-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 150, "height": 104 }
+  },
+  {
+    "id": "power_source",
+    "name": "Source electrique",
+    "kind": "object",
+    "type": "heater",
+    "category": "equipment",
+    "subType": "power_source",
+    "asset": "/storage/chemistry-lab/svg/equipment/power-source.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["heat", "inspect", "rotate"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "power-source-shell",
+      "effectZone": "power-source-effect-zone",
+      "heatZone": "power-source-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 160, "height": 124 }
+  },
+  {
+    "id": "wash_bottle_lab",
+    "name": "Pissette de laboratoire",
+    "kind": "object",
+    "type": "container",
+    "category": "equipment",
+    "subType": "wash_bottle",
+    "asset": "/storage/chemistry-lab/svg/equipment/wash-bottle.svg",
+    "capacityMl": 250,
+    "acceptsChemicals": true,
+    "acceptsHeat": false,
+    "allowedActions": ["add_chemical", "pour", "empty", "rotate", "inspect"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "wash-bottle-shell",
+      "liquidZone": "wash-bottle-liquid-zone",
+      "effectZone": "wash-bottle-effect-zone",
+      "heatZone": "wash-bottle-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 122, "height": 198 }
+  },
+  {
+    "id": "electrolysis_tank",
+    "name": "Cuve d electrolyse",
+    "kind": "object",
+    "type": "container",
+    "category": "equipment",
+    "subType": "electrolysis_tank",
+    "asset": "/storage/chemistry-lab/svg/equipment/electrolysis-tank.svg",
+    "capacityMl": 220,
+    "acceptsChemicals": true,
+    "acceptsHeat": true,
+    "allowedActions": ["add_chemical", "tilt", "pour", "heat", "empty", "rotate", "inspect"],
+    "attachPoints": [],
+    "zones": {
+      "shell": "tank-shell",
+      "liquidZone": "tank-liquid-zone",
+      "effectZone": "tank-effect-zone",
+      "heatZone": "tank-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": true,
+      "canReceivePour": true
+    },
+    "defaultPlacement": { "width": 156, "height": 156 }
+  },
+  {
+    "id": "lab_stand_basic",
+    "name": "Support universel",
+    "kind": "object",
+    "type": "support",
+    "category": "equipment",
+    "subType": "lab_stand",
+    "asset": "/storage/chemistry-lab/svg/equipment/stand.svg",
+    "acceptsChemicals": false,
+    "acceptsHeat": false,
+    "allowedActions": ["inspect", "rotate"],
+    "attachPoints": ["support-clamp"],
+    "zones": {
+      "shell": "stand-pole",
+      "effectZone": "stand-effect-zone"
+    },
+    "constraints": {
+      "needsSupport": false,
+      "canBeHeatedDirectly": false,
+      "canReceivePour": false
+    },
+    "defaultPlacement": { "width": 142, "height": 212 }
+  }
+]

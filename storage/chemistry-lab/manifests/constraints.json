@@ -1,0 +1,100 @@
+[
+  {
+    "id": "container_accepts_chemicals",
+    "kind": "constraint",
+    "appliesToAction": "add_chemical",
+    "ruleType": "compatibility",
+    "description": "Le produit doit etre ajoute dans un objet pouvant contenir des substances.",
+    "validator": {
+      "targetType": "container",
+      "targetFlag": "acceptsChemicals"
+    },
+    "errorMessage": "Choisis un recipient compatible avant d ajouter ce produit."
+  },
+  {
+    "id": "container_has_capacity",
+    "kind": "constraint",
+    "appliesToAction": "add_chemical",
+    "ruleType": "volume",
+    "description": "Le recipient doit avoir une capacite disponible.",
+    "validator": {
+      "targetType": "container",
+      "capacityField": "capacityMl"
+    },
+    "errorMessage": "Le recipient n a plus de volume disponible."
+  },
+  {
+    "id": "burner_under_container",
+    "kind": "constraint",
+    "appliesToAction": "heat",
+    "ruleType": "spatial",
+    "description": "Le bruleur doit etre sous un recipient chauffable.",
+    "validator": {
+      "sourceType": "heater",
+      "targetType": "container",
+      "alignment": "vertical_overlap",
+      "distanceMax": 90
+    },
+    "errorMessage": "Place le bruleur sous le recipient avant de chauffer."
+  },
+  {
+    "id": "target_accepts_heat",
+    "kind": "constraint",
+    "appliesToAction": "heat",
+    "ruleType": "compatibility",
+    "description": "L objet cible doit accepter le chauffage.",
+    "validator": {
+      "targetType": "container",
+      "targetFlag": "acceptsHeat"
+    },
+    "errorMessage": "Cet objet ne supporte pas le chauffage."
+  },
+  {
+    "id": "source_has_content_for_pour",
+    "kind": "constraint",
+    "appliesToAction": "pour",
+    "ruleType": "action_precondition",
+    "description": "On ne peut pas verser depuis un objet vide.",
+    "validator": {
+      "sourceType": "container",
+      "requiresContents": true
+    },
+    "errorMessage": "Le recipient source est vide."
+  },
+  {
+    "id": "target_can_receive_pour",
+    "kind": "constraint",
+    "appliesToAction": "pour",
+    "ruleType": "compatibility",
+    "description": "Le recipient cible doit pouvoir recevoir un versement.",
+    "validator": {
+      "targetType": "container",
+      "targetConstraint": "canReceivePour"
+    },
+    "errorMessage": "Le recipient cible ne peut pas recevoir ce versement."
+  },
+  {
+    "id": "empty_requires_content",
+    "kind": "constraint",
+    "appliesToAction": "empty",
+    "ruleType": "content",
+    "description": "Vider un recipient exige un contenu prealable.",
+    "validator": {
+      "targetType": "container",
+      "requiresContents": true
+    },
+    "errorMessage": "Aucun contenu a vider."
+  },
+  {
+    "id": "support_attachment_allowed",
+    "kind": "constraint",
+    "appliesToAction": "attach_to_support",
+    "ruleType": "mounting",
+    "description": "Seuls certains objets peuvent etre attaches au support.",
+    "validator": {
+      "targetType": "support",
+      "sourceAttachPoint": "support-clamp"
+    },
+    "errorMessage": "Cet objet ne peut pas etre fixe sur le support."
+  }
+]

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 230" fill="none">
+  <defs>
+    <linearGradient id="standMetal" x1="44" x2="113" y1="28" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dfe8f1"/>
+      <stop offset="0.42" stop-color="#8ca4bc"/>
+      <stop offset="1" stop-color="#354a61"/>
+    </linearGradient>
+    <linearGradient id="standBase" x1="18" x2="142" y1="186" y2="214" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#384e66"/>
+      <stop offset="0.5" stop-color="#7d96b2"/>
+      <stop offset="1" stop-color="#26374a"/>
+    </linearGradient>
+  </defs>
+
+  <g id="stand-base">
+    <rect x="18" y="194" width="124" height="18" rx="9" fill="url(#standBase)"/>
+    <rect x="25" y="186" width="110" height="12" rx="6" fill="#5d7ea0"/>
+    <path d="M34 191h92" stroke="#d7e6f2" stroke-linecap="round" stroke-width="2.4" opacity="0.42"/>
+  </g>
+
+  <g id="stand-pole">
+    <rect x="74" y="24" width="12" height="170" rx="6" fill="url(#standMetal)" stroke="#d9edf9" stroke-width="2.6"/>
+    <path d="M78 30v155" stroke="#ffffff" stroke-linecap="round" stroke-width="2.2" opacity="0.3"/>
+  </g>
+
+  <g id="stand-clamp">
+    <rect x="48" y="70" width="64" height="11" rx="5.5" fill="#dcecf8" stroke="#95b0c7" stroke-width="1.6"/>
+    <rect x="92" y="61" width="10" height="41" rx="5" fill="#8ca9c3"/>
+    <circle cx="55" cy="75.5" r="4" fill="#5a748d"/>
+    <circle cx="105" cy="75.5" r="4" fill="#5a748d"/>
+    <path d="M53 76h54" stroke="#ffffff" stroke-linecap="round" stroke-width="1.8" opacity="0.5"/>
+  </g>
+
+  <g id="stand-effect-zone" data-zone="effect-zone"></g>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "name": "safio-backend",
+  "version": "1.0.0",
+  "description": "Backend Node.js + Firebase pour SAFIO EDU",
+  "main": "server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20.18.0 <21.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check config/firebase-admin.js && node --check utils/official-coefficients.js && node --check utils/academic-data.js && node --check utils/data-store.js && node --check utils/subject.utils.js && node --check middlewares/validation.middleware.js && node --check services/academic.service.js && node --check services/schedule.service.js && node --check controllers/academic.controller.js && node --check routes/academic.routes.js && node --check routes/auth.routes.js && node --check routes/student.routes.js && node --check routes/chemistry-lab.routes.js && node --check controllers/chemistry-lab.controller.js && node --check services/chemistry-lab.service.js && node --check modules/chemistry-lab/chemistryLab.repository.js && node --check modules/chemistry-lab/chemistryLab.schemas.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase": "^10.12.2",
+    "firebase-admin": "^13.8.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 46" fill="none">
+  <defs>
+    <linearGradient id="stirrerGlass" x1="10" x2="132" y1="20" y2="27" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fefefe" stop-opacity="0.92"/>
+      <stop offset="0.52" stop-color="#dff2ff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#90c7ea" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="stirrerGrip" x1="116" x2="152" y1="13" y2="33" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a7d8f4"/>
+      <stop offset="1" stop-color="#6ea5cb"/>
+    </linearGradient>
+  </defs>
+
+  <g id="stirrer-shaft">
+    <rect x="12" y="18" width="112" height="10" rx="5" fill="url(#stirrerGlass)" stroke="#c9e8fb" stroke-width="2"/>
+    <path d="M18 22h98" stroke="#ffffff" stroke-linecap="round" stroke-width="2.1" opacity="0.46"/>
+  </g>
+
+  <g id="stirrer-handle">
+    <rect x="118" y="12" width="34" height="22" rx="11" fill="url(#stirrerGrip)" stroke="#d4edfb" stroke-width="2"/>
+    <path d="M123 18c7-2 15-2 24 0" stroke="#eff8ff" stroke-linecap="round" stroke-width="2" opacity="0.56"/>
+  </g>
+
+  <g id="stirrer-tip">
+    <path d="M14 23H5" stroke="#f9fdff" stroke-linecap="round" stroke-width="4"/>
+    <circle cx="10" cy="23" r="2.4" fill="#f8fdff" opacity="0.76"/>
+  </g>
+
+  <g id="stirrer-effect-zone" data-zone="effect-zone"></g>
+</svg>

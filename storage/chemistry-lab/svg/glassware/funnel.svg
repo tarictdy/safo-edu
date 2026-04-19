@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 180" fill="none">
+  <defs>
+    <linearGradient id="funnelGlass" x1="30" x2="110" y1="18" y2="144" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fcfeff" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#8ec7ec" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <g id="funnel-shell">
+    <path d="M18 24h104l-38 48v38l-12 40H58l-2-40V72L18 24Z" fill="url(#funnelGlass)" stroke="#d7efff" stroke-width="4"/>
+    <path d="M28 35h84" stroke="#ffffff" stroke-linecap="round" stroke-width="4" opacity="0.8"/>
+    <path d="M44 48h52" stroke="#eaf8ff" stroke-linecap="round" stroke-width="3" opacity="0.6"/>
+  </g>
+  <g id="funnel-effect-zone" data-zone="effect-zone"></g>
+</svg>
+

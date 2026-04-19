@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+  <defs>
+    <linearGradient id="bridgeGlass" x1="18" x2="142" y1="24" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fcfeff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#8fc7ec" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <g id="salt-bridge-shell">
+    <path d="M26 88V48c0-18 12-30 28-30s28 12 28 30v10c0 6 4 10 8 10s8-4 8-10V48c0-18 12-30 28-30s28 12 28 30v40" stroke="url(#bridgeGlass)" stroke-linecap="round" stroke-width="18"/>
+    <path d="M26 88V48c0-18 12-30 28-30s28 12 28 30v10c0 6 4 10 8 10s8-4 8-10V48c0-18 12-30 28-30s28 12 28 30v40" stroke="#d9efff" stroke-linecap="round" stroke-width="4"/>
+  </g>
+  <g id="salt-bridge-effect-zone" data-zone="effect-zone"></g>
+</svg>
+

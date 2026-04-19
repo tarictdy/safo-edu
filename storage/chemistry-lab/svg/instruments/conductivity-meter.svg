@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 230" fill="none">
+  <defs>
+    <linearGradient id="cond-shell-fill" x1="51" y1="14" x2="51" y2="212" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#476779"/>
+      <stop offset="1" stop-color="#233847"/>
+    </linearGradient>
+  </defs>
+  <g id="conductivity-meter-shell">
+    <rect x="20" y="14" width="62" height="112" rx="16" fill="url(#cond-shell-fill)" stroke="#d7ebf8" stroke-width="2.6"/>
+    <rect x="28" y="26" width="46" height="30" rx="8" fill="#d8fff2"/>
+    <rect x="32" y="66" width="38" height="12" rx="6" fill="#7ba7bd"/>
+    <rect x="35" y="84" width="32" height="12" rx="6" fill="#7ba7bd"/>
+    <path d="M43 126v72" stroke="#9ec7e4" stroke-linecap="round" stroke-width="6"/>
+    <path d="M59 126v88" stroke="#9ec7e4" stroke-linecap="round" stroke-width="6"/>
+    <rect x="36" y="198" width="30" height="14" rx="7" fill="#d9edf8" stroke="#a9c6d9" stroke-width="1.8"/>
+  </g>
+  <g id="conductivity-meter-effect-zone" data-zone="effect-zone"></g>
+</svg>

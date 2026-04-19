@@ -1,0 +1,4709 @@
+{
+  "users_public": {
+    "par_fbe79476-3673-4834-a4f7-a312984ebb4b": {
+      "uid": "par_fbe79476-3673-4834-a4f7-a312984ebb4b",
+      "role": "parent",
+      "fullName": "tuo",
+      "email": "socaf@gmail.com",
+      "avatar": null
+    },
+    "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b": {
+      "uid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "role": "student",
+      "fullName": "Tqric Tdy",
+      "email": "tarictdy@gmail.com",
+      "avatar": null
+    },
+    "stu_f0af4b3f-812a-43e6-a705-b29e4e341b40": {
+      "uid": "stu_f0af4b3f-812a-43e6-a705-b29e4e341b40",
+      "role": "student",
+      "fullName": "Aminata  Doumbia",
+      "email": "allangbalevia@gmail.com",
+      "avatar": null
+    }
+  },
+  "auth_meta": {
+    "par_fbe79476-3673-4834-a4f7-a312984ebb4b": {
+      "uid": "par_fbe79476-3673-4834-a4f7-a312984ebb4b",
+      "role": "parent",
+      "email": "socaf@gmail.com",
+      "passwordHash": "9e45d16fc571c55e3941f33458609ee922bcf3de1ca4096a15cead2f020e3c63",
+      "status": "active",
+      "createdAt": "2026-04-02T09:22:20.505Z",
+      "lastLoginAt": "2026-04-02T09:39:51.456Z"
+    },
+    "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b": {
+      "uid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "role": "student",
+      "email": "tarictdy@gmail.com",
+      "passwordHash": "c1429724123c309a457d4070ec5d995b15ca1c2495a2d0fcbdee05a1f0d46b22",
+      "status": "active",
+      "createdAt": "2026-03-18T16:58:50.473Z",
+      "lastLoginAt": "2026-04-13T04:43:54.651Z"
+    },
+    "stu_f0af4b3f-812a-43e6-a705-b29e4e341b40": {
+      "uid": "stu_f0af4b3f-812a-43e6-a705-b29e4e341b40",
+      "role": "student",
+      "email": "allangbalevia@gmail.com",
+      "passwordHash": "79a2b1a4d9e851d4170bcc10b32787d0c35d612c38ea3a7b75760fcf6acc9249",
+      "status": "active",
+      "createdAt": "2026-04-01T22:10:40.479Z",
+      "lastLoginAt": null
+    }
+  },
+  "students": {
+    "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b": {
+      "uid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "fullName": "Tqric Tdy",
+      "email": "tarictdy@gmail.com",
+      "matricule": "2024",
+      "birthDate": "2008-06-29",
+      "classCode": "Terminale D",
+      "schoolName": "SAFIO EDU",
+      "status": "active",
+      "createdAt": "2026-03-18T16:58:50.473Z",
+      "updatedAt": "2026-04-05T22:59:33.519Z",
+      "preferences": {
+        "preferredStudyMoments": [
+          "matin",
+          "soir"
+        ],
+        "maxSessionsPerDay": 3,
+        "maxHoursPerWeek": 18,
+        "examMode": false
+      },
+      "difficulties": {
+        "Math": 4,
+        "Physique": 4,
+        "SVT": 4,
+        "Français": 1,
+        "Anglais": 1,
+        "Philosophie": 2
+      },
+      "fixedCourses": [
+        {
+          "day": "Lundi",
+          "startHour": "07:00",
+          "label": "Math",
+          "subjectName": "Math",
+          "type": "school-course",
+          "isSchoolCourse": true
+        },
+        {
+          "day": "Lundi",
+          "startHour": "08:00",
+          "label": "Math",
+          "subjectName": "Math",
+          "type": "school-course",
+          "isSchoolCourse": true
+        },
+        {
+          "day": "Lundi",
+          "startHour": "09:00",
+          "label": "Français",
+          "subjectName": "Français",
+          "type": "school-course",
+          "isSchoolCourse": true
+        },
+        {
+          "day": "Lundi",
+          "startHour": "10:00",
+          "label": "Français",
+          "subjectName": "Français",
+          "type": "school-course",
+          "isSchoolCourse": true
+        },
+        {
+          "day": "Lundi",
+          "startHour": "11:00",
+          "label": "Français",
+          "subjectName": "Français",
+          "type": "school-course",
+          "isSchoolCourse": true
+        },
+        {
+          "day": "Lundi",
+          "startHour": "12:00",
+          "label": "Pause",
+          "type": "blocked",
+          "isSchoolCourse": false
+        },
+        {
+          "day": "Lundi",
+          "startHour": "13:00",
+          "label": "EPS",
+          "subjectName": "EPS",
+          "type": "school-course",
+          "isSchoolCourse": true
+        },
+        {
+          "day": "Lundi",
+          "startHour": "14:00",
+          "label": "EPS",
+          "subjectName": "EPS",
+          "type": "school-course",
+          "isSchoolCourse": true
+        },
+        {
+          "day": "Lundi",
+          "startHour": "15:00",
+          "label": "EPS",
+          "subjectName": "EPS",
+          "type": "school-course",
+          "isSchoolCourse": true
+        }
+      ],
+      "exams": [],
+      "importantDays": {
+        "Math": [
+          "Lundi"
+        ]
+      },
+      "schoolTimetable": {
+        "slots": [
+          {
+            "day": "Lundi",
+            "startHour": "07:00",
+            "label": "Math",
+            "subjectName": "Math",
+            "type": "school-course",
+            "isSchoolCourse": true
+          },
+          {
+            "day": "Lundi",
+            "startHour": "08:00",
+            "label": "Math",
+            "subjectName": "Math",
+            "type": "school-course",
+            "isSchoolCourse": true
+          },
+          {
+            "day": "Lundi",
+            "startHour": "09:00",
+            "label": "Français",
+            "subjectName": "Français",
+            "type": "school-course",
+            "isSchoolCourse": true
+          },
+          {
+            "day": "Lundi",
+            "startHour": "10:00",
+            "label": "Français",
+            "subjectName": "Français",
+            "type": "school-course",
+            "isSchoolCourse": true
+          },
+          {
+            "day": "Lundi",
+            "startHour": "11:00",
+            "label": "Français",
+            "subjectName": "Français",
+            "type": "school-course",
+            "isSchoolCourse": true
+          },
+          {
+            "day": "Lundi",
+            "startHour": "12:00",
+            "label": "Pause",
+            "type": "blocked",
+            "isSchoolCourse": false
+          },
+          {
+            "day": "Lundi",
+            "startHour": "13:00",
+            "label": "EPS",
+            "subjectName": "EPS",
+            "type": "school-course",
+            "isSchoolCourse": true
+          },
+          {
+            "day": "Lundi",
+            "startHour": "14:00",
+            "label": "EPS",
+            "subjectName": "EPS",
+            "type": "school-course",
+            "isSchoolCourse": true
+          },
+          {
+            "day": "Lundi",
+            "startHour": "15:00",
+            "label": "EPS",
+            "subjectName": "EPS",
+            "type": "school-course",
+            "isSchoolCourse": true
+          }
+        ],
+        "updatedAt": "2026-04-01T14:01:13.928Z"
+      },
+      "activeScheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "scheduleAdjustments": [],
+      "notificationTimeline": [
+        "noti_4d74a0ef-0cae-4ac3-881d-ce4b6053e8fc",
+        "noti_38aad38d-f67a-41b8-970f-451157df5bc7",
+        "noti_26593823-142c-4b5f-9aff-524ffc868c2c",
+        "noti_a651f5d5-f1ea-4f67-9c8b-b5cb3ebfacd5",
+        "noti_110d9712-8e47-45f9-b643-7128a832ce39",
+        "noti_82c0051a-c193-4fc3-ac85-f6e60cb4da2f",
+        "noti_80eda797-d158-4ae0-8d24-299587fd3b3a",
+        "noti_3d463b6c-6403-47eb-a154-28e21d8d8149",
+        "noti_138c1350-bd40-41a0-9a5d-f2e41fabcc53",
+        "noti_c57a2b99-9f19-4392-b24e-352d5fc6c9ae",
+        "noti_44ab42c8-4fe9-42a4-b93c-1a812afb5679",
+        "noti_6c42d6bf-fe36-43a4-9888-be8011fb655c",
+        "noti_6a032b4c-4a77-4d3c-9faf-fde0fdc122c2",
+        "noti_ff3e3d65-f710-4781-a6aa-cfa00db50674",
+        "noti_eaae8494-e47c-496c-a47b-76bcb79be596",
+        "noti_bec39d40-07f2-4ec4-a223-23a3b04e4d72",
+        "noti_e6a17354-8421-4a9a-8ef2-fd9b2ecaa41d",
+        "noti_890344f3-2100-4e77-b0cd-0dfc05f311e0"
+      ],
+      "missedSessions": [],
+      "sessionTracking": [
+        {
+          "eventId": "evt_f2162596-d4f2-4de9-9b95-a74272861c2a",
+          "notificationId": "noti_4d74a0ef-0cae-4ac3-881d-ce4b6053e8fc",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-01T14:01:13.932Z",
+          "subjectName": "Math",
+          "day": "Mardi",
+          "hour": "07:00"
+        },
+        {
+          "eventId": "evt_c602d4bb-9870-4ef4-a73d-2d3fdbd15ab2",
+          "notificationId": "noti_38aad38d-f67a-41b8-970f-451157df5bc7",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-01T14:01:13.932Z",
+          "subjectName": "Physique",
+          "day": "Mardi",
+          "hour": "09:00"
+        },
+        {
+          "eventId": "evt_eead1702-2bbe-4fe0-90b2-c7ac3b11e49f",
+          "notificationId": "noti_26593823-142c-4b5f-9aff-524ffc868c2c",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-01T14:01:13.932Z",
+          "subjectName": "Math",
+          "day": "Mercredi",
+          "hour": "07:00"
+        },
+        {
+          "eventId": "evt_a7a743dc-b097-4517-b851-5877460f0a65",
+          "notificationId": "noti_a651f5d5-f1ea-4f67-9c8b-b5cb3ebfacd5",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-01T14:01:13.932Z",
+          "subjectName": "Physique",
+          "day": "Mercredi",
+          "hour": "09:00"
+        },
+        {
+          "eventId": "evt_8b369f07-cdde-42cc-b9f8-be29471fa7cb",
+          "notificationId": "noti_110d9712-8e47-45f9-b643-7128a832ce39",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-02T07:05:34.589Z",
+          "subjectName": "Math",
+          "day": "Jeudi",
+          "hour": "07:00"
+        },
+        {
+          "eventId": "evt_4747aa81-b411-4b10-aa6c-1becacecb94b",
+          "notificationId": "noti_82c0051a-c193-4fc3-ac85-f6e60cb4da2f",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-02T09:05:34.738Z",
+          "subjectName": "Physique",
+          "day": "Jeudi",
+          "hour": "09:00"
+        },
+        {
+          "eventId": "evt_5c6a704d-1252-4c68-9228-dd1c7daea96e",
+          "notificationId": "noti_3d463b6c-6403-47eb-a154-28e21d8d8149",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-04T03:38:56.474Z",
+          "subjectName": "Physique",
+          "day": "Vendredi",
+          "hour": "09:00"
+        },
+        {
+          "eventId": "evt_7166fcba-48d1-42d7-ba09-cc9084f7cec3",
+          "notificationId": "noti_80eda797-d158-4ae0-8d24-299587fd3b3a",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-04T03:38:56.474Z",
+          "subjectName": "Math",
+          "day": "Vendredi",
+          "hour": "07:00"
+        },
+        {
+          "eventId": "evt_680e1114-a4c1-4232-b22d-fc495b27ae86",
+          "notificationId": "noti_138c1350-bd40-41a0-9a5d-f2e41fabcc53",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-04T07:05:56.768Z",
+          "subjectName": "Anglais",
+          "day": "Samedi",
+          "hour": "07:00"
+        },
+        {
+          "eventId": "evt_3cf2ecd1-40cb-4a06-9bc3-d7243da32ae9",
+          "notificationId": "noti_c57a2b99-9f19-4392-b24e-352d5fc6c9ae",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-04T09:05:56.975Z",
+          "subjectName": "Math",
+          "day": "Samedi",
+          "hour": "09:00"
+        },
+        {
+          "eventId": "evt_61cd8ba5-22ec-41bd-8276-e7562b401187",
+          "notificationId": "noti_44ab42c8-4fe9-42a4-b93c-1a812afb5679",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-04T10:05:57.081Z",
+          "subjectName": "Philosophie",
+          "day": "Samedi",
+          "hour": "10:00"
+        },
+        {
+          "eventId": "evt_355770ee-ef8e-44d3-9256-ef5c2c44f186",
+          "notificationId": "noti_6a032b4c-4a77-4d3c-9faf-fde0fdc122c2",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-04T21:00:25.678Z",
+          "subjectName": "Math",
+          "day": "Samedi",
+          "hour": "19:00"
+        },
+        {
+          "eventId": "evt_319a2451-8975-4eef-aabb-1589dba65136",
+          "notificationId": "noti_6c42d6bf-fe36-43a4-9888-be8011fb655c",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-04T21:00:25.678Z",
+          "subjectName": "Math",
+          "day": "Samedi",
+          "hour": "18:00"
+        },
+        {
+          "eventId": "evt_96a36bc3-554e-4c82-96fc-4d4ea4b538c4",
+          "notificationId": "noti_ff3e3d65-f710-4781-a6aa-cfa00db50674",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-05T07:05:26.671Z",
+          "subjectName": "Français",
+          "day": "Dimanche",
+          "hour": "07:00"
+        },
+        {
+          "eventId": "evt_6aed5b67-7e86-4acd-b23f-0de2f8c05302",
+          "notificationId": "noti_eaae8494-e47c-496c-a47b-76bcb79be596",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-05T09:05:26.931Z",
+          "subjectName": "Math",
+          "day": "Dimanche",
+          "hour": "09:00"
+        },
+        {
+          "eventId": "evt_94632fb2-fa58-415e-9a80-a1aec16d25f2",
+          "notificationId": "noti_bec39d40-07f2-4ec4-a223-23a3b04e4d72",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-05T20:05:06.535Z",
+          "subjectName": "Math",
+          "day": "Dimanche",
+          "hour": "20:00"
+        },
+        {
+          "eventId": "evt_ce30d0e3-3bf8-4fce-af6e-2bbb63e246ed",
+          "notificationId": "noti_890344f3-2100-4e77-b0cd-0dfc05f311e0",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-05T22:59:33.519Z",
+          "subjectName": "Math",
+          "day": "Dimanche",
+          "hour": "22:00"
+        },
+        {
+          "eventId": "evt_60732692-8268-4ce6-8209-0b2c459f634f",
+          "notificationId": "noti_e6a17354-8421-4a9a-8ef2-fd9b2ecaa41d",
+          "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+          "type": "auto_completed_unconfirmed",
+          "createdAt": "2026-04-05T22:59:33.519Z",
+          "subjectName": "Math",
+          "day": "Dimanche",
+          "hour": "21:00"
+        }
+      ],
+      "assignments": [],
+      "phone": "+2250501302602",
+      "notificationSettings": {
+        "smsEnabled": true,
+        "reminderLeadMinutes": 10
+      }
+    },
+    "stu_f0af4b3f-812a-43e6-a705-b29e4e341b40": {
+      "uid": "stu_f0af4b3f-812a-43e6-a705-b29e4e341b40",
+      "fullName": "Aminata  Doumbia",
+      "email": "allangbalevia@gmail.com",
+      "phone": "",
+      "matricule": "19671425B",
+      "birthDate": "2009-03-01",
+      "classCode": "Terminale D",
+      "schoolName": "SAFIO EDU",
+      "status": "active",
+      "createdAt": "2026-04-01T22:10:40.479Z",
+      "updatedAt": "2026-04-01T22:10:40.479Z",
+      "preferences": {
+        "preferredStudyMoments": [],
+        "maxSessionsPerDay": 3,
+        "maxHoursPerWeek": 18,
+        "examMode": false
+      },
+      "difficulties": {},
+      "fixedCourses": [],
+      "exams": [],
+      "importantDays": {},
+      "schoolTimetable": {
+        "slots": [],
+        "updatedAt": null
+      },
+      "scheduleAdjustments": [],
+      "notificationSettings": {
+        "smsEnabled": false,
+        "reminderLeadMinutes": 10
+      },
+      "assignments": [],
+      "missedSessions": [],
+      "notificationTimeline": [],
+      "sessionTracking": []
+    }
+  },
+  "parents": {
+    "par_fbe79476-3673-4834-a4f7-a312984ebb4b": {
+      "uid": "par_fbe79476-3673-4834-a4f7-a312984ebb4b",
+      "fullName": "tuo",
+      "email": "socaf@gmail.com",
+      "phone": "+2250707243628",
+      "notificationSettings": {
+        "telegramChatId": "",
+        "telegramEnabled": false
+      },
+      "childMatricules": [
+        "2024"
+      ],
+      "status": "active",
+      "createdAt": "2026-04-02T09:22:20.505Z",
+      "updatedAt": "2026-04-02T09:39:37.887Z"
+    }
+  },
+  "parentStudentLinks": {
+    "par-fbe79476-3673-4834-a4f7-a312984ebb4b-stu-c315d6ed-3eb2-4b4c-940d-f303a7c7d77b": {
+      "parentUid": "par_fbe79476-3673-4834-a4f7-a312984ebb4b",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "studentMatricule": "2024",
+      "studentName": "Tqric Tdy",
+      "parentName": "tuo",
+      "relationType": "parent",
+      "requestedAt": "2026-04-02T09:22:20.505Z",
+      "linkedAt": "2026-04-02T09:39:37.887Z",
+      "confirmedAt": "2026-04-02T09:39:37.887Z",
+      "rejectedAt": null,
+      "status": "active"
+    }
+  },
+  "academic_programs": {
+    "6e": {
+      "label": "6e",
+      "cycle": "college",
+      "order": 1,
+      "totalCoefficient": 18,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "edhc",
+          "name": "EDHC",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.D.H.C.",
+            "Education aux droits de l homme et a la citoyennete"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EDHC",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "Mathematiques",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ]
+    },
+    "5e": {
+      "label": "5e",
+      "cycle": "college",
+      "order": 2,
+      "totalCoefficient": 18,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "edhc",
+          "name": "EDHC",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.D.H.C.",
+            "Education aux droits de l homme et a la citoyennete"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EDHC",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "Mathematiques",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ]
+    },
+    "4e": {
+      "label": "4e",
+      "cycle": "college",
+      "order": 3,
+      "totalCoefficient": 20,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "edhc",
+          "name": "EDHC",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.D.H.C.",
+            "Education aux droits de l homme et a la citoyennete"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EDHC",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ]
+    },
+    "3e": {
+      "label": "3e",
+      "cycle": "college",
+      "order": 4,
+      "totalCoefficient": 20,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "edhc",
+          "name": "EDHC",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.D.H.C.",
+            "Education aux droits de l homme et a la citoyennete"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EDHC",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ]
+    },
+    "Seconde A": {
+      "label": "Seconde A",
+      "cycle": "lycee",
+      "order": 5,
+      "totalCoefficient": 23,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 3,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ]
+    },
+    "Seconde B": {
+      "label": "Seconde B",
+      "cycle": "lycee",
+      "order": 6,
+      "subjects": [
+        {
+          "subjectCode": "francais",
+          "name": "Français",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "math",
+          "name": "Math",
+          "coefficient": 4,
+          "isCore": true
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Géographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": true
+        }
+      ],
+      "subjectOptions": [
+        "Français",
+        "Math",
+        "Physique",
+        "SVT",
+        "Histoire-Géographie",
+        "Anglais"
+      ]
+    },
+    "Seconde C": {
+      "label": "Seconde C",
+      "cycle": "lycee",
+      "order": 6,
+      "totalCoefficient": 23,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 5,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ]
+    },
+    "Seconde D": {
+      "label": "Seconde D",
+      "cycle": "lycee",
+      "order": 8,
+      "subjects": [
+        {
+          "subjectCode": "francais",
+          "name": "Français",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "math",
+          "name": "Math",
+          "coefficient": 4,
+          "isCore": true
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Géographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": true
+        }
+      ],
+      "subjectOptions": [
+        "Français",
+        "Math",
+        "Physique",
+        "SVT",
+        "Histoire-Géographie",
+        "Anglais"
+      ]
+    },
+    "Seconde E": {
+      "label": "Seconde E",
+      "cycle": "lycee",
+      "order": 9,
+      "subjects": [
+        {
+          "subjectCode": "francais",
+          "name": "Français",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "math",
+          "name": "Math",
+          "coefficient": 4,
+          "isCore": true
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Géographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": true
+        }
+      ],
+      "subjectOptions": [
+        "Français",
+        "Math",
+        "Physique",
+        "SVT",
+        "Histoire-Géographie",
+        "Anglais"
+      ]
+    },
+    "Première A": {
+      "label": "Première A",
+      "cycle": "lycee",
+      "order": 7,
+      "totalCoefficient": 25,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 3,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Philosophie",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ],
+      "variantNote": "Valeur A1 par defaut selon la circulaire."
+    },
+    "Première B": {
+      "label": "Première B",
+      "cycle": "lycee",
+      "order": 11,
+      "subjects": [
+        {
+          "subjectCode": "francais",
+          "name": "Français",
+          "coefficient": 5,
+          "isCore": true
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 4,
+          "isCore": true
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Géographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "math",
+          "name": "Math",
+          "coefficient": 2,
+          "isCore": false
+        }
+      ],
+      "subjectOptions": [
+        "Français",
+        "Philosophie",
+        "Histoire-Géographie",
+        "Anglais",
+        "Math"
+      ]
+    },
+    "Première C": {
+      "label": "Première C",
+      "cycle": "lycee",
+      "order": 10,
+      "totalCoefficient": 25,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 5,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 5,
+          "isCore": true,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Philosophie",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ],
+      "lv2Note": "Coefficient facultatif selon la circulaire."
+    },
+    "Première D": {
+      "label": "Première D",
+      "cycle": "lycee",
+      "order": 11,
+      "totalCoefficient": 25,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Philosophie",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ],
+      "lv2Note": "Coefficient facultatif selon la circulaire."
+    },
+    "Première E": {
+      "label": "Première E",
+      "cycle": "lycee",
+      "order": 14,
+      "subjects": [
+        {
+          "subjectCode": "math",
+          "name": "Math",
+          "coefficient": 4,
+          "isCore": true
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique",
+          "coefficient": 4,
+          "isCore": true
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 4,
+          "isCore": true
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Français",
+          "coefficient": 2,
+          "isCore": false
+        },
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": false
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 2,
+          "isCore": false
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Géographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Géographie"
+          ]
+        }
+      ],
+      "subjectOptions": [
+        "Math",
+        "Physique",
+        "SVT",
+        "Français",
+        "Anglais",
+        "Philosophie",
+        "Histoire-Géographie"
+      ]
+    },
+    "Terminale A": {
+      "label": "Terminale A",
+      "cycle": "lycee",
+      "order": 12,
+      "totalCoefficient": 28,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 3,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 5,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Philosophie",
+        "SVT",
+        "Conduite"
+      ],
+      "variantNote": "Valeur A1 par defaut selon la circulaire."
+    },
+    "Terminale B": {
+      "label": "Terminale B",
+      "cycle": "lycee",
+      "order": 16,
+      "subjects": [
+        {
+          "subjectCode": "francais",
+          "name": "Français",
+          "coefficient": 5,
+          "isCore": true
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 4,
+          "isCore": true
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Géographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "math",
+          "name": "Math",
+          "coefficient": 2,
+          "isCore": false
+        }
+      ],
+      "subjectOptions": [
+        "Français",
+        "Philosophie",
+        "Histoire-Géographie",
+        "Anglais",
+        "Math"
+      ]
+    },
+    "Terminale C": {
+      "label": "Terminale C",
+      "cycle": "lycee",
+      "order": 15,
+      "totalCoefficient": 24,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 5,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 5,
+          "isCore": true,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Philosophie",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ],
+      "lv2Note": "Coefficient facultatif selon la circulaire."
+    },
+    "Terminale D": {
+      "label": "Terminale D",
+      "cycle": "lycee",
+      "order": 16,
+      "totalCoefficient": 24,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Philosophie",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ],
+      "lv2Note": "Coefficient facultatif selon la circulaire."
+    },
+    "Terminale E": {
+      "label": "Terminale E",
+      "cycle": "lycee",
+      "order": 19,
+      "subjects": [
+        {
+          "subjectCode": "math",
+          "name": "Math",
+          "coefficient": 5,
+          "isCore": true
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique",
+          "coefficient": 5,
+          "isCore": true
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 4,
+          "isCore": true
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Français",
+          "coefficient": 2,
+          "isCore": false
+        },
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": false
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 2,
+          "isCore": false
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Géographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Géographie"
+          ]
+        }
+      ],
+      "subjectOptions": [
+        "Math",
+        "Physique",
+        "SVT",
+        "Français",
+        "Anglais",
+        "Philosophie",
+        "Histoire-Géographie"
+      ]
+    },
+    "Seconde": {
+      "label": "Seconde",
+      "cycle": "lycee",
+      "order": 20,
+      "subjects": [
+        {
+          "subjectCode": "francais",
+          "name": "Français",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "math",
+          "name": "Math",
+          "coefficient": 4,
+          "isCore": true
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 3,
+          "isCore": true
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Géographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 2,
+          "isCore": true
+        }
+      ],
+      "subjectOptions": [
+        "Français",
+        "Math",
+        "Physique",
+        "SVT",
+        "Histoire-Géographie",
+        "Anglais"
+      ]
+    },
+    "Première A1": {
+      "label": "Première A1",
+      "cycle": "lycee",
+      "order": 8,
+      "totalCoefficient": 25,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 3,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Philosophie",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ]
+    },
+    "Première A2": {
+      "label": "Première A2",
+      "cycle": "lycee",
+      "order": 9,
+      "totalCoefficient": 24,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 3,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "physique",
+          "name": "Physique-Chimie",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Physique",
+            "PC"
+          ]
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Philosophie",
+        "Physique-Chimie",
+        "SVT",
+        "Conduite"
+      ]
+    },
+    "Terminale A1": {
+      "label": "Terminale A1",
+      "cycle": "lycee",
+      "order": 13,
+      "totalCoefficient": 28,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 3,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 5,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Philosophie",
+        "SVT",
+        "Conduite"
+      ]
+    },
+    "Terminale A2": {
+      "label": "Terminale A2",
+      "cycle": "lycee",
+      "order": 14,
+      "totalCoefficient": 26,
+      "officialSource": {
+        "document": "Circulaire n 270/MENA/DPFC",
+        "schoolYear": "2023-2024",
+        "title": "Coefficients du 1er et du 2nd cycles de l enseignement secondaire general"
+      },
+      "subjects": [
+        {
+          "subjectCode": "anglais",
+          "name": "Anglais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "arts_musique",
+          "name": "Arts plastiques / Ed. musicale",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "Arts Plastiques/Ed.Musicale",
+            "Arts plastiques",
+            "Art plastique",
+            "Education musicale",
+            "Musique"
+          ]
+        },
+        {
+          "subjectCode": "eps",
+          "name": "EPS",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": [
+            "E.P.S.",
+            "Education physique et sportive"
+          ]
+        },
+        {
+          "subjectCode": "francais",
+          "name": "Francais",
+          "coefficient": 4,
+          "isCore": true,
+          "aliases": [
+            "Francais",
+            "Français"
+          ]
+        },
+        {
+          "subjectCode": "histoire_geographie",
+          "name": "Histoire-Géographie",
+          "coefficient": 3,
+          "isCore": true,
+          "aliases": [
+            "Histoire",
+            "Geographie",
+            "Geo",
+            "HG",
+            "Histoire Geo",
+            "Histoire-Geographie",
+            "Géographie",
+            "Histoire-Géographie"
+          ]
+        },
+        {
+          "subjectCode": "lv2",
+          "name": "LV2 (Allemand / Espagnol)",
+          "coefficient": 3,
+          "isCore": false,
+          "aliases": [
+            "L.V.2",
+            "Allemand",
+            "Espagnol",
+            "LV2 Allemand",
+            "LV2 Espagnol"
+          ]
+        },
+        {
+          "subjectCode": "math",
+          "name": "Mathematiques",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Math",
+            "Maths"
+          ]
+        },
+        {
+          "subjectCode": "philo",
+          "name": "Philosophie",
+          "coefficient": 5,
+          "isCore": true,
+          "aliases": []
+        },
+        {
+          "subjectCode": "svt",
+          "name": "SVT",
+          "coefficient": 2,
+          "isCore": true,
+          "aliases": [
+            "Sciences de la Vie et de la Terre"
+          ]
+        },
+        {
+          "subjectCode": "conduite",
+          "name": "Conduite",
+          "coefficient": 1,
+          "isCore": false,
+          "aliases": []
+        }
+      ],
+      "subjectOptions": [
+        "Anglais",
+        "Arts plastiques / Ed. musicale",
+        "EPS",
+        "Francais",
+        "Histoire-Géographie",
+        "LV2 (Allemand / Espagnol)",
+        "Mathematiques",
+        "Philosophie",
+        "SVT",
+        "Conduite"
+      ]
+    }
+  },
+  "schedules": {
+    "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-5b5dd8a6-556e-4b3a-80bd-12454adc20b1": {
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-5b5dd8a6-556e-4b3a-80bd-12454adc20b1",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "source": "auto-generation",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "examMode": false,
+      "maxSessionsPerDay": 3,
+      "maxHoursPerWeek": 18,
+      "createdAt": "2026-04-01T08:56:45.562Z",
+      "updatedAt": "2026-04-01T08:56:45.562Z",
+      "overload": false,
+      "badge": "Semaine tres solide",
+      "calendar": {
+        "Lundi": {
+          "07:00": "Cours Math (rev 10m avant + 5m)",
+          "08:00": "Cours Math (rev 10m avant + 5m)",
+          "09:00": "Physique",
+          "10:00": "Pause",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Mardi": {
+          "07:00": "Pause",
+          "08:00": "Physique",
+          "09:00": "Pause",
+          "10:00": "SVT",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Mercredi": {
+          "07:00": "Pause",
+          "08:00": "Physique",
+          "09:00": "Pause",
+          "10:00": "SVT",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Jeudi": {
+          "07:00": "Pause",
+          "08:00": "Physique",
+          "09:00": "Pause",
+          "10:00": "Repos",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Vendredi": {
+          "07:00": "Pause",
+          "08:00": "Physique",
+          "09:00": "Pause",
+          "10:00": "Repos",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Samedi": {
+          "07:00": "Pause",
+          "08:00": "Philosophie",
+          "09:00": "Pause",
+          "10:00": "Pause",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Math",
+          "17:00": "Pause",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Repos"
+        },
+        "Dimanche": {
+          "07:00": "Pause",
+          "08:00": "Math",
+          "09:00": "Pause",
+          "10:00": "Math",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Revision Math",
+          "21:00": "Revision Math",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Repos"
+        }
+      },
+      "counterProposal": null,
+      "proposalAnalysis": null,
+      "microRevisionPlan": [
+        {
+          "day": "Lundi",
+          "startHour": "07:00",
+          "subjectName": "Math",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "07:30",
+          "subjectName": "Math",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "08:00",
+          "subjectName": "Math",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "08:30",
+          "subjectName": "Math",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        }
+      ],
+      "manualAdjustmentsApplied": 0,
+      "stats": {
+        "totalStudyHours": 18,
+        "hoursBySubject": {
+          "Physique": 7,
+          "Math": 8.5,
+          "SVT": 1,
+          "Anglais": 0.5,
+          "Philosophie": 0.5,
+          "Français": 0.5
+        },
+        "overloadWarnings": [],
+        "balancedDays": 7,
+        "topSubjects": [
+          {
+            "matiere": "Math",
+            "score": 31.2,
+            "coefficient": 6,
+            "difficulty": 4,
+            "isCore": true,
+            "isOptional": false
+          },
+          {
+            "matiere": "Physique",
+            "score": 31.2,
+            "coefficient": 6,
+            "difficulty": 4,
+            "isCore": true,
+            "isOptional": false
+          },
+          {
+            "matiere": "SVT",
+            "score": 26,
+            "coefficient": 5,
+            "difficulty": 4,
+            "isCore": true,
+            "isOptional": false
+          },
+          {
+            "matiere": "Philosophie",
+            "score": 4,
+            "coefficient": 2,
+            "difficulty": 2,
+            "isCore": false,
+            "isOptional": false
+          }
+        ]
+      },
+      "scores": [
+        {
+          "matiere": "Math",
+          "subjectCode": "math",
+          "coef": 6,
+          "diff": 4,
+          "isCore": true,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 31.200000000000003
+        },
+        {
+          "matiere": "Physique",
+          "subjectCode": "physique",
+          "coef": 6,
+          "diff": 4,
+          "isCore": true,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 31.200000000000003
+        },
+        {
+          "matiere": "SVT",
+          "subjectCode": "svt",
+          "coef": 5,
+          "diff": 4,
+          "isCore": true,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 26
+        },
+        {
+          "matiere": "Français",
+          "subjectCode": "francais",
+          "coef": 2,
+          "diff": 1,
+          "isCore": false,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 2
+        },
+        {
+          "matiere": "Anglais",
+          "subjectCode": "anglais",
+          "coef": 2,
+          "diff": 1,
+          "isCore": false,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 2
+        },
+        {
+          "matiere": "Philosophie",
+          "subjectCode": "philo",
+          "coef": 2,
+          "diff": 2,
+          "isCore": false,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 4
+        }
+      ],
+      "metadata": {
+        "classCode": "Terminale D",
+        "examMode": false,
+        "maxSessionsPerDay": 3,
+        "maxHoursPerWeek": 18,
+        "preferredStudyMoments": [
+          "matin",
+          "soir"
+        ],
+        "importantDays": {
+          "Math": [
+            "Lundi"
+          ]
+        },
+        "generatedAt": "2026-04-01T08:56:45.562Z",
+        "slotDurationMinutes": 30,
+        "microRevisionPolicy": {
+          "beforeCourseMinutes": 10,
+          "duringCourseMinutes": 5
+        }
+      }
+    },
+    "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6": {
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "source": "auto-generation",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "examMode": false,
+      "maxSessionsPerDay": 3,
+      "maxHoursPerWeek": 18,
+      "createdAt": "2026-04-01T14:01:13.928Z",
+      "updatedAt": "2026-04-01T14:01:13.932Z",
+      "overload": false,
+      "badge": "Semaine tres solide",
+      "calendar": {
+        "Lundi": {
+          "07:00": "Cours Math (rev 10m avant + 5m)",
+          "08:00": "Cours Math (rev 10m avant + 5m)",
+          "09:00": "Cours Français (rev 10m avant + 5m)",
+          "10:00": "Cours Français (rev 10m avant + 5m)",
+          "11:00": "Cours Français (rev 10m avant + 5m)",
+          "12:00": "Pause",
+          "13:00": "Cours EPS (rev 10m avant + 5m)",
+          "14:00": "Cours EPS (rev 10m avant + 5m)",
+          "15:00": "Cours EPS (rev 10m avant + 5m)",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Mardi": {
+          "07:00": "Math",
+          "08:00": "Pause",
+          "09:00": "Physique",
+          "10:00": "Repos",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Mercredi": {
+          "07:00": "Math",
+          "08:00": "Pause",
+          "09:00": "Physique",
+          "10:00": "Repos",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Jeudi": {
+          "07:00": "Math",
+          "08:00": "Pause",
+          "09:00": "Physique",
+          "10:00": "Repos",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Vendredi": {
+          "07:00": "Math",
+          "08:00": "Pause",
+          "09:00": "Physique",
+          "10:00": "Repos",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Samedi": {
+          "07:00": "Anglais",
+          "08:00": "Pause",
+          "09:00": "Math",
+          "10:00": "Philosophie",
+          "11:00": "Pause",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Math",
+          "19:00": "Math",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Repos"
+        },
+        "Dimanche": {
+          "07:00": "Français",
+          "08:00": "Pause",
+          "09:00": "Math",
+          "10:00": "Repos",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Revision Math",
+          "21:00": "Revision Math",
+          "22:00": "Revision Math",
+          "23:00": "Repos",
+          "23:30": "Repos"
+        }
+      },
+      "counterProposal": null,
+      "proposalAnalysis": null,
+      "microRevisionPlan": [
+        {
+          "day": "Lundi",
+          "startHour": "07:00",
+          "subjectName": "Math",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "08:00",
+          "subjectName": "Math",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "09:00",
+          "subjectName": "Français",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "10:00",
+          "subjectName": "Français",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "11:00",
+          "subjectName": "Français",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "13:00",
+          "subjectName": "EPS",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "14:00",
+          "subjectName": "EPS",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "15:00",
+          "subjectName": "EPS",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        }
+      ],
+      "manualAdjustmentsApplied": 0,
+      "stats": {
+        "totalStudyHours": 18,
+        "hoursBySubject": {
+          "Math": 11,
+          "Physique": 4,
+          "Anglais": 1,
+          "Philosophie": 1,
+          "Français": 1
+        },
+        "overloadWarnings": [],
+        "balancedDays": 7,
+        "topSubjects": [
+          {
+            "matiere": "Math",
+            "score": 31.2,
+            "coefficient": 6,
+            "difficulty": 4,
+            "isCore": true,
+            "isOptional": false
+          },
+          {
+            "matiere": "Physique",
+            "score": 31.2,
+            "coefficient": 6,
+            "difficulty": 4,
+            "isCore": true,
+            "isOptional": false
+          },
+          {
+            "matiere": "SVT",
+            "score": 26,
+            "coefficient": 5,
+            "difficulty": 4,
+            "isCore": true,
+            "isOptional": false
+          },
+          {
+            "matiere": "Philosophie",
+            "score": 4,
+            "coefficient": 2,
+            "difficulty": 2,
+            "isCore": false,
+            "isOptional": false
+          }
+        ]
+      },
+      "scores": [
+        {
+          "matiere": "Math",
+          "subjectCode": "math",
+          "coef": 6,
+          "diff": 4,
+          "isCore": true,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 31.200000000000003
+        },
+        {
+          "matiere": "Physique",
+          "subjectCode": "physique",
+          "coef": 6,
+          "diff": 4,
+          "isCore": true,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 31.200000000000003
+        },
+        {
+          "matiere": "SVT",
+          "subjectCode": "svt",
+          "coef": 5,
+          "diff": 4,
+          "isCore": true,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 26
+        },
+        {
+          "matiere": "Français",
+          "subjectCode": "francais",
+          "coef": 2,
+          "diff": 1,
+          "isCore": false,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 2
+        },
+        {
+          "matiere": "Anglais",
+          "subjectCode": "anglais",
+          "coef": 2,
+          "diff": 1,
+          "isCore": false,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 2
+        },
+        {
+          "matiere": "Philosophie",
+          "subjectCode": "philo",
+          "coef": 2,
+          "diff": 2,
+          "isCore": false,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 4
+        }
+      ],
+      "metadata": {
+        "classCode": "Terminale D",
+        "examMode": false,
+        "maxSessionsPerDay": 3,
+        "maxHoursPerWeek": 18,
+        "preferredStudyMoments": [
+          "matin",
+          "soir"
+        ],
+        "importantDays": {
+          "Math": [
+            "Lundi"
+          ]
+        },
+        "generatedAt": "2026-04-01T14:01:13.928Z",
+        "slotDurationMinutes": 60,
+        "hasHalfHourException": true,
+        "microRevisionPolicy": {
+          "beforeCourseMinutes": 10,
+          "duringCourseMinutes": 5
+        },
+        "assignmentsConsidered": [],
+        "evolvingMode": false
+      },
+      "notificationIds": [
+        "noti_4d74a0ef-0cae-4ac3-881d-ce4b6053e8fc",
+        "noti_38aad38d-f67a-41b8-970f-451157df5bc7",
+        "noti_26593823-142c-4b5f-9aff-524ffc868c2c",
+        "noti_a651f5d5-f1ea-4f67-9c8b-b5cb3ebfacd5",
+        "noti_110d9712-8e47-45f9-b643-7128a832ce39",
+        "noti_82c0051a-c193-4fc3-ac85-f6e60cb4da2f",
+        "noti_80eda797-d158-4ae0-8d24-299587fd3b3a",
+        "noti_3d463b6c-6403-47eb-a154-28e21d8d8149",
+        "noti_138c1350-bd40-41a0-9a5d-f2e41fabcc53",
+        "noti_c57a2b99-9f19-4392-b24e-352d5fc6c9ae",
+        "noti_44ab42c8-4fe9-42a4-b93c-1a812afb5679",
+        "noti_6c42d6bf-fe36-43a4-9888-be8011fb655c",
+        "noti_6a032b4c-4a77-4d3c-9faf-fde0fdc122c2",
+        "noti_ff3e3d65-f710-4781-a6aa-cfa00db50674",
+        "noti_eaae8494-e47c-496c-a47b-76bcb79be596",
+        "noti_bec39d40-07f2-4ec4-a223-23a3b04e4d72",
+        "noti_e6a17354-8421-4a9a-8ef2-fd9b2ecaa41d",
+        "noti_890344f3-2100-4e77-b0cd-0dfc05f311e0"
+      ]
+    },
+    "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-eb415c9b-d061-40a7-9bbe-c07ed9277eea": {
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-eb415c9b-d061-40a7-9bbe-c07ed9277eea",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "source": "auto-generation",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "examMode": false,
+      "maxSessionsPerDay": 3,
+      "maxHoursPerWeek": 18,
+      "createdAt": "2026-04-01T09:23:37.194Z",
+      "updatedAt": "2026-04-01T09:23:37.194Z",
+      "overload": false,
+      "badge": "Semaine tres solide",
+      "calendar": {
+        "Lundi": {
+          "07:00": "Cours Math (rev 10m avant + 5m)",
+          "08:00": "Cours Math (rev 10m avant + 5m)",
+          "09:00": "Cours Français (rev 10m avant + 5m)",
+          "10:00": "Cours Français (rev 10m avant + 5m)",
+          "11:00": "Cours Français (rev 10m avant + 5m)",
+          "12:00": "Pause",
+          "13:00": "Cours EPS (rev 10m avant + 5m)",
+          "14:00": "Cours EPS (rev 10m avant + 5m)",
+          "15:00": "Cours EPS (rev 10m avant + 5m)",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Mardi": {
+          "07:00": "Pause",
+          "08:00": "Physique",
+          "09:00": "Pause",
+          "10:00": "SVT",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Mercredi": {
+          "07:00": "Pause",
+          "08:00": "Physique",
+          "09:00": "Pause",
+          "10:00": "Repos",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Jeudi": {
+          "07:00": "Pause",
+          "08:00": "Physique",
+          "09:00": "Pause",
+          "10:00": "Repos",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Vendredi": {
+          "07:00": "Pause",
+          "08:00": "Physique",
+          "09:00": "Pause",
+          "10:00": "Repos",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Sommeil"
+        },
+        "Samedi": {
+          "07:00": "Pause",
+          "08:00": "Philosophie",
+          "09:00": "Pause",
+          "10:00": "Pause",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Math",
+          "17:00": "Pause",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Repos",
+          "21:00": "Repos",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Repos"
+        },
+        "Dimanche": {
+          "07:00": "Pause",
+          "08:00": "Math",
+          "09:00": "Pause",
+          "10:00": "Math",
+          "11:00": "Repos",
+          "12:00": "Repos",
+          "13:00": "Repos",
+          "14:00": "Repos",
+          "15:00": "Repos",
+          "16:00": "Repos",
+          "17:00": "Repos",
+          "18:00": "Repos",
+          "19:00": "Repos",
+          "20:00": "Revision Math",
+          "21:00": "Revision Math",
+          "22:00": "Repos",
+          "23:00": "Repos",
+          "23:30": "Repos"
+        }
+      },
+      "counterProposal": null,
+      "proposalAnalysis": null,
+      "microRevisionPlan": [
+        {
+          "day": "Lundi",
+          "startHour": "07:00",
+          "subjectName": "Math",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "08:00",
+          "subjectName": "Math",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "09:00",
+          "subjectName": "Français",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "10:00",
+          "subjectName": "Français",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "11:00",
+          "subjectName": "Français",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "13:00",
+          "subjectName": "EPS",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "14:00",
+          "subjectName": "EPS",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        },
+        {
+          "day": "Lundi",
+          "startHour": "15:00",
+          "subjectName": "EPS",
+          "beforeStartMinutes": 10,
+          "duringCourseMinutes": 5,
+          "note": "Rev 10 min avant + 5 min en cours"
+        }
+      ],
+      "manualAdjustmentsApplied": 0,
+      "stats": {
+        "totalStudyHours": 18,
+        "hoursBySubject": {
+          "Physique": 7,
+          "Math": 8.5,
+          "SVT": 1,
+          "Anglais": 0.5,
+          "Philosophie": 0.5,
+          "Français": 0.5
+        },
+        "overloadWarnings": [],
+        "balancedDays": 7,
+        "topSubjects": [
+          {
+            "matiere": "Math",
+            "score": 31.2,
+            "coefficient": 6,
+            "difficulty": 4,
+            "isCore": true,
+            "isOptional": false
+          },
+          {
+            "matiere": "Physique",
+            "score": 31.2,
+            "coefficient": 6,
+            "difficulty": 4,
+            "isCore": true,
+            "isOptional": false
+          },
+          {
+            "matiere": "SVT",
+            "score": 26,
+            "coefficient": 5,
+            "difficulty": 4,
+            "isCore": true,
+            "isOptional": false
+          },
+          {
+            "matiere": "Philosophie",
+            "score": 4,
+            "coefficient": 2,
+            "difficulty": 2,
+            "isCore": false,
+            "isOptional": false
+          }
+        ]
+      },
+      "scores": [
+        {
+          "matiere": "Math",
+          "subjectCode": "math",
+          "coef": 6,
+          "diff": 4,
+          "isCore": true,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 31.200000000000003
+        },
+        {
+          "matiere": "Physique",
+          "subjectCode": "physique",
+          "coef": 6,
+          "diff": 4,
+          "isCore": true,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 31.200000000000003
+        },
+        {
+          "matiere": "SVT",
+          "subjectCode": "svt",
+          "coef": 5,
+          "diff": 4,
+          "isCore": true,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 26
+        },
+        {
+          "matiere": "Français",
+          "subjectCode": "francais",
+          "coef": 2,
+          "diff": 1,
+          "isCore": false,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 2
+        },
+        {
+          "matiere": "Anglais",
+          "subjectCode": "anglais",
+          "coef": 2,
+          "diff": 1,
+          "isCore": false,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 2
+        },
+        {
+          "matiere": "Philosophie",
+          "subjectCode": "philo",
+          "coef": 2,
+          "diff": 2,
+          "isCore": false,
+          "isOptional": false,
+          "hasExam": false,
+          "score": 4
+        }
+      ],
+      "metadata": {
+        "classCode": "Terminale D",
+        "examMode": false,
+        "maxSessionsPerDay": 3,
+        "maxHoursPerWeek": 18,
+        "preferredStudyMoments": [
+          "matin",
+          "soir"
+        ],
+        "importantDays": {
+          "Math": [
+            "Lundi"
+          ]
+        },
+        "generatedAt": "2026-04-01T09:23:37.194Z",
+        "slotDurationMinutes": 30,
+        "microRevisionPolicy": {
+          "beforeCourseMinutes": 10,
+          "duringCourseMinutes": 5
+        }
+      }
+    }
+  },
+  "noti": {
+    "noti_110d9712-8e47-45f9-b643-7128a832ce39": {
+      "notificationId": "noti_110d9712-8e47-45f9-b643-7128a832ce39",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Jeudi",
+      "hour": "07:00",
+      "subjectName": "Math",
+      "sessionLabel": "Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-02T07:00:00.000Z",
+      "reminderAt": "2026-04-02T06:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-02T06:50:34.573Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-02T07:05:34.589Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-02T07:05:34.589Z"
+    },
+    "noti_138c1350-bd40-41a0-9a5d-f2e41fabcc53": {
+      "notificationId": "noti_138c1350-bd40-41a0-9a5d-f2e41fabcc53",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Samedi",
+      "hour": "07:00",
+      "subjectName": "Anglais",
+      "sessionLabel": "Anglais",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-04T07:00:00.000Z",
+      "reminderAt": "2026-04-04T06:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-04T06:50:56.749Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-04T07:05:56.768Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-04T07:05:56.768Z"
+    },
+    "noti_26593823-142c-4b5f-9aff-524ffc868c2c": {
+      "notificationId": "noti_26593823-142c-4b5f-9aff-524ffc868c2c",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Mercredi",
+      "hour": "07:00",
+      "subjectName": "Math",
+      "sessionLabel": "Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-01T07:00:00.000Z",
+      "reminderAt": "2026-04-01T06:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": null,
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-01T14:01:13.932Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-01T14:01:13.932Z"
+    },
+    "noti_38aad38d-f67a-41b8-970f-451157df5bc7": {
+      "notificationId": "noti_38aad38d-f67a-41b8-970f-451157df5bc7",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Mardi",
+      "hour": "09:00",
+      "subjectName": "Physique",
+      "sessionLabel": "Physique",
+      "durationHours": 1,
+      "sessionStartAt": "2026-03-31T09:00:00.000Z",
+      "reminderAt": "2026-03-31T08:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": null,
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-01T14:01:13.932Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-01T14:01:13.932Z"
+    },
+    "noti_3d463b6c-6403-47eb-a154-28e21d8d8149": {
+      "notificationId": "noti_3d463b6c-6403-47eb-a154-28e21d8d8149",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Vendredi",
+      "hour": "09:00",
+      "subjectName": "Physique",
+      "sessionLabel": "Physique",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-03T09:00:00.000Z",
+      "reminderAt": "2026-04-03T08:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-04T03:38:56.473Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-04T03:38:56.473Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-04T03:38:56.473Z"
+    },
+    "noti_44ab42c8-4fe9-42a4-b93c-1a812afb5679": {
+      "notificationId": "noti_44ab42c8-4fe9-42a4-b93c-1a812afb5679",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Samedi",
+      "hour": "10:00",
+      "subjectName": "Philosophie",
+      "sessionLabel": "Philosophie",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-04T10:00:00.000Z",
+      "reminderAt": "2026-04-04T09:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-04T09:50:57.058Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-04T10:05:57.081Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-04T10:05:57.081Z"
+    },
+    "noti_4d74a0ef-0cae-4ac3-881d-ce4b6053e8fc": {
+      "notificationId": "noti_4d74a0ef-0cae-4ac3-881d-ce4b6053e8fc",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Mardi",
+      "hour": "07:00",
+      "subjectName": "Math",
+      "sessionLabel": "Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-03-31T07:00:00.000Z",
+      "reminderAt": "2026-03-31T06:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": null,
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-01T14:01:13.932Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-01T14:01:13.932Z"
+    },
+    "noti_6a032b4c-4a77-4d3c-9faf-fde0fdc122c2": {
+      "notificationId": "noti_6a032b4c-4a77-4d3c-9faf-fde0fdc122c2",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Samedi",
+      "hour": "19:00",
+      "subjectName": "Math",
+      "sessionLabel": "Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-04T19:00:00.000Z",
+      "reminderAt": "2026-04-04T18:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-04T21:00:25.678Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-04T21:00:25.678Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-04T21:00:25.678Z"
+    },
+    "noti_6c42d6bf-fe36-43a4-9888-be8011fb655c": {
+      "notificationId": "noti_6c42d6bf-fe36-43a4-9888-be8011fb655c",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Samedi",
+      "hour": "18:00",
+      "subjectName": "Math",
+      "sessionLabel": "Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-04T18:00:00.000Z",
+      "reminderAt": "2026-04-04T17:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-04T21:00:25.678Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-04T21:00:25.678Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-04T21:00:25.678Z"
+    },
+    "noti_80eda797-d158-4ae0-8d24-299587fd3b3a": {
+      "notificationId": "noti_80eda797-d158-4ae0-8d24-299587fd3b3a",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Vendredi",
+      "hour": "07:00",
+      "subjectName": "Math",
+      "sessionLabel": "Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-03T07:00:00.000Z",
+      "reminderAt": "2026-04-03T06:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-04T03:38:56.474Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-04T03:38:56.474Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-04T03:38:56.474Z"
+    },
+    "noti_82c0051a-c193-4fc3-ac85-f6e60cb4da2f": {
+      "notificationId": "noti_82c0051a-c193-4fc3-ac85-f6e60cb4da2f",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Jeudi",
+      "hour": "09:00",
+      "subjectName": "Physique",
+      "sessionLabel": "Physique",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-02T09:00:00.000Z",
+      "reminderAt": "2026-04-02T08:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-02T08:50:34.720Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-02T09:05:34.738Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-02T09:05:34.738Z"
+    },
+    "noti_890344f3-2100-4e77-b0cd-0dfc05f311e0": {
+      "notificationId": "noti_890344f3-2100-4e77-b0cd-0dfc05f311e0",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Dimanche",
+      "hour": "22:00",
+      "subjectName": "Math",
+      "sessionLabel": "Revision Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-05T22:00:00.000Z",
+      "reminderAt": "2026-04-05T21:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-05T22:59:33.514Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-05T22:59:33.517Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-05T22:59:33.517Z"
+    },
+    "noti_a651f5d5-f1ea-4f67-9c8b-b5cb3ebfacd5": {
+      "notificationId": "noti_a651f5d5-f1ea-4f67-9c8b-b5cb3ebfacd5",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Mercredi",
+      "hour": "09:00",
+      "subjectName": "Physique",
+      "sessionLabel": "Physique",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-01T09:00:00.000Z",
+      "reminderAt": "2026-04-01T08:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": null,
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-01T14:01:13.932Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-01T14:01:13.932Z"
+    },
+    "noti_bec39d40-07f2-4ec4-a223-23a3b04e4d72": {
+      "notificationId": "noti_bec39d40-07f2-4ec4-a223-23a3b04e4d72",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Dimanche",
+      "hour": "20:00",
+      "subjectName": "Math",
+      "sessionLabel": "Revision Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-05T20:00:00.000Z",
+      "reminderAt": "2026-04-05T19:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-05T19:54:06.443Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-05T20:05:06.533Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-05T20:05:06.533Z"
+    },
+    "noti_c57a2b99-9f19-4392-b24e-352d5fc6c9ae": {
+      "notificationId": "noti_c57a2b99-9f19-4392-b24e-352d5fc6c9ae",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Samedi",
+      "hour": "09:00",
+      "subjectName": "Math",
+      "sessionLabel": "Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-04T09:00:00.000Z",
+      "reminderAt": "2026-04-04T08:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-04T08:50:56.953Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-04T09:05:56.975Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-04T09:05:56.975Z"
+    },
+    "noti_e6a17354-8421-4a9a-8ef2-fd9b2ecaa41d": {
+      "notificationId": "noti_e6a17354-8421-4a9a-8ef2-fd9b2ecaa41d",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Dimanche",
+      "hour": "21:00",
+      "subjectName": "Math",
+      "sessionLabel": "Revision Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-05T21:00:00.000Z",
+      "reminderAt": "2026-04-05T20:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-05T20:50:27.793Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-05T22:59:33.519Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-05T22:59:33.519Z"
+    },
+    "noti_eaae8494-e47c-496c-a47b-76bcb79be596": {
+      "notificationId": "noti_eaae8494-e47c-496c-a47b-76bcb79be596",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Dimanche",
+      "hour": "09:00",
+      "subjectName": "Math",
+      "sessionLabel": "Math",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-05T09:00:00.000Z",
+      "reminderAt": "2026-04-05T08:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-05T08:50:26.887Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-05T09:05:26.931Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-05T09:05:26.931Z"
+    },
+    "noti_ff3e3d65-f710-4781-a6aa-cfa00db50674": {
+      "notificationId": "noti_ff3e3d65-f710-4781-a6aa-cfa00db50674",
+      "studentUid": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b",
+      "scheduleId": "stu_c315d6ed-3eb2-4b4c-940d-f303a7c7d77b-ab6baf31-5db4-47dd-ac14-ccdd7d75edf6",
+      "weekKey": "2026-W14",
+      "classCode": "Terminale D",
+      "day": "Dimanche",
+      "hour": "07:00",
+      "subjectName": "Français",
+      "sessionLabel": "Français",
+      "durationHours": 1,
+      "sessionStartAt": "2026-04-05T07:00:00.000Z",
+      "reminderAt": "2026-04-05T06:50:00.000Z",
+      "reminderLeadMinutes": 10,
+      "status": "auto_completed_unconfirmed",
+      "response": null,
+      "sentAt": "2026-04-05T06:50:26.652Z",
+      "respondedAt": null,
+      "rescheduledTo": null,
+      "autoCompletedAt": "2026-04-05T07:05:26.671Z",
+      "sms": {
+        "enabled": false,
+        "phone": "",
+        "status": "disabled"
+      },
+      "createdAt": "2026-04-01T14:01:13.932Z",
+      "updatedAt": "2026-04-05T07:05:26.671Z"
+    }
+  },
+  "missed_sessions": {},
+  "sms_dispatches": {},
+  "telegram_dispatches": {}
+}

@@ -1,0 +1,158 @@
+f
+/* ------------------------
+   RESET
+-------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ------------------------
+   GLOBAL
+-------------------------*/
+body {
+    background: #f4f6f9;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #222;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* ------------------------
+   CARD FORM STYLE
+-------------------------*/
+.form-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.group-row {
+    display: flex;
+    gap: 20px;
+}
+
+.group {
+    flex: 1;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+input[type="file"] {
+    border: none;
+    background: transparent;
+}
+
+/* ------------------------
+   BUTTONS
+-------------------------*/
+button {
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #007bff;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #0056d8;
+}
+
+.danger-btn {
+    background: #e63946;
+    color: white;
+}
+
+.danger-btn:hover {
+    background: #c92131;
+}
+
+/* ------------------------
+   PREVIEW PDF LIST
+-------------------------*/
+.list-container {
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+.item-card {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-info span {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.btn-area {
+    display: flex;
+    gap: 10px;
+}
+
+/* ------------------------
+   RESPONSIVE MOBILE
+-------------------------*/
+@media (max-width: 680px) {
+    .group-row {
+        flex-direction: column;
+    }
+
+    .item-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn-area {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dispatching - Safio</title>
+  
+    <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 20px auto; padding: 16px; }
+    label { display:block; margin-top:8px; }
+    input, select, textarea { width:100%; padding:8px; margin-top:4px; }
+    .row { display:flex; gap:12px; }
+    .col { flex:1; }
+    button { padding:10px 16px; margin-top:10px; }
+    .item { border:1px solid #ddd; padding:8px; margin-top:8px; border-radius:6px;}
+  </style>
+</head>
+<body>
+  <h2>Dispatching (ajout / suppression)</h2>
+
+  <label>Type
+    <select id="type">
+      <option value="exos">Exercice</option>
+      <option value="sujets">Sujet</option>
+      <option value="lecons">Leçon</option>
+      <option value="ecoles">École</option>
+      <option value="classes">Classe</option>
+    </select>
+  </label>
+
+  <label>Metadata (JSON) — ex: {"titre":"Dérivées","niveau":"terminal","matiere":"mathematiques","serie":"C","ecoleId":"..."}
+    <textarea id="metadata" rows="4">{ "titre": "", "niveau": "terminal", "matiere": "", "serie": "", "ecoleId": "" }</textarea>
+  </label>
+
+  <label>Fichiers (images ou pdf) — multiple
+    <input type="file" id="files" multiple accept="image/*,application/pdf" />
+  </label>
+
+  <div class="row">
+    <button id="convertAndUpload">Convertir localement (images → PDF) & Upload</button>
+    <button id="uploadRaw">Uploader (backend convertira si images)</button>
+  </div>
+
+  <h3>Liste des items</h3>
+  <div class="row">
+    <div class="col">
+      <label>Type à lister
+        <select id="listType">
+          <option value="exos">Exos</option>
+          <option value="sujets">Sujets</option>
+          <option value="lecons">Lecons</option>
+          <option value="ecoles">Ecoles</option>
+          <option value="classes">Classes</option>
+        </select>
+      </label>
+    </div>
+    <div class="col">
+      <label>ecoleId (pour classes)
+        <input id="listEcoleId" placeholder="optionnel pour classes"/>
+      </label>
+    </div>
+    <div class="col">
+      <button id="refreshList">Rafraîchir</button>
+    </div>
+  </div>
+
+  <div id="list"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const backendBase = "http://localhost:4000";
+
+async function fileToDataUrl(file) {
+  return new Promise((res, rej) => {
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = rej;
+    r.readAsDataURL(file);
+  });
+}
+
+// convertir fichiers images en un seul PDF côté client (jsPDF)
+async function imagesToPdfBlob(files) {
+  const { jsPDF } = window.jspdf;
+  const pdf = new jsPDF({ unit: "mm", format: "a4" });
+
+  let first = true;
+  for (const f of files) {
+    if (!f.type.startsWith("image/")) continue;
+    const dataUrl = await fileToDataUrl(f);
+    if (!first) pdf.addPage();
+    // taille image en mm approximative
+    pdf.addImage(dataUrl, "JPEG", 10, 10, 190, 270);
+    first = false;
+  }
+  const blob = pdf.output("blob");
+  return blob;
+}
+
+document.getElementById("convertAndUpload").addEventListener("click", async () => {
+  const files = Array.from(document.getElementById("files").files);
+  if (!files.length) return alert("choisis des fichiers");
+
+  // split images and pdfs
+  const images = files.filter(f => f.type.startsWith("image/"));
+  const pdfs = files.filter(f => f.type === "application/pdf");
+
+  let uploadBlob;
+  if (images.length) {
+    uploadBlob = await imagesToPdfBlob(images);
+  } else if (pdfs.length) {
+    // si déjà des pdfs: on prend le premier
+    uploadBlob = pdfs[0];
+  } else {
+    return alert("fichiers invalides");
+  }
+
+  const metadata = JSON.parse(document.getElementById("metadata").value || "{}");
+  const type = document.getElementById("type").value;
+
+  const form = new FormData();
+  form.append("type", type);
+  form.append("metadata", JSON.stringify(metadata));
+  form.append("files", new File([uploadBlob], `upload_${Date.now()}.pdf`, { type: "application/pdf" }));
+
+  const resp = await fetch(`${backendBase}/api/upload`, { method: "POST", body: form });
+  const data = await resp.json();
+  alert(JSON.stringify(data));
+});
+
+document.getElementById("uploadRaw").addEventListener("click", async () => {
+  const files = Array.from(document.getElementById("files").files);
+  if (!files.length) return alert("choisis des fichiers");
+  const metadata = JSON.parse(document.getElementById("metadata").value || "{}");
+  const type = document.getElementById("type").value;
+
+  const form = new FormData();
+  form.append("type", type);
+  form.append("metadata", JSON.stringify(metadata));
+  files.forEach(f => form.append("files", f));
+
+  const resp = await fetch(`${backendBase}/api/upload`, { method: "POST", body: form });
+  const data = await resp.json();
+  alert(JSON.stringify(data));
+});
+
+async function refreshList() {
+  const type = document.getElementById("listType").value;
+  const ecoleId = document.getElementById("listEcoleId").value.trim();
+  let url = `${backendBase}/api/list/${type}`;
+  if (type === "classes" && ecoleId) url += `?ecoleId=${encodeURIComponent(ecoleId)}`;
+  const resp = await fetch(url);
+  const list = await resp.json();
+  const container = document.getElementById("list");
+  container.innerHTML = "";
+  if (!Array.isArray(list)) return container.innerText = "error listing";
+  list.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerHTML = `<strong>${item.titre || item.nomEcole || item.matiere || item.id || item.ecoleId || ""}</strong>
+      <div>id: ${item.id}</div>
+      <div>niveau: ${item.niveau || ""} - matiere: ${item.matiere || ""} - serie: ${item.serie || ""}</div>
+      <div>pdf: ${item.pdfUrl ? `<a href="${item.pdfUrl}" target="_blank">voir</a>` : "—"}</div>
+      <div style="margin-top:6px;">
+        <button data-id="${item.id}" class="btn-delete" data-ecoleid="${item.ecoleId||''}">Supprimer</button>
+      </div>`;
+    container.appendChild(div);
+  });
+
+  // add delete handlers
+  container.querySelectorAll(".btn-delete").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const docId = btn.getAttribute("data-id");
+      const ecoleId = btn.getAttribute("data-ecoleid") || undefined;
+      if (!confirm("Supprimer ?")) return;
+      const resp = await fetch(`${backendBase}/api/delete`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type, docId, ecoleId })
+      });
+      const data = await resp.json();
+      alert(JSON.stringify(data));
+      refreshList();
+    });
+  });
+}
+
+document.getElementById("refreshList").addEventListener("click", refreshList);
+refreshList();
+</script>
+</body>
+</html>

@@ -1,0 +1,873 @@
+/* ============================================
+   SAFIO EDU - Modern Design System
+   Colors: Blue (#0066FF) & Pink (#FF3399) Tech Theme
+   Team: SOCAF TDY INDUSTRIAL
+   ============================================ */
+
+/* ---------- CSS Variables (Design Tokens) ---------- */
+:root {
+  /* Primary Colors */
+  --safio-blue: #0066FF;
+  --safio-blue-light: #3388FF;
+  --safio-blue-dark: #0044CC;
+  --safio-pink: #FF3399;
+  --safio-pink-light: #FF66B2;
+  --safio-pink-dark: #CC2277;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--safio-blue) 0%, var(--safio-pink) 100%);
+  --gradient-primary-hover: linear-gradient(135deg, var(--safio-blue-light) 0%, var(--safio-pink-light) 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(255, 51, 153, 0.1) 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(0, 102, 255, 0.3) 0%, rgba(255, 51, 153, 0.3) 100%);
+  
+  /* Dark Mode (Default) */
+  --bg-primary: #050A15;
+  --bg-secondary: #0A1628;
+  --bg-tertiary: #0F1F3A;
+  --bg-card: rgba(15, 31, 58, 0.8);
+  --bg-card-hover: rgba(20, 40, 75, 0.9);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-glow: rgba(0, 102, 255, 0.3);
+  --text-primary: #FFFFFF;
+  --text-secondary: #B0C4DE;
+  --text-muted: #6B7C93;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-glow-blue: 0 0 30px rgba(0, 102, 255, 0.3);
+  --shadow-glow-pink: 0 0 30px rgba(255, 51, 153, 0.3);
+  --shadow-glow-mixed: 0 0 40px rgba(0, 102, 255, 0.2), 0 0 60px rgba(255, 51, 153, 0.15);
+  
+  /* Typography */
+  --font-primary: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-display: 'Plus Jakarta Sans', var(--font-primary);
+  
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Light Mode */
+body.theme-light {
+  --bg-primary: #F8FAFF;
+  --bg-secondary: #EEF3FF;
+  --bg-tertiary: #E4ECFF;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: rgba(255, 255, 255, 1);
+  --border-color: rgba(0, 102, 255, 0.15);
+  --border-glow: rgba(0, 102, 255, 0.25);
+  --text-primary: #0A1628;
+  --text-secondary: #3A4A5C;
+  --text-muted: #6B7C93;
+  --shadow-sm: 0 2px 8px rgba(0, 50, 120, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 50, 120, 0.12);
+  --shadow-lg: 0 16px 48px rgba(0, 50, 120, 0.16);
+  --shadow-glow-blue: 0 0 30px rgba(0, 102, 255, 0.15);
+  --shadow-glow-pink: 0 0 30px rgba(255, 51, 153, 0.15);
+  --shadow-glow-mixed: 0 0 40px rgba(0, 102, 255, 0.1), 0 0 60px rgba(255, 51, 153, 0.08);
+}
+
+/* ---------- Base Styles ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Animated Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse 80% 50% at 20% -20%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 120%, rgba(255, 51, 153, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Floating Particles Animation */
+@keyframes float-particle {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--safio-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--safio-pink);
+}
+
+/* ---------- Container & Layout ---------- */
+.safio-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.safio-section {
+  padding: var(--space-3xl) 0;
+}
+
+/* ---------- Buttons ---------- */
+.safio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.safio-btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-md), var(--shadow-glow-mixed);
+}
+
+.safio-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-mixed);
+}
+
+.safio-btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.safio-btn-primary:hover::after {
+  opacity: 1;
+}
+
+.safio-btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+.safio-btn-secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--safio-blue);
+  transform: translateY(-2px);
+}
+
+.safio-btn-ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.safio-btn-ghost:hover {
+  background: var(--gradient-soft);
+  border-color: var(--safio-blue);
+}
+
+/* ---------- Cards ---------- */
+.safio-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  backdrop-filter: blur(20px);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.safio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.safio-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-mixed);
+}
+
+.safio-card:hover::before {
+  opacity: 1;
+}
+
+/* Glowing Card Variant */
+.safio-card-glow {
+  background: var(--bg-card);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  position: relative;
+}
+
+.safio-card-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: var(--gradient-primary);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.5;
+  filter: blur(8px);
+  transition: opacity var(--transition-base);
+}
+
+.safio-card-glow:hover::before {
+  opacity: 0.8;
+}
+
+/* ---------- Inputs & Forms ---------- */
+.safio-input {
+  width: 100%;
+  padding: var(--space-md);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.safio-input:focus {
+  outline: none;
+  border-color: var(--safio-blue);
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+}
+
+.safio-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ---------- Navigation ---------- */
+.safio-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) 0;
+  gap: var(--space-md);
+}
+
+.safio-logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.safio-nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.safio-nav-link {
+  padding: var(--space-sm) var(--space-md);
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.safio-nav-link:hover {
+  color: var(--text-primary);
+  background: var(--gradient-soft);
+}
+
+/* ---------- Tags & Badges ---------- */
+.safio-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-md);
+  background: var(--gradient-soft);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--safio-blue);
+}
+
+.safio-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 var(--space-sm);
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 51, 153, 0.4);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.6s ease forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.6s ease forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-card) 0%,
+    var(--bg-tertiary) 50%,
+    var(--bg-card) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Stagger Animation Delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* Intersection Observer Animation Triggers */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Loading Spinner ---------- */
+.safio-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--safio-blue);
+  border-right-color: var(--safio-pink);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.safio-spinner-lg {
+  width: 60px;
+  height: 60px;
+  border-width: 4px;
+}
+
+/* Loading Overlay */
+.safio-loading {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  z-index: 9999;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.safio-loading.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.safio-loading-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ---------- Theme Toggle ---------- */
+.safio-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.safio-theme-toggle:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--safio-blue);
+}
+
+.safio-theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-primary);
+  transition: transform var(--transition-base);
+}
+
+.safio-theme-toggle:hover svg {
+  transform: rotate(15deg);
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--safio-blue);
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: rgba(0, 102, 255, 0.3);
+  color: var(--text-primary);
+}
+
+/* ---------- Responsive Utilities ---------- */
+@media (max-width: 1024px) {
+  .safio-container {
+    padding: 0 var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .safio-section {
+    padding: var(--space-2xl) 0;
+  }
+  
+  .safio-nav {
+    flex-wrap: wrap;
+  }
+  
+  .safio-nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .safio-container {
+    padding: 0 var(--space-md);
+  }
+  
+  .safio-btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.875rem;
+  }
+}
+
+/* ---------- Hero Section Styles ---------- */
+.safio-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.safio-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 70% 80%, rgba(255, 51, 153, 0.08) 0%, transparent 40%);
+  animation: float 20s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* ---------- Grid System ---------- */
+.safio-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.safio-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.safio-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.safio-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .safio-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .safio-grid-2,
+  .safio-grid-3,
+  .safio-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Icon Styles ---------- */
+.safio-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-soft);
+  border-radius: var(--radius-md);
+  color: var(--safio-blue);
+}
+
+.safio-icon-lg {
+  width: 64px;
+  height: 64px;
+  font-size: 1.5rem;
+}
+
+/* ---------- Stats & KPIs ---------- */
+.safio-stat {
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.safio-stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.safio-stat-label {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-top: var(--space-xs);
+}
+
+/* ---------- Testimonials ---------- */
+.safio-testimonial {
+  position: relative;
+  padding: var(--space-xl);
+}
+
+.safio-testimonial::before {
+  content: '"';
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  font-size: 4rem;
+  line-height: 1;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.3;
+}
+
+/* ---------- Team Member Card ---------- */
+.safio-team-card {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.safio-team-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto var(--space-md);
+  background: var(--gradient-primary);
+  padding: 3px;
+}
+
+.safio-team-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bg-secondary);
+}
+
+.safio-team-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.safio-team-role {
+  color: var(--safio-pink);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+.safio-footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: var(--space-2xl) 0 var(--space-lg);
+}
+
+.safio-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.safio-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .safio-footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .safio-footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+}
+
+/* ---------- Particles Background ---------- */
+.safio-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.safio-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--safio-blue);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.safio-particle:nth-child(odd) {
+  background: var(--safio-pink);
+}

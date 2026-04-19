@@ -1,0 +1,47 @@
+body {
+  font-family: Inter, Arial, sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+.container {
+  max-width: 540px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+.card {
+  display: grid;
+  gap: 12px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+input, button {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #475569;
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.btn-secondary {
+  background: #334155;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+}
+.message {
+  min-height: 24px;
+}
+.error { color: #fda4af; }
+.success { color: #86efac; }
+a { color: #93c5fd; }

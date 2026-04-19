@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAFIO EDU — Étude de fonction</title>
+  <style>
+    :root{--bg:#0b1220;--card:#111a2b;--stroke:#28344d;--txt:#eef2ff;--muted:#9aa4b2;--accent:#ff6f3c;--ok:#34d399}
+    body.theme-light{--bg:#f4f8ff;--card:#fff;--stroke:#d8e2f3;--txt:#0f172a;--muted:#475569;--accent:#2563eb;--ok:#059669}
+    *{box-sizing:border-box;font-family:Inter,system-ui,Arial,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--txt);padding:16px}
+    .wrap{max-width:1200px;margin:0 auto;display:grid;gap:12px}
+    .top{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+    .top a,.top button{padding:9px 12px;border-radius:10px;border:1px solid var(--stroke);background:var(--card);color:var(--txt);text-decoration:none}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:14px;padding:14px}
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
+    .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+    .toolbar button{border:1px solid var(--stroke);background:transparent;color:var(--txt);padding:8px 10px;border-radius:8px;cursor:pointer}
+    input,button.main{width:100%;padding:11px;border-radius:10px;border:1px solid var(--stroke);background:#0a1322;color:var(--txt)}
+    body.theme-light input{background:#fff}
+    button.main{background:linear-gradient(135deg,var(--accent),#ff996f);border:none;cursor:pointer;font-weight:700}
+    .actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+    #preview{min-height:52px;padding:8px;border-radius:10px;background:rgba(127,127,127,.1)}
+    .variation-table{width:100%;border-collapse:collapse;margin-top:10px;overflow:hidden;border-radius:12px}
+    .variation-table th,.variation-table td{border:1px solid var(--stroke);padding:9px;text-align:center}
+    .variation-table th{background:rgba(127,127,127,.12)}
+    .chip{display:inline-block;padding:4px 8px;border-radius:999px;border:1px solid var(--stroke);margin-right:6px}
+    canvas{width:100%;height:340px;background:#07101f;border:1px solid var(--stroke);border-radius:10px}
+    body.theme-light canvas{background:#f8fbff}
+    .muted{color:var(--muted)}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.actions{grid-template-columns:1fr}}
+  </style>
+  <link rel="stylesheet" href="/css/coursera-modern.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a href="index.html">← Accueil</a>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a href="planner.html">Emploi du temps</a>
+        <a href="etude-fonction.html">Étude de fonction</a>
+        <a href="index.html#physique">Physique</a>
+        <a href="chemistry-lab.html">Lab chimie</a>
+        <button id="themeBtn" onclick="toggleTheme()">Mode sombre</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Étude complète de fonction</h2>
+        <p class="muted">Supporte <b>ln</b>, log, exp, sqrt, tan, abs, fractions, etc.</p>
+        <input id="fonction" placeholder="Ex: ln(x)/(x-1) + sqrt(x+2)" />
+        <div class="toolbar">
+          <button onclick="insert('ln()')">ln</button><button onclick="insert('log()')">log</button><button onclick="insert('exp()')">exp</button>
+          <button onclick="insert('sqrt()')">√</button><button onclick="insert('abs()')">|x|</button><button onclick="insert('tan()')">tan</button>
+          <button onclick="insert('^2')">x²</button><button onclick="insert('/( )')">fraction</button>
+        </div>
+        <div class="actions">
+          <button class="main" id="btnPreview">Aperçu</button>
+          <button class="main" id="btnAnalyse">Analyse complète</button>
+          <button class="main" id="btnReset">Réinitialiser</button>
+        </div>
+        <div id="preview"></div>
+        <div id="resume" style="margin-top:10px"></div>
+      </section>
+
+      <section class="card">
+        <h3>Courbe représentative</h3>
+        <canvas id="graph"></canvas>
+      </section>
+    </div>
+
+    <section class="card" id="variation"></section>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.0/lib/browser/math.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+const inputEl=document.getElementById("fonction");
+const previewEl=document.getElementById("preview");
+const variationEl=document.getElementById("variation");
+const resumeEl=document.getElementById("resume");
+const canvas=document.getElementById("graph");
+const ctx=canvas.getContext("2d");
+
+function normalizeExpr(s){
+  return s.replace(/\bln\s*\(/g,'log(').replace(/\btg\s*\(/g,'tan(').replace(/\bcot\s*\(/g,'cot(').replace(/\bcbrt\s*\(/g,'cbrt(');
+}
+function insert(text){const st=inputEl.selectionStart,en=inputEl.selectionEnd;inputEl.value=inputEl.value.slice(0,st)+text+inputEl.value.slice(en);inputEl.focus();const p=text.includes('()')?st+text.indexOf('()')+1:st+text.length;inputEl.selectionStart=inputEl.selectionEnd=p;previewFunction();}
+function latexify(s){return s.replace(/log\((.*?)\)/g,'\\ln($1)').replace(/sqrt\((.*?)\)/g,'\\sqrt{$1}').replace(/abs\((.*?)\)/g,'\\lvert $1 \\rvert');}
+function previewFunction(){const raw=inputEl.value.trim();if(!raw){previewEl.innerHTML='';return;} previewEl.innerHTML=`\\[f(x)=${latexify(raw)}\\]`; if(window.MathJax?.typesetPromise)MathJax.typesetPromise([previewEl]).catch(()=>{});}
+
+function safeEval(comp,x){try{const v=comp.evaluate({x}); return Number.isFinite(v)?v:null;}catch{return null;}}
+function domainIntervals(comp,min=-12,max=12,step=0.05){
+  const intervals=[]; let inSeg=false,start=min;
+  for(let x=min;x<=max;x+=step){const ok=safeEval(comp,x)!==null; if(ok&&!inSeg){start=x;inSeg=true;} if(!ok&&inSeg){intervals.push([start,x-step]);inSeg=false;}}
+  if(inSeg) intervals.push([start,max]);
+  return intervals.filter(([a,b])=>b-a>0.03);
+}
+function derivZeros(dComp,intervals){
+  const pts=[];
+  for(const [a,b] of intervals){
+    let prevX=a, prev=safeEval(dComp,a);
+    for(let x=a+0.05;x<=b;x+=0.05){
+      const cur=safeEval(dComp,x);
+      if(cur===null||prev===null){prevX=x;prev=cur;continue;}
+      if(Math.abs(cur)<1e-4) pts.push(x);
+      if(prev*cur<0) pts.push((prevX+x)/2);
+      prevX=x; prev=cur;
+    }
+  }
+  return [...new Set(pts.map(v=>Math.round(v*100)/100))].sort((a,b)=>a-b);
+}
+function fmt(x){if(x===null||x===undefined||Number.isNaN(x))return '?'; if(!Number.isFinite(x))return x>0?'+∞':'-∞'; if(Math.abs(x)>9999)return x.toExponential(2); return Math.abs(x-Math.round(x))<1e-6?String(Math.round(x)):Number(x).toFixed(3).replace(/\.000$/,'');}
+function lim(comp,x,d){const v=safeEval(comp,x+d*1e-4); return v===null?'?':fmt(v);}
+function analyze(){
+  const src=inputEl.value.trim(); if(!src){alert('Écris une fonction'); return;}
+  let fNode; try{fNode=math.parse(normalizeExpr(src));}catch{alert('Syntaxe invalide');return;}
+  const fComp=fNode.compile();
+  let dNode, dComp; try{dNode=math.derivative(fNode,'x'); dComp=dNode.compile();}catch{alert('Dérivée impossible pour cette expression');return;}
+
+  const domains=domainIntervals(fComp);
+  const z=derivZeros(dComp,domains);
+  const breaks=[]; domains.forEach(([a,b])=>breaks.push(a,b));
+  const all=[...new Set([...breaks,...z].map(v=>Math.round(v*100)/100))].sort((a,b)=>a-b);
+
+  const rows=[];
+  for(let i=0;i<all.length-1;i++){
+    const a=all[i],b=all[i+1],m=(a+b)/2;
+    const fa=lim(fComp,a,+1), fb=lim(fComp,b,-1);
+    const dv=safeEval(dComp,m); const sign=dv===null?'?':dv>1e-5?'+':dv<-1e-5?'-':'0';
+    rows.push({int:`(${fmt(a)} ; ${fmt(b)})`,sign,var:`${fa} → ${fb}`});
+  }
+
+  const domainTxt=domains.length?domains.map(([a,b])=>`[${fmt(a)} ; ${fmt(b)}]`).join(' ∪ '):'Aucun domaine détecté';
+  resumeEl.innerHTML=`<span class='chip'>Domaine: ${domainTxt}</span><span class='chip'>f'(x): ${dNode.toString()}</span>`;
+
+  let html='<h3>Tableau de variation</h3><table class="variation-table"><tr><th>Intervalle</th><th>Signe de f\'(x)</th><th>Variation de f</th></tr>';
+  rows.forEach(r=>html+=`<tr><td>${r.int}</td><td><b>${r.sign}</b></td><td>${r.var}</td></tr>`);
+  html+='</table>';
+
+  const asy=[];
+  for(let x=-12;x<=12;x+=0.1){if(safeEval(fComp,x)===null&&safeEval(fComp,x-0.01)!==null&&safeEval(fComp,x+0.01)!==null)asy.push(Math.round(x*10)/10);}
+  const limP=safeEval(fComp,1e4), limN=safeEval(fComp,-1e4);
+  html+=`<h3>Étude complète</h3><ul><li><b>Domaine :</b> ${domainTxt}</li><li><b>Asymptotes verticales (approx.) :</b> ${asy.length?asy.join(', '):'Aucune détectée'}</li><li><b>Limite x→+∞ :</b> ${fmt(limP)}</li><li><b>Limite x→-∞ :</b> ${fmt(limN)}</li></ul>`;
+
+  variationEl.innerHTML=html;
+  previewFunction();
+  drawGraph(fComp,all);
+}
+function clearCanvas(){ctx.clearRect(0,0,canvas.width,canvas.height);}
+function drawGraph(comp,marks){
+  const dpr=window.devicePixelRatio||1,W=canvas.clientWidth,H=canvas.clientHeight; canvas.width=W*dpr; canvas.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); clearCanvas();
+  const x0=W/2,y0=H/2,s=35;
+  ctx.strokeStyle='rgba(127,127,127,.6)'; ctx.beginPath(); ctx.moveTo(0,y0); ctx.lineTo(W,y0); ctx.moveTo(x0,0); ctx.lineTo(x0,H); ctx.stroke();
+  ctx.strokeStyle=getComputedStyle(document.body).getPropertyValue('--accent').trim(); ctx.lineWidth=2; ctx.beginPath(); let gap=true;
+  for(let px=0;px<=W;px++){const x=(px-x0)/s; const y=safeEval(comp,x); if(y===null||Math.abs(y)>1e3){gap=true; continue;} const py=y0-y*s; if(gap){ctx.moveTo(px,py); gap=false;} else ctx.lineTo(px,py);} ctx.stroke();
+  ctx.setLineDash([5,5]); ctx.strokeStyle='rgba(255,199,0,.7)';
+  marks.forEach(v=>{const px=x0+v*s; if(px>0&&px<W){ctx.beginPath();ctx.moveTo(px,0);ctx.lineTo(px,H);ctx.stroke();}});
+  ctx.setLineDash([]);
+}
+
+document.getElementById('btnPreview').addEventListener('click',previewFunction);
+document.getElementById('btnAnalyse').addEventListener('click',analyze);
+document.getElementById('btnReset').addEventListener('click',()=>{inputEl.value='';previewEl.innerHTML='';variationEl.innerHTML='';resumeEl.innerHTML='';clearCanvas();});
+
+function applyTheme(theme){document.body.classList.toggle('theme-light',theme==='light');const b=document.getElementById('themeBtn'); if(b)b.textContent=theme==='light'?'Mode clair':'Mode sombre';}
+function toggleTheme(){const next=document.body.classList.contains('theme-light')?'dark':'light';localStorage.setItem('safio-theme',next);applyTheme(next);} 
+applyTheme(localStorage.getItem('safio-theme')||'dark');
+</script>
+</body>
+</html>

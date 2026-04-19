@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAFIO EDU | Programmes academiques</title>
+  <link rel="stylesheet" href="/css/smart-platform.css" />
+  <link rel="stylesheet" href="/css/academic-programs.css" />
+</head>
+<body class="smart-platform academic-admin-page">
+  <main class="smart-shell">
+    <header class="smart-topbar fade-up">
+      <div class="brand-wrap">
+        <div class="brand-title">Programmes academiques</div>
+        <div class="brand-sub">Ajouter, modifier, supprimer les matieres et corriger les coefficients officiels.</div>
+      </div>
+      <nav class="nav-chips">
+        <a class="nav-chip" href="/pages/dashboard.html">Dashboard</a>
+        <a class="nav-chip" href="/emploi.html">Planning IA</a>
+        <a class="nav-chip" href="/index.html">Accueil</a>
+      </nav>
+    </header>
+
+    <section class="smart-grid grid-main-side">
+      <div class="smart-grid">
+        <article class="smart-card fade-up fade-delay-1">
+          <div class="program-admin-head">
+            <div>
+              <h1 class="card-title">Gestion des matieres</h1>
+              <p class="card-sub">Les modifications sont ecrites dans la collection Firestore <code>academic_programs</code>.</p>
+            </div>
+            <button class="smart-btn" id="syncOfficialBtn" type="button">Corriger depuis la circulaire n 270</button>
+          </div>
+          <div id="statusBox" class="status-box status-info" style="display:none;"></div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-2">
+          <div class="smart-form-grid">
+            <div>
+              <label class="smart-label" for="classSelect">Classe / serie</label>
+              <select class="smart-select" id="classSelect"></select>
+            </div>
+            <div>
+              <label class="smart-label" for="programLabel">Libelle</label>
+              <input class="smart-input" id="programLabel" type="text" />
+            </div>
+            <div>
+              <label class="smart-label" for="programCycle">Cycle</label>
+              <select class="smart-select" id="programCycle">
+                <option value="college">College</option>
+                <option value="lycee">Lycee</option>
+              </select>
+            </div>
+            <div>
+              <label class="smart-label" for="programOrder">Ordre</label>
+              <input class="smart-input" id="programOrder" type="number" min="1" />
+            </div>
+            <div>
+              <label class="smart-label" for="totalCoefficient">Total officiel</label>
+              <input class="smart-input" id="totalCoefficient" type="number" min="0" step="0.5" />
+            </div>
+            <div style="align-self:end;">
+              <button class="smart-btn ghost" id="saveProgramBtn" type="button">Enregistrer la classe</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-3">
+          <div class="program-admin-head">
+            <div>
+              <h2 class="card-title">Matieres de la classe</h2>
+              <p class="card-sub" id="programSummary">Selectionne une classe.</p>
+            </div>
+            <button class="smart-btn ghost" id="resetSubjectFormBtn" type="button">Nouvelle matiere</button>
+          </div>
+          <div class="table-shell">
+            <table class="smart-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Matiere</th>
+                  <th>Coefficient</th>
+                  <th>Base</th>
+                  <th>Famille</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="subjectsBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+
+      <aside class="smart-grid">
+        <article class="smart-card fade-up fade-delay-2">
+          <h2 class="card-title">Ajouter / Modifier</h2>
+          <p class="card-sub">Le code sert d identifiant stable dans la classe selectionnee.</p>
+          <form id="subjectForm" class="program-subject-form">
+            <div>
+              <label class="smart-label" for="subjectCode">Code matiere</label>
+              <input class="smart-input" id="subjectCode" type="text" placeholder="ex: math" />
+            </div>
+            <div>
+              <label class="smart-label" for="subjectName">Nom matiere</label>
+              <input class="smart-input" id="subjectName" type="text" placeholder="ex: Mathematiques" required />
+            </div>
+            <div>
+              <label class="smart-label" for="subjectCoefficient">Coefficient</label>
+              <input class="smart-input" id="subjectCoefficient" type="number" min="0" step="0.5" value="1" required />
+            </div>
+            <div>
+              <label class="smart-label" for="subjectIsCore">Matiere de base</label>
+              <select class="smart-select" id="subjectIsCore">
+                <option value="false">Non</option>
+                <option value="true">Oui</option>
+              </select>
+            </div>
+            <div>
+              <label class="smart-label" for="subjectAliases">Alias</label>
+              <textarea class="smart-input" id="subjectAliases" rows="4" placeholder="Maths, Mathematiques"></textarea>
+            </div>
+            <button class="smart-btn" type="submit" id="subjectSubmitBtn">Ajouter la matiere</button>
+          </form>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-3">
+          <h3 class="card-title">Correction PDF</h3>
+          <p class="card-sub">Le bouton de correction applique les coefficients lus dans la circulaire n 270. Les classes non presentes dans le PDF sont conservees.</p>
+          <div class="notice-list" id="officialInfo"></div>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="/js/academic-programs.js"></script>
+</body>
+</html>
+

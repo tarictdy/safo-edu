@@ -1,0 +1,353 @@
+.sandbox-item.is-heated .lab-svg {
+  filter: drop-shadow(0 0 16px rgba(255, 159, 64, 0.28));
+}
+
+.rendered-liquid {
+  transition: y 240ms ease, height 240ms ease, fill 260ms ease, opacity 260ms ease;
+}
+
+.rendered-liquid--shine,
+.rendered-liquid--heat {
+  transition: y 240ms ease, height 240ms ease, opacity 260ms ease;
+}
+
+.rendered-liquid--surface,
+.rendered-liquid--surface-shadow,
+.rendered-liquid--mix {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 2.2;
+  opacity: 0.7;
+}
+
+.rendered-liquid--surface-shadow {
+  stroke-width: 1.8;
+  opacity: 0.32;
+}
+
+.rendered-liquid--mix {
+  stroke-width: 1.9;
+  opacity: 0.34;
+}
+
+.rendered-liquid--mix.is-secondary {
+  stroke-width: 1.5;
+  opacity: 0.24;
+}
+
+.effect-bubbles circle {
+  fill: rgba(239, 252, 255, 0.88);
+  stroke: rgba(255, 255, 255, 0.55);
+  stroke-width: 1;
+}
+
+.effect-steam path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.72);
+  stroke-linecap: round;
+  stroke-width: 4;
+  filter: blur(1px);
+}
+
+.effect-smoke path {
+  fill: none;
+  stroke: rgba(96, 104, 116, 0.58);
+  stroke-linecap: round;
+  stroke-width: 6;
+  filter: blur(1.4px);
+}
+
+.effect-heat-shimmer path {
+  fill: none;
+  stroke: rgba(255, 171, 88, 0.22);
+  stroke-linecap: round;
+  stroke-width: 5;
+  filter: blur(1.6px);
+}
+
+.effect-precipitate,
+.effect-precipitate path {
+  fill: rgba(248, 249, 255, 0.95);
+}
+
+.effect-flame .flame-outer,
+.effect-reaction-flame .flame-outer {
+  fill: #ff7a1a;
+  filter: drop-shadow(0 0 8px rgba(255, 99, 26, 0.45));
+}
+
+.effect-flame .flame-mid,
+.effect-reaction-flame .flame-mid {
+  fill: #ffbb45;
+}
+
+.effect-flame .flame-core,
+.effect-reaction-flame .flame-core {
+  fill: #fff4b5;
+}
+
+.effect-reaction-flame {
+  transform-origin: 72px 112px;
+}
+
+.effect-surface-deposit path {
+  fill: none;
+  stroke: rgba(228, 229, 232, 0.92);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.effect-surface-deposit--strip path,
+.effect-surface-deposit--electrode path,
+.effect-surface-deposit--pair path {
+  stroke: rgba(241, 244, 247, 0.94);
+  stroke-width: 5;
+}
+
+.effect-flash circle {
+  fill: rgba(255, 216, 118, 0.34);
+  stroke: rgba(255, 242, 191, 0.9);
+  stroke-width: 4;
+  filter: blur(0.5px);
+}
+
+.effect-heat-glow ellipse {
+  fill: rgba(255, 122, 36, 0.32);
+  filter: blur(6px);
+}
+
+.effect-explosion__core {
+  fill: rgba(255, 170, 52, 0.64);
+  filter: blur(1.5px);
+}
+
+.effect-explosion__ring {
+  fill: none;
+  stroke: rgba(255, 221, 144, 0.9);
+  stroke-width: 6;
+}
+
+.effect-explosion__spark {
+  fill: rgba(255, 244, 188, 0.88);
+  stroke: rgba(255, 198, 82, 0.84);
+  stroke-width: 1.6;
+}
+
+.effect-meter-live__screen {
+  fill: rgba(187, 255, 203, 0.22);
+  stroke: rgba(153, 255, 176, 0.72);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 9px rgba(119, 255, 152, 0.14));
+}
+
+.effect-meter-live__text {
+  fill: #dbffe5;
+  font-family: "IBM Plex Sans", monospace;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.effect-meter-live__ring {
+  fill: none;
+  stroke: rgba(255, 228, 136, 0.86);
+  stroke-width: 4;
+}
+
+.effect-meter-live__needle {
+  fill: none;
+  stroke: rgba(255, 247, 206, 0.95);
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.effect-meter-live__mode {
+  fill: rgba(255, 231, 160, 0.88);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.effect-meter-live__jack {
+  fill: rgba(15, 27, 36, 0.84);
+  stroke: rgba(216, 237, 249, 0.72);
+  stroke-width: 1.6;
+}
+
+.effect-meter-live__jack--right {
+  stroke: rgba(255, 173, 116, 0.76);
+}
+
+.effect-ph-meter-live__screen,
+.effect-conductivity-live__screen {
+  stroke-width: 1.8;
+}
+
+.effect-ph-meter-live__screen {
+  fill: color-mix(in srgb, var(--sensor-tone, #8dff9a) 24%, transparent);
+  stroke: color-mix(in srgb, var(--sensor-tone, #8dff9a) 78%, white 12%);
+  filter: drop-shadow(0 0 8px rgba(152, 241, 136, 0.14));
+}
+
+.effect-conductivity-live__screen {
+  fill: color-mix(in srgb, var(--sensor-tone, #76f5ff) 22%, transparent);
+  stroke: color-mix(in srgb, var(--sensor-tone, #76f5ff) 78%, white 12%);
+  filter: drop-shadow(0 0 8px rgba(125, 235, 255, 0.14));
+}
+
+.effect-ph-meter-live__text,
+.effect-conductivity-live__text {
+  font-family: "IBM Plex Sans", monospace;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.effect-ph-meter-live__text {
+  fill: color-mix(in srgb, var(--sensor-tone, #8dff9a) 46%, white 54%);
+}
+
+.effect-conductivity-live__text {
+  fill: color-mix(in srgb, var(--sensor-tone, #76f5ff) 42%, white 58%);
+}
+
+.effect-ph-meter-live__unit,
+.effect-conductivity-live__unit {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.effect-ph-meter-live__unit {
+  fill: rgba(198, 255, 200, 0.82);
+}
+
+.effect-conductivity-live__unit {
+  fill: rgba(184, 255, 248, 0.82);
+}
+
+.effect-ph-meter-live__probe,
+.effect-conductivity-live__probe {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 3.2;
+}
+
+.effect-ph-meter-live__probe {
+  stroke: rgba(176, 221, 255, 0.78);
+}
+
+.effect-conductivity-live__probe {
+  stroke: rgba(158, 232, 255, 0.78);
+}
+
+.effect-ph-meter-live__tip,
+.effect-conductivity-live__tip {
+  stroke-width: 1.2;
+}
+
+.effect-ph-meter-live__tip {
+  fill: rgba(164, 255, 163, 0.88);
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+.effect-conductivity-live__tip {
+  fill: rgba(132, 246, 255, 0.88);
+  stroke: rgba(255, 255, 255, 0.72);
+}
+
+.effect-current-pulse__terminal {
+  fill: rgba(111, 241, 202, 0.24);
+  stroke: rgba(111, 241, 202, 0.82);
+  stroke-width: 2;
+}
+
+.effect-current-pulse__terminal--right {
+  fill: rgba(255, 158, 106, 0.24);
+  stroke: rgba(255, 158, 106, 0.82);
+}
+
+.effect-current-pulse__arc {
+  fill: none;
+  stroke: rgba(141, 220, 255, 0.88);
+  stroke-linecap: round;
+  stroke-width: 3.4;
+  filter: drop-shadow(0 0 4px rgba(141, 220, 255, 0.32));
+}
+
+.effect-ionic-bridge__flow {
+  fill: none;
+  stroke: rgba(149, 221, 255, 0.58);
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+.effect-ionic-bridge__ion {
+  fill: rgba(255, 236, 160, 0.95);
+  stroke: rgba(255, 255, 255, 0.72);
+  stroke-width: 1.4;
+}
+
+.effect-electrolysis__left circle,
+.effect-electrolysis__right circle {
+  fill: rgba(236, 252, 255, 0.94);
+  stroke: rgba(255, 255, 255, 0.65);
+  stroke-width: 1;
+}
+
+.effect-electrolysis__label {
+  fill: rgba(226, 247, 255, 0.88);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.effect-electrolysis__glow {
+  fill: none;
+  stroke: rgba(141, 220, 255, 0.58);
+  stroke-linecap: round;
+  stroke-width: 5;
+  filter: blur(0.6px);
+}
+
+.effect-electrode-current__arc {
+  fill: none;
+  stroke: rgba(137, 215, 255, 0.88);
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.effect-electrode-current__spark {
+  fill: rgba(255, 230, 137, 0.96);
+  stroke: rgba(255, 255, 255, 0.72);
+  stroke-width: 1.2;
+}
+
+.effect-hotplate-live__ring {
+  fill: none;
+  stroke-width: 3.4;
+}
+
+.effect-hotplate-live__ring--outer {
+  stroke: rgba(255, 138, 70, 0.74);
+}
+
+.effect-hotplate-live__ring--inner {
+  stroke: rgba(255, 208, 120, 0.82);
+}
+
+.effect-hotplate-live__haze {
+  fill: none;
+  stroke: rgba(255, 199, 119, 0.42);
+  stroke-linecap: round;
+  stroke-width: 3.4;
+  filter: blur(0.4px);
+}
+
+.catalog-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+}

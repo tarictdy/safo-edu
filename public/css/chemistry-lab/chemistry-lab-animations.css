@@ -1,0 +1,221 @@
+@keyframes tilt-item {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-18deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes stir-item {
+  0% { transform: rotate(0deg) translateX(0); }
+  25% { transform: rotate(-4deg) translateX(-3px); }
+  50% { transform: rotate(6deg) translateX(4px); }
+  75% { transform: rotate(-4deg) translateX(-3px); }
+  100% { transform: rotate(0deg) translateX(0); }
+}
+
+@keyframes pulse-heat {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(255, 181, 74, 0)); }
+  50% { filter: drop-shadow(0 0 14px rgba(255, 181, 74, 0.5)); }
+}
+
+@keyframes pulse-heat-strong {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(255, 106, 31, 0)); }
+  40% { filter: drop-shadow(0 0 16px rgba(255, 106, 31, 0.58)); }
+  70% { filter: drop-shadow(0 0 26px rgba(255, 168, 83, 0.38)); }
+}
+
+@keyframes rotate-item {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(22deg); }
+}
+
+@keyframes rise-bubbles {
+  0% { transform: translateY(6px); opacity: 0; }
+  40% { opacity: 1; }
+  100% { transform: translateY(-10px); opacity: 0; }
+}
+
+@keyframes drift-steam {
+  0% { transform: translateY(2px) translateX(0); opacity: 0; }
+  35% { opacity: 0.7; }
+  100% { transform: translateY(-18px) translateX(4px); opacity: 0; }
+}
+
+@keyframes drift-smoke {
+  0% { transform: translateY(0) translateX(0) scale(0.9); opacity: 0; }
+  30% { opacity: 0.5; }
+  100% { transform: translateY(-24px) translateX(7px) scale(1.12); opacity: 0; }
+}
+
+@keyframes shimmer-heat {
+  0% { transform: translateY(2px) scaleX(0.96); opacity: 0.1; }
+  50% { transform: translateY(-6px) scaleX(1.04); opacity: 0.45; }
+  100% { transform: translateY(-12px) scaleX(0.98); opacity: 0; }
+}
+
+@keyframes reaction-flash {
+  0% { box-shadow: 0 0 0 rgba(255, 178, 84, 0); filter: brightness(1); }
+  30% { box-shadow: 0 0 0 10px rgba(255, 178, 84, 0.22); filter: brightness(1.12); }
+  55% { box-shadow: 0 0 34px rgba(255, 132, 54, 0.34); filter: brightness(1.22); }
+  100% { box-shadow: 0 0 0 rgba(255, 178, 84, 0); filter: brightness(1); }
+}
+
+@keyframes flicker-flame {
+  0% { transform: translateY(0) scale(1, 1); }
+  25% { transform: translateY(-2px) scale(1.03, 0.98); }
+  50% { transform: translateY(1px) scale(0.97, 1.04); }
+  75% { transform: translateY(-3px) scale(1.04, 0.96); }
+  100% { transform: translateY(0) scale(1, 1); }
+}
+
+@keyframes burst-ring {
+  0% { transform: scale(0.25); opacity: 0.95; }
+  100% { transform: scale(1.18); opacity: 0; }
+}
+
+@keyframes burst-core {
+  0% { transform: scale(0.45); opacity: 0.2; }
+  35% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.15); opacity: 0; }
+}
+
+@keyframes meter-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.96); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes needle-swing {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@keyframes current-arc {
+  0% { stroke-dashoffset: 28; opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.55; }
+}
+
+@keyframes ion-travel-a {
+  0% { transform: translate(0, 0); opacity: 0.15; }
+  35% { opacity: 1; }
+  100% { transform: translate(74px, -10px); opacity: 0.2; }
+}
+
+@keyframes ion-travel-b {
+  0% { transform: translate(0, 0); opacity: 0.2; }
+  40% { opacity: 1; }
+  100% { transform: translate(32px, 18px); opacity: 0.18; }
+}
+
+@keyframes ion-travel-c {
+  0% { transform: translate(0, 0); opacity: 0.12; }
+  40% { opacity: 1; }
+  100% { transform: translate(-70px, 4px); opacity: 0.22; }
+}
+
+@keyframes electro-bubble-left {
+  0% { transform: translateY(10px); opacity: 0; }
+  35% { opacity: 1; }
+  100% { transform: translateY(-22px); opacity: 0; }
+}
+
+@keyframes electro-bubble-right {
+  0% { transform: translateY(12px); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(-28px); opacity: 0; }
+}
+
+.sandbox-item.anim-tilt {
+  animation: tilt-item 680ms ease;
+}
+
+.sandbox-item.anim-stir {
+  animation: stir-item 720ms ease;
+}
+
+.sandbox-item.anim-pulse-heat {
+  animation: pulse-heat-strong 940ms ease;
+}
+
+.sandbox-item.anim-rotate-item {
+  animation: rotate-item 420ms ease;
+}
+
+.sandbox-item.anim-reaction-flash {
+  animation: reaction-flash 720ms ease;
+}
+
+.effect-bubbles circle {
+  animation: rise-bubbles 1.4s ease-in-out infinite;
+}
+
+.effect-steam path {
+  animation: drift-steam 1.8s ease-in-out infinite;
+}
+
+.effect-smoke path {
+  animation: drift-smoke 2.3s ease-in-out infinite;
+}
+
+.effect-heat-shimmer path {
+  animation: shimmer-heat 1.2s ease-in-out infinite;
+}
+
+.effect-flame,
+.effect-reaction-flame {
+  animation: flicker-flame 680ms ease-in-out infinite;
+  transform-box: fill-box;
+}
+
+.effect-explosion__ring {
+  transform-origin: center;
+  animation: burst-ring 760ms ease-out 1 both;
+}
+
+.effect-explosion__core,
+.effect-explosion__spark {
+  transform-origin: center;
+  animation: burst-core 620ms ease-out 1 both;
+}
+
+.effect-meter-live__screen,
+.effect-meter-live__ring {
+  transform-origin: center;
+  animation: meter-pulse 1.2s ease-in-out infinite;
+}
+
+.effect-meter-live__needle {
+  transform-origin: 122px 58px;
+  animation: needle-swing 1.4s ease-in-out infinite;
+}
+
+.effect-current-pulse__arc,
+.effect-electrode-current__arc,
+.effect-ionic-bridge__flow {
+  stroke-dasharray: 8 10;
+  animation: current-arc 1.1s linear infinite;
+}
+
+.effect-ionic-bridge__ion--a {
+  animation: ion-travel-a 1.8s ease-in-out infinite;
+}
+
+.effect-ionic-bridge__ion--b {
+  animation: ion-travel-b 1.6s ease-in-out infinite;
+}
+
+.effect-ionic-bridge__ion--c {
+  animation: ion-travel-c 1.8s ease-in-out infinite;
+}
+
+.effect-electrolysis__left circle {
+  animation: electro-bubble-left 1.35s ease-in-out infinite;
+}
+
+.effect-electrolysis__right circle {
+  animation: electro-bubble-right 1.1s ease-in-out infinite;
+}
+
+.effect-current-pulse__terminal,
+.effect-electrode-current__spark {
+  animation: meter-pulse 1.1s ease-in-out infinite;
+}

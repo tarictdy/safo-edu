@@ -1,0 +1,284 @@
+/* =============================
+   Variables et reset
+============================= */
+:root{
+  --bg:#0f1724;
+  --card:#111827;
+  --accent:#ff6f3c;
+  --muted:#9aa4b2;
+  --white:#fff;
+  --glass: rgba(255,255,255,0.03);
+}
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:Inter,Arial,sans-serif;
+  margin:0;
+  padding:0;
+}
+
+/* =============================
+   Body & Header
+============================= */
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+}
+
+header{
+  text-align:center;
+  padding:15px;
+  background:var(--card);
+}
+
+header h1{
+  margin:0;
+  font-size:1.6rem;
+}
+
+/* =============================
+   Container principal
+============================= */
+.container{
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  width:95%;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+/* =============================
+   Card
+============================= */
+.card{
+  background:var(--glass);
+  padding:10px 14px;
+  border-radius:8px;
+}
+
+/* Card graphe */
+.card:nth-child(2){
+  width:100%;
+  padding:14px;
+}
+
+/* =============================
+   Input fonction
+============================= */
+input#fonction{
+  width:100%;
+  padding:8px;
+  border-radius:5px;
+  border:1px solid #333;
+  background:#071226;
+  color:var(--white);
+  font-size:16px;
+  margin-bottom:5px;
+}
+
+/* =============================
+   Aperçu MathJax
+============================= */
+.math-display{
+  min-height:30px;
+  margin:5px 0;
+  color:#48c6ef;
+  font-size:18px;
+}
+
+/* =============================
+   Boutons de saisie
+============================= */
+.calc-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-bottom:10px;
+}
+
+.calc-buttons div{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-bottom:3px;
+}
+
+.calc-buttons button{
+  padding:5px 8px;
+  border-radius:5px;
+  border:none;
+  background:#0b2030;
+  color:#fff;
+  cursor:pointer;
+  font-size:14px;
+  flex:1 0 20%;
+}
+
+/* =============================
+   Actions (prévisualiser/analyser/reset)
+============================= */
+.actions{
+  display:flex;
+  gap:5px;
+  margin-bottom:10px;
+}
+
+.actions button{
+  flex:1;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:8px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+/* =============================
+   Tableau de variation
+============================= */
+.variation{
+  margin-top:10px;
+  background:#071226;
+  padding:8px;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,0.03);
+  font-size:14px;
+  color:var(--muted);
+}
+
+table.variation-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:6px;
+}
+
+.variation-table th, .variation-table td{
+  border:1px solid rgba(255,255,255,0.1);
+  padding:5px;
+  text-align:center;
+  font-size:13px;
+  background:rgba(255,255,255,0.03);
+}
+
+/* =============================
+   Graphe
+============================= */
+canvas#graph{
+  display:block;
+  width:100%;
+  height:500px;
+  background:#020617;
+  border-radius:6px;
+  margin-top:10px;
+}
+
+/* =============================
+   Légende graphe
+============================= */
+.legend{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.dot{
+  display:inline-block;
+  width:14px;
+  height:10px;
+  border-radius:3px;
+  margin-right:8px;
+  vertical-align:middle;
+}
+
+.graph-line{
+  background:var(--accent);
+}
+
+.asymp-line{
+  background:linear-gradient(90deg,#ffd 0%,#ff6f3c 100%);
+}
+
+/* =============================
+   Responsive
+============================= */
+@media(max-width:600px){
+  .calc-buttons button{
+    flex:1 0 28%;
+    font-size:12px;
+  }
+  canvas#graph{
+    height:400px;
+  }
+}
+
+/* Header avec logo et nav */
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+  background:var(--card);
+  flex-wrap:wrap;
+}
+
+.site-header .logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.site-header .logo h1{
+  font-size:1.3rem;
+}
+
+.site-header nav a{
+  color:var(--white);
+  text-decoration:none;
+  font-size:1rem;
+  padding:5px 10px;
+  background:var(--accent);
+  border-radius:5px;
+}
+
+/* Photos sur la page à-propos */
+.photos{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+
+.photo-placeholder{
+  flex:1 1 45%;
+  height:150px;
+  background:var(--glass);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  color:var(--muted);
+  font-size:14px;
+  text-align:center;
+}

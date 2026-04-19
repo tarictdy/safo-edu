@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAFIO EDU — Simulateur de mouvement (PC)</title>
+<style>
+  :root{--bg:#0b1220;--card:#111a2b;--stroke:#2a3752;--txt:#eef2ff;--muted:#9aa4b2;--accent:#ff6f3c;--ok:#22c55e;--warn:#f59e0b}
+  body.theme-light{--bg:#f4f8ff;--card:#fff;--stroke:#d8e2f3;--txt:#0f172a;--muted:#475569;--accent:#2563eb;--ok:#059669;--warn:#d97706}
+  *{box-sizing:border-box;font-family:Inter,system-ui,Arial,sans-serif}
+  body{margin:0;background:radial-gradient(1000px 520px at 15% -20%, #1d2e50 0%, var(--bg) 55%);color:var(--txt)}
+  .wrap{max-width:1260px;margin:0 auto;padding:14px}
+  .top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+  .top a,.top button,.chip{border:1px solid var(--stroke);background:var(--card);color:var(--txt);text-decoration:none;padding:8px 12px;border-radius:10px}
+  .hero{background:var(--card);border:1px solid var(--stroke);padding:14px;border-radius:14px;margin-bottom:12px}
+  .hero h1{margin:0 0 6px;font-size:1.4rem}
+  .hero p{margin:0;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:340px 1fr;gap:12px}
+  .panel,.simu{background:var(--card);border:1px solid var(--stroke);padding:12px;border-radius:14px}
+  .panel h3{margin:0 0 8px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  label{display:block;margin-top:8px;font-size:.9rem;color:var(--muted)}
+  input,select{width:100%;padding:8px;border-radius:10px;border:1px solid var(--stroke);background:transparent;color:var(--txt)}
+  .actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+  .actions button{padding:9px;border-radius:10px;border:none;background:linear-gradient(135deg,var(--accent),#ff9a6f);color:white;cursor:pointer;font-weight:700}
+  .actions button.secondary{background:transparent;border:1px solid var(--stroke);color:var(--txt)}
+  canvas{width:100%;height:400px;border:1px solid var(--stroke);border-radius:12px;background:#081120}
+  body.theme-light canvas{background:#f8fbff}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+  .stat{border:1px solid var(--stroke);border-radius:10px;padding:8px;background:rgba(127,127,127,.08)}
+  .stat b{display:block}
+  .pedago{margin-top:10px;border-left:4px solid var(--ok);padding:8px 10px;background:rgba(34,197,94,.08);border-radius:8px}
+  .mini{font-size:.85rem;color:var(--muted)}
+  .footer{margin-top:12px;text-align:center;color:var(--muted)}
+  @media (max-width:980px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.row,.actions,.stats{grid-template-columns:1fr}}
+</style>
+  <link rel="stylesheet" href="/css/coursera-modern.css" />
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <a href="index.html">← Accueil</a>
+      <a href="planner.html">Emploi du temps</a>
+      <a href="etude-fonction.html">Étude de fonction</a>
+      <a href="chemistry-lab.html">Lab chimie</a>
+      <span class="chip">Physique ludique</span>
+    </div>
+    <button id="themeBtn" onclick="toggleTheme()">Mode sombre</button>
+  </div>
+
+  <section class="hero">
+    <h1>Simulateur de mouvement en champ électrique</h1>
+    <p>Outil conçu pour le prof de PC : montrer en direct le lien entre <b>E</b>, <b>force électrostatique</b>, <b>accélération</b> et <b>trajectoire</b>.</p>
+  </section>
+
+  <section class="grid">
+    <aside class="panel">
+      <h3>Paramètres de l’expérience</h3>
+      <div class="row">
+        <div>
+          <label>Particule</label>
+          <select id="particle" onchange="applyParticlePreset()">
+            <option value="electron">Électron</option>
+            <option value="proton">Proton</option>
+            <option value="custom">Personnalisée</option>
+          </select>
+        </div>
+        <div>
+          <label>Niveau</label>
+          <select id="preset" onchange="applyScenario()">
+            <option value="terminale">Terminale D</option>
+            <option value="deflection">Déviation forte</option>
+            <option value="equilibre">Déviation faible</option>
+          </select>
+        </div>
+      </div>
+
+      <label>Distance entre plaques d (m)</label>
+      <input id="d" value="0.02">
+      <label>Tension appliquée U (V)</label>
+      <input id="U" value="200">
+      <div class="row">
+        <div><label>Charge q (C)</label><input id="q" value="-1.6e-19"></div>
+        <div><label>Masse m (kg)</label><input id="m" value="9.1e-31"></div>
+      </div>
+      <div class="row">
+        <div><label>Vitesse initiale v₀ (m/s)</label><input id="v0" value="2e6"></div>
+        <div><label>Longueur des plaques l (m)</label><input id="l" value="0.06"></div>
+      </div>
+      <label>Distance plaques → écran L (m)</label>
+      <input id="L" value="0.2">
+      <label>Ralenti (1 = normal, 10 = très lent)</label>
+      <input id="slow" type="range" min="1" max="10" value="4">
+
+      <label>Mode de déflexion</label>
+      <select id="deflexMode">
+        <option value="normal">Physique réelle</option>
+        <option value="electro" selected>Déflexion électrostatique (visible)</option>
+      </select>
+
+      <label>Amplification visuelle de la déflexion</label>
+      <input id="deflexGain" type="range" min="1" max="2000" value="500">
+
+      <label>Vitesse de l'animation</label>
+      <input id="animScale" type="range" min="100" max="5000" value="900">
+
+      <div class="actions">
+        <button id="btnStart">Démarrer</button>
+        <button id="btnPause" class="secondary">Pause</button>
+        <button id="btnReset" class="secondary">Réinitialiser</button>
+      </div>
+
+      <div class="pedago" id="pedago"></div>
+      <p class="mini">Astuce prof: lancez 2 scénarios successifs (électron vs proton) pour comparer l’influence de la masse et du signe de la charge.</p>
+    </aside>
+
+    <article class="simu">
+      <canvas id="canvas" width="900" height="420"></canvas>
+      <div class="stats" id="stats"></div>
+    </article>
+  </section>
+
+  <p class="footer">© 2026 SAFIO EDU — Simulation pédagogique de mouvement</p>
+</div>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let state = null;
+let anim = null;
+let paused = true;
+const SCENE = {left:90, right:760, top:70, bottom:350, plateStart:210, plateEnd:470, screenX:820};
+
+function val(id, def){ const v=parseFloat(document.getElementById(id).value); return Number.isFinite(v)?v:def; }
+function applyTheme(theme){ document.body.classList.toggle('theme-light', theme==='light'); document.getElementById('themeBtn').textContent = theme==='light' ? 'Mode clair' : 'Mode sombre'; }
+function toggleTheme(){ const next=document.body.classList.contains('theme-light') ? 'dark' : 'light'; localStorage.setItem('safio-theme', next); applyTheme(next); }
+applyTheme(localStorage.getItem('safio-theme') || 'dark');
+
+function applyParticlePreset(){
+  const type = document.getElementById('particle').value;
+  if(type==='electron'){ document.getElementById('q').value='-1.6e-19'; document.getElementById('m').value='9.1e-31'; }
+  if(type==='proton'){ document.getElementById('q').value='1.6e-19'; document.getElementById('m').value='1.67e-27'; }
+}
+function applyScenario(){
+  const s = document.getElementById('preset').value;
+  if(s==='terminale'){ document.getElementById('U').value='200'; document.getElementById('v0').value='2e6'; document.getElementById('d').value='0.02'; }
+  if(s==='deflection'){ document.getElementById('U').value='350'; document.getElementById('v0').value='1.6e6'; document.getElementById('d').value='0.02'; }
+  if(s==='equilibre'){ document.getElementById('U').value='120'; document.getElementById('v0').value='2.4e6'; document.getElementById('d').value='0.025'; }
+}
+
+function physicsSetup(){
+  const d=val('d',0.02), U=val('U',200), q=val('q',-1.6e-19), m=val('m',9.1e-31), v0=val('v0',2e6), L=val('L',0.2), l=val('l',0.06);
+  const deflexMode = document.getElementById('deflexMode').value;
+  const deflexGain = val('deflexGain',500);
+  const E=U/d;
+  const ayReal=(q*E)/m;
+  const ay = deflexMode==='electro' ? ayReal * deflexGain : ayReal;
+  const tPlaque = l / v0;
+  const vySortieReal = ayReal*tPlaque;
+  const yPlaquesReal = 0.5*ayReal*tPlaque*tPlaque;
+  const yEcranReal = yPlaquesReal + vySortieReal*(L/v0);
+  const vySortie = ay*tPlaque;
+  const yPlaques = 0.5*ay*tPlaque*tPlaque;
+  const tEcran = L / v0;
+  const yEcran = yPlaques + vySortie*tEcran;
+  return {d,U,q,m,v0,L,l,E,ay,ayReal,deflexMode,deflexGain,tPlaque,vySortie,yPlaques,tEcran,yEcran,vySortieReal,yPlaquesReal,yEcranReal};
+}
+
+function updatePedago(p){
+  document.getElementById('pedago').innerHTML =
+    `<b>Lecture physique :</b><br>`+
+    `E = U/d = <b>${p.E.toExponential(2)} V/m</b><br>`+
+    `aᵧ réel = <b>${p.ayReal.toExponential(2)} m/s²</b><br>`+
+    `aᵧ simulé = <b>${p.ay.toExponential(2)} m/s²</b> (${p.deflexMode==='electro'?'amplifié':'normal'})<br>`+
+    `Sous plaques : MRU en x + MRUV en y<br>`+
+    `Après plaques : MRU en x + trajectoire rectiligne inclinée`;
+}
+
+function updateStats(p, t, x, y, vy){
+  document.getElementById('stats').innerHTML =
+    `<div class="stat"><b>Temps</b>${(t*1e9).toFixed(3)} ns</div>`+
+    `<div class="stat"><b>x</b>${x.toFixed(3)} m</div>`+
+    `<div class="stat"><b>y</b>${y.toExponential(2)} m</div>`+
+    `<div class="stat"><b>vᵧ</b>${vy.toExponential(2)} m/s</div>`+
+    `<div class="stat"><b>Déviation écran (sim)</b>${p.yEcran.toExponential(2)} m</div>`+
+    `<div class="stat"><b>Déviation écran (réel)</b>${p.yEcranReal.toExponential(2)} m</div>`+
+    `<div class="stat"><b>v sortie plaques</b>${p.vySortie.toExponential(2)} m/s</div>`+
+    `<div class="stat"><b>Type</b>${p.q<0?'Particule négative':'Particule positive'}</div>`+
+    `<div class="stat"><b>Mouvement</b>Composé (x,y)</div>`;
+}
+
+function xToCanvas(x, p){
+  return SCENE.left + (x/(p.l+p.L))*(SCENE.screenX-SCENE.left-20);
+}
+
+function yToCanvas(y, p){
+  const center = (SCENE.top + SCENE.bottom)/2;
+  const maxAbs = Math.max(Math.abs(p.yEcran), Math.abs(p.yPlaques), 1e-5);
+  const scaleYpx = ((SCENE.bottom-SCENE.top)*0.43) / maxAbs;
+  return center + y*scaleYpx;
+}
+
+function drawArrow(x1,y1,x2,y2,color,label){
+  ctx.strokeStyle=color;
+  ctx.fillStyle=color;
+  ctx.lineWidth=2;
+  ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
+  const ang=Math.atan2(y2-y1,x2-x1), ah=8;
+  ctx.beginPath();
+  ctx.moveTo(x2,y2);
+  ctx.lineTo(x2-ah*Math.cos(ang-Math.PI/6), y2-ah*Math.sin(ang-Math.PI/6));
+  ctx.lineTo(x2-ah*Math.cos(ang+Math.PI/6), y2-ah*Math.sin(ang+Math.PI/6));
+  ctx.closePath();
+  ctx.fill();
+  if(label) ctx.fillText(label, x2+6, y2-6);
+}
+
+function drawScene(p, x, y, trail, vy=0){
+  const W=canvas.width, H=canvas.height;
+  ctx.clearRect(0,0,W,H);
+
+  ctx.fillStyle='rgba(127,127,127,.12)';
+  ctx.fillRect(SCENE.left, SCENE.top, SCENE.right-SCENE.left, SCENE.bottom-SCENE.top);
+
+  const yCenter=(SCENE.top+SCENE.bottom)/2;
+  ctx.setLineDash([5,5]);
+  ctx.strokeStyle='rgba(148,163,184,.7)';
+  ctx.beginPath(); ctx.moveTo(SCENE.left, yCenter); ctx.lineTo(SCENE.screenX, yCenter); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Plaques plus visibles
+  ctx.fillStyle='#f97316';
+  ctx.fillRect(SCENE.plateStart, SCENE.top+15, SCENE.plateEnd-SCENE.plateStart, 12);
+  ctx.fillStyle='#3b82f6';
+  ctx.fillRect(SCENE.plateStart, SCENE.bottom-27, SCENE.plateEnd-SCENE.plateStart, 12);
+
+  // Ecran
+  ctx.fillStyle='#64748b';
+  ctx.fillRect(SCENE.screenX, SCENE.top-12, 10, SCENE.bottom-SCENE.top+24);
+  ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--txt');
+  ctx.font='14px Inter, Arial';
+  ctx.fillText('Écran', SCENE.screenX+16, SCENE.top-2);
+  ctx.fillText('+ plaque', SCENE.plateStart, SCENE.top+8);
+  ctx.fillText('- plaque', SCENE.plateStart, SCENE.bottom+4);
+  ctx.fillText('yₛ (axe médian)', SCENE.left+8, yCenter-8);
+
+  // champ électrique
+  ctx.strokeStyle='rgba(56,189,248,.45)';
+  for(let i=SCENE.plateStart+10;i<SCENE.plateEnd;i+=20){
+    ctx.beginPath(); ctx.moveTo(i, SCENE.top+30); ctx.lineTo(i, SCENE.bottom-35); ctx.stroke();
+  }
+
+  // flèche distance entre plaques (d)
+  drawArrow(SCENE.plateEnd+18, SCENE.top+21, SCENE.plateEnd+18, SCENE.bottom-21, '#a78bfa', `d = ${p.d.toExponential(2)} m`);
+
+  ctx.strokeStyle='rgba(245,158,11,.9)'; ctx.lineWidth=2;
+  ctx.beginPath();
+  trail.forEach((pt,idx)=> idx?ctx.lineTo(pt[0],pt[1]):ctx.moveTo(pt[0],pt[1]));
+  ctx.stroke();
+
+  // distance de déflexion par rapport à l'axe médian
+  ctx.strokeStyle='rgba(34,197,94,.95)';
+  ctx.beginPath(); ctx.moveTo(x, yCenter); ctx.lineTo(x, y); ctx.stroke();
+  ctx.fillStyle='rgba(34,197,94,.95)';
+  ctx.fillText(`|Δy| = ${Math.abs((y-yCenter)* (Math.max(Math.abs(p.yEcran), Math.abs(p.yPlaques), 1e-5)/((SCENE.bottom-SCENE.top)*0.43))).toExponential(2)} m`, x+8, (y+yCenter)/2);
+
+  ctx.beginPath(); ctx.arc(x,y,6,0,Math.PI*2); ctx.fillStyle='#ef4444'; ctx.fill();
+
+  // vecteur vitesse (v) et force (F=qE)
+  const vxLen=38;
+  const vyLen=Math.max(-45, Math.min(45, (vy/p.v0)*260));
+  drawArrow(x, y, x+vxLen, y+vyLen, '#22d3ee', 'v');
+  const forceDir = p.ay >= 0 ? 1 : -1;
+  drawArrow(x, y, x, y + forceDir*38, '#f43f5e', 'F=qE');
+}
+
+function startSim(){
+  const p=physicsSetup();
+  updatePedago(p);
+  paused=false;
+  cancelAnimationFrame(anim);
+
+  const originX=SCENE.left;
+  const originY=(SCENE.top+SCENE.bottom)/2;
+  state={
+    p,
+    t:0,
+    x:0,
+    y:0,
+    vy:0,
+    px:originX,
+    py:originY,
+    trail:[[originX,originY]],
+    scaleX:1,
+    scaleY:1
+  };
+  loop();
+}
+
+function pauseSim(){
+  paused=true;
+  cancelAnimationFrame(anim);
+  if(state){
+    drawScene(state.p, state.px, state.py, state.trail, state.vy);
+    updateStats(state.p, state.t, state.x, state.y, state.vy);
+  }
+}
+function resetSim(){
+  pauseSim();
+  state=null;
+  document.getElementById('stats').innerHTML='';
+  document.getElementById('pedago').innerHTML='Cliquez sur Démarrer pour lancer la simulation.';
+  drawScene({yEcran:1e-5,yPlaques:1e-5,l:0.06,L:0.2,d:0.02,ay:1,v0:1}, SCENE.left, (SCENE.top+SCENE.bottom)/2, [[SCENE.left,(SCENE.top+SCENE.bottom)/2]], 0);
+}
+
+function loop(){
+  if(!state || paused) return;
+  const {p}=state;
+  const slow = val('slow',4);
+  const animScale = val('animScale',900);
+  const dt = (5e-12/slow) * animScale;
+
+  state.t += dt;
+  state.x += p.v0*dt;
+
+  if(state.x <= p.l){
+    state.vy += p.ay*dt;
+    state.y += state.vy*dt;
+  } else {
+    state.y += state.vy*dt;
+  }
+
+  state.px = xToCanvas(state.x, p);
+  state.py = yToCanvas(state.y, p);
+  state.trail.push([state.px,state.py]);
+  if(state.trail.length>800) state.trail.shift();
+
+  drawScene(p, state.px, state.py, state.trail, state.vy);
+  updateStats(p, state.t, state.x, state.y, state.vy);
+
+  if(state.px < SCENE.screenX && state.py>0 && state.py<canvas.height) anim=requestAnimationFrame(loop);
+}
+
+document.getElementById('btnStart').addEventListener('click', startSim);
+document.getElementById('btnPause').addEventListener('click', pauseSim);
+document.getElementById('btnReset').addEventListener('click', resetSim);
+resetSim();
+</script>
+</body>
+</html>

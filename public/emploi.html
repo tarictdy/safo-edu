@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAFIO EDU | Planning IA</title>
+  <link rel="stylesheet" href="/css/smart-platform.css" />
+</head>
+<body class="smart-platform">
+  <main class="smart-shell">
+    <header class="smart-topbar fade-up">
+      <div class="brand-wrap">
+        <div class="brand-title">SAFIO EDU - Assistant intelligent</div>
+        <div class="brand-sub">Planification optimisee, revisions guidees et suivi de progression en temps reel.</div>
+      </div>
+      <nav class="nav-chips">
+        <a class="nav-chip" href="/pages/dashboard.html">Dashboard</a>
+        <a class="nav-chip" href="/index.html">Accueil</a>
+        <a class="nav-chip" href="/fonction.html">Fonctions</a>
+        <a class="nav-chip" href="/pc1.html">Physique</a>
+      </nav>
+    </header>
+
+    <section class="smart-grid smart-kpis fade-up fade-delay-1">
+      <article class="kpi-box">
+        <div class="kpi-label">Charge hebdomadaire</div>
+        <div class="kpi-value" id="kpiWeeklyHours">- h</div>
+      </article>
+      <article class="kpi-box">
+        <div class="kpi-label">Streak de discipline</div>
+        <div class="kpi-value" id="kpiStreak">0 jours</div>
+      </article>
+      <article class="kpi-box">
+        <div class="kpi-label">Niveau de progression</div>
+        <div class="kpi-value" id="kpiLevel">Niveau 1</div>
+      </article>
+      <article class="kpi-box">
+        <div class="kpi-label">Notifications actives</div>
+        <div class="kpi-value" id="kpiNotices">0</div>
+      </article>
+    </section>
+
+    <section class="smart-grid grid-main-side">
+      <div class="smart-grid">
+        <article class="smart-card fade-up fade-delay-1">
+          <h2 class="card-title">Configuration intelligente</h2>
+          <p class="card-sub">Regle ta classe, tes difficultes et tes preferences pour une generation vraiment personnalisee.</p>
+
+          <div class="smart-form-grid" style="margin-top:10px;">
+            <div>
+              <label class="smart-label" for="classCode">Classe</label>
+              <select class="smart-select" id="classCode"></select>
+            </div>
+            <div>
+              <label class="smart-label" for="maxSessionsPerDay">Heures max / jour</label>
+              <input class="smart-input" id="maxSessionsPerDay" type="number" min="1" max="8" value="3" />
+            </div>
+            <div>
+              <label class="smart-label" for="maxHoursPerWeek">Heures max / semaine</label>
+              <input class="smart-input" id="maxHoursPerWeek" type="number" min="8" max="40" value="18" />
+            </div>
+            <div>
+              <label class="smart-label" for="examMode">Mode examens proches</label>
+              <select class="smart-select" id="examMode">
+                <option value="false">Non</option>
+                <option value="true">Oui</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="smart-form-grid" style="margin-top:10px;">
+            <div>
+              <label class="smart-label" for="pref1">Preference 1</label>
+              <select class="smart-select" id="pref1">
+                <option value="">Aucune</option>
+                <option value="matin">Matin</option>
+                <option value="apresmidi">Apres-midi</option>
+                <option value="soir">Soir</option>
+              </select>
+            </div>
+            <div>
+              <label class="smart-label" for="pref2">Preference 2</label>
+              <select class="smart-select" id="pref2">
+                <option value="">Aucune</option>
+                <option value="matin">Matin</option>
+                <option value="apresmidi">Apres-midi</option>
+                <option value="soir">Soir</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="smart-form-grid" style="margin-top:10px;">
+            <div>
+              <label class="smart-label" for="studentPhone">Numero telephone (SMS)</label>
+              <input class="smart-input" id="studentPhone" type="tel" placeholder="+2250700000000" />
+            </div>
+            <div>
+              <label class="smart-label" for="telegramChatId">ID chat Telegram SAFIO Bot</label>
+              <input class="smart-input" id="telegramChatId" type="text" placeholder="123456789 ou -100..." />
+            </div>
+            <div>
+              <label class="smart-label" for="smsEnabled">Rappels SMS</label>
+              <select class="smart-select" id="smsEnabled">
+                <option value="false">Desactives</option>
+                <option value="true">Actives</option>
+              </select>
+            </div>
+            <div>
+              <label class="smart-label" for="reminderLeadMinutes">Delai rappel</label>
+              <select class="smart-select" id="reminderLeadMinutes">
+                <option value="10">10 minutes avant</option>
+                <option value="15">15 minutes avant</option>
+                <option value="20">20 minutes avant</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:10px;">
+            <button class="smart-btn ghost" id="saveContactBtn" type="button">Enregistrer contact notifications</button>
+          </div>
+
+          <div id="difficultyContainer" style="margin-top:12px;"></div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-2">
+          <h2 class="card-title">Saisie rapide par plage horaire</h2>
+          <p class="card-sub">Exemple: choisis 07:00 a 09:00, selectionne Maths et applique sur les jours coches.</p>
+
+          <div class="day-pills" id="bulkDays" style="margin-top:10px;"></div>
+
+          <div class="smart-form-grid" style="margin-top:10px;">
+            <div>
+              <label class="smart-label" for="bulkStartHour">Debut</label>
+              <select class="smart-select" id="bulkStartHour"></select>
+            </div>
+            <div>
+              <label class="smart-label" for="bulkEndHour">Fin (incluse)</label>
+              <select class="smart-select" id="bulkEndHour"></select>
+            </div>
+            <div>
+              <label class="smart-label" for="bulkSubject">Matiere / Etat</label>
+              <select class="smart-select" id="bulkSubject"></select>
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:10px;">
+            <button class="smart-btn" id="bulkApplyBtn" type="button">Appliquer la plage</button>
+            <button class="smart-btn ghost" id="bulkClearBtn" type="button">Effacer la plage</button>
+          </div>
+
+          <h3 class="card-title" style="margin-top:14px;">Devoirs a suivre (planning evolutif)</h3>
+          <p class="card-sub">Ajoute les dates des devoirs, puis genere automatiquement les prochaines semaines.</p>
+
+          <div class="smart-form-grid" style="margin-top:10px;">
+            <div>
+              <label class="smart-label" for="assignmentSubject">Matiere</label>
+              <select class="smart-select" id="assignmentSubject"></select>
+            </div>
+            <div>
+              <label class="smart-label" for="assignmentDate">Date devoir</label>
+              <input class="smart-input" id="assignmentDate" type="date" />
+            </div>
+            <div>
+              <label class="smart-label" for="assignmentLevel">Importance</label>
+              <select class="smart-select" id="assignmentLevel">
+                <option value="2">Standard</option>
+                <option value="3" selected>Importante</option>
+                <option value="4">Tres importante</option>
+                <option value="5">Priorite max</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:10px;">
+            <button class="smart-btn ghost" id="addAssignmentBtn" type="button">Ajouter devoir</button>
+            <button class="smart-btn red" id="generateEvolvingBtn" type="button">Generer planning evolutif (4 semaines)</button>
+          </div>
+          <div id="assignmentList" class="notice-list" style="margin-top:10px;"></div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-3">
+          <h2 class="card-title">Emploi du temps scolaire hebdomadaire</h2>
+          <p class="card-sub">Chaque case est editable, mais la saisie rapide au-dessus evite la fatigue.</p>
+
+          <div class="table-shell" id="schoolTableWrap"></div>
+
+          <div class="btn-row" style="margin-top:10px;">
+            <button class="smart-btn" id="generateBtn" type="button">Generer planning IA</button>
+            <button class="smart-btn ghost" id="loadCurrentBtn" type="button">Recharger planning actif</button>
+          </div>
+
+          <div id="statusBox" class="status-box status-info" style="display:none;"></div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-4" id="generatedCard" style="display:none;">
+          <h2 class="card-title">Planning genere (vue animee)</h2>
+          <p class="card-sub">Tu peux modifier ce planning et demander une contre-proposition intelligente.</p>
+
+          <div class="badges-wrap" id="badgesWrap" style="margin-top:10px;"></div>
+          <div id="revisionLegend" class="revision-legend" style="margin-top:10px;"></div>
+          <div class="table-shell" id="generatedTableWrap"></div>
+
+          <div class="btn-row" style="margin-top:10px;">
+            <button class="smart-btn ghost" id="editGeneratedBtn" type="button">Modifier le planning genere</button>
+            <button class="smart-btn red" id="analyzeProposalBtn" type="button" style="display:none;">Analyser ma proposition</button>
+            <button class="smart-btn ghost" id="downloadPdfBtn" type="button">Telecharger PDF</button>
+          </div>
+        </article>
+      </div>
+
+      <aside class="smart-grid">
+        <article class="smart-card fade-up fade-delay-2">
+          <h3 class="card-title">Progress tracking</h3>
+          <p class="card-sub">Visualise ta progression par matiere et compare avec les objectifs de la semaine.</p>
+          <div id="progressList" class="progress-list"></div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-3">
+          <h3 class="card-title">Notifications et rappels</h3>
+          <p class="card-sub">Rappels d'etude, micro-revisions avant cours et alertes anti-surcharge.</p>
+          <div id="noticeList" class="notice-list"></div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-4">
+          <h3 class="card-title">Gamification</h3>
+          <p class="card-sub">Badge, streak et XP pour maintenir la motivation.</p>
+          <div id="streakBox" class="streak-box" style="margin-top:10px;"></div>
+          <div id="analysisBox" class="notice-list" style="margin-top:10px;"></div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-4">
+          <h3 class="card-title">Demandes parent</h3>
+          <p class="card-sub">Valide ou refuse les parents qui demandent l acces a ton suivi SAFIO.</p>
+          <div id="parentRequestList" class="notice-list"></div>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="/js/emploi.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* ===========================
+   BASE GLOBALE
+=========================== */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+}
+
+header {
+    background: linear-gradient(90deg, #48c6ef, #6f86d6);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 26px;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    width: 430px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+h2 {
+    color: #48c6ef;
+}
+
+/* ===========================
+   INPUT
+=========================== */
+#fonction {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    color: #48c6ef;
+    border: 1px solid #444;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+/* ===========================
+   BOUTONS
+=========================== */
+.calc-buttons {
+    margin-top: 15px;
+}
+
+.calc-buttons div {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.calc-buttons button {
+    flex: 1;
+    padding: 10px;
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calc-buttons button:hover {
+    background: #48c6ef;
+    color: black;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #48c6ef;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6f86d6;
+}
+
+/* ===========================
+   TABLEAU DE VARIATION
+=========================== */
+.variation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.variation-table th,
+.variation-table td {
+    border: 1px solid #444;
+    padding: 10px;
+}
+
+.variation-table th {
+    background: #333;
+    color: #48c6ef;
+}
+
+/* ===========================
+   ASYMPTOTES
+=========================== */
+#asymptotes {
+    margin-top: 20px;
+    background: #111;
+    border-left: 4px solid #48c6ef;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media(max-width: 600px){
+    .card { width: 100%; }
+    #graph { width: 100% !important; height: 300px !important; }
+}
+

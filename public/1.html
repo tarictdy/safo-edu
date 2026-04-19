@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SAFIO — Emploi du Temps Intelligent</title>
+<style>
+:root{
+  --bg:#0b1220;
+  --bg-soft:#111a2b;
+  --card:rgba(255,255,255,0.04);
+  --stroke:rgba(255,255,255,0.12);
+  --accent:#ff6f3c;
+  --accent-2:#ff8b5e;
+  --text:#eef2ff;
+  --muted:#9aa4b2;
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+body{margin:0;background:radial-gradient(1200px 600px at 20% -10%, #1a2945 0%, var(--bg) 45%, #070b14 100%);color:var(--text);padding:clamp(12px,2vw,24px);} 
+.main{max-width:1200px;margin:0 auto;display:grid;gap:14px;}
+.app-title{text-align:center;font-size:clamp(1.2rem,2.8vw,2rem);margin:6px 0 2px;}
+.subtitle{text-align:center;color:var(--muted);margin:0 0 8px;}
+.container{background:var(--card);border:1px solid var(--stroke);backdrop-filter:blur(8px);padding:14px;border-radius:14px;display:flex;flex-direction:column;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);} 
+h2,h3,h4{margin:0 0 4px;text-align:center;}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px 14px;align-items:end;}
+label{display:block;font-size:.94rem;color:#d6deea;margin-top:2px;}
+select,input,button{font-size:.95rem;padding:10px;border-radius:10px;border:1px solid var(--stroke);width:100%;background:var(--bg-soft);color:var(--text);}
+input::placeholder{color:#7e8998;}
+button{cursor:pointer;background:linear-gradient(135deg,var(--accent),var(--accent-2));border:none;font-weight:700;transition:transform .12s ease,filter .2s ease;}
+button:hover{filter:brightness(1.05);} 
+button:active{transform:translateY(1px) scale(.997);} 
+.actions{display:flex;justify-content:center;}
+.table-wrap{width:100%;overflow:auto;border-radius:10px;border:1px solid var(--stroke);} 
+table{width:100%;border-collapse:collapse;min-width:840px;background:rgba(255,255,255,0.02);} 
+th,td{border:1px solid rgba(255,255,255,0.08);padding:8px;text-align:center;word-break:break-word;}
+th{position:sticky;top:0;background:#1b2538;z-index:1;}
+td.coursFixe{background:#6b7280;font-weight:700;}
+td.reposFixe{background:#334155;color:#dbeafe;font-weight:600;}
+#alertContainer{font-weight:700;color:#ffd9c7;}
+#statsContainer div strong{color:#fff;}
+.footer{background:#121826;border:1px solid var(--stroke);color:#d7deea;text-align:center;padding:14px;border-radius:12px;}
+.footer a{color:#4fd1ff;text-decoration:none;font-weight:700;}
+.footer a:hover{text-decoration:underline;}
+.matiere-Francais{background:#e74c3c;}
+.matiere-Math{background:#2ecc71;}
+.matiere-Histoire{background:#3498db;}
+.matiere-Geo{background:#f1c40f;color:#333;}
+.matiere-Anglais{background:#9b59b6;}
+.matiere-SVT{background:#1abc9c;}
+.matiere-Physique{background:#e67e22;}
+.matiere-HG{background:#16a085;}
+.matiere-Philosophie{background:#d35400;}
+.matiere-RevisionFrançais,.matiere-RevisionFrancais{background:#ef4444;}
+.matiere-RevisionMath{background:#16a34a;}
+.matiere-RevisionHistoire{background:#2563eb;}
+@media (max-width:768px){
+  .container{padding:12px;border-radius:12px;}
+  th,td{padding:6px;font-size:.83rem;}
+  select,input,button{font-size:.9rem;padding:9px;}
+}
+@media (max-width:480px){
+  body{padding:10px;}
+  .app-title{line-height:1.2;}
+  .container{gap:8px;}
+  th,td{padding:5px;font-size:.76rem;}
+}
+</style>
+  <link rel="stylesheet" href="/css/coursera-modern.css" />
+</head>
+<body>
+<main class="main">
+  <h1 class="app-title">PUFF — Emploi du Temps Intelligent</h1>
+  <p class="subtitle">Planification scolaire optimisée, révisions ciblées et équilibre anti-surcharge.</p>
+
+  <section class="container">
+    <h3>1️⃣ Choisis ta classe</h3>
+    <div class="form-grid">
+      <div>
+        <label for="classe">Classe</label>
+        <select id="classe" onchange="poserQuestions()">
+          <option value="">-- Choisir --</option>
+          <option>6e</option><option>5e</option><option>4e</option><option>3e</option>
+          <option>Seconde</option>
+          <option>Première A</option><option>Première C</option><option>Première D</option>
+          <option>Terminale A</option><option>Terminale C</option><option>Terminale D</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section id="questionsContainer" class="container"></section>
+  <section id="edtScolaireContainer" class="container"></section>
+  <section id="alertContainer" class="container"></section>
+  <section id="motivationContainer" class="container"></section>
+  <section id="statsContainer" class="container"></section>
+  <section id="edtPersonnelContainer" class="container table-wrap"></section>
+
+  <div class="actions">
+    <button onclick="telechargerPDF()">Télécharger PDF</button>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 <a href="https://socaf.onrender.com" target="_blank" rel="noopener noreferrer">SOCAF TDY INDUSTRIAL</a>. Tous droits réservés.</p>
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="a.js"></script>
+</body>
+</html>

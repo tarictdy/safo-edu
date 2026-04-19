@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAFIO EDU — Accueil</title>
+  <style>
+    :root{
+      --bg:#070b14;--bg2:#0f172a;--card:rgba(255,255,255,.06);--stroke:rgba(255,255,255,.14);
+      --txt:#eef2ff;--muted:#a9b4c6;--accent:#ff6f3c;--accent2:#ff925f;
+    }
+    body.theme-light{
+      --bg:#f4f8ff;--bg2:#e9f0ff;--card:#ffffff;--stroke:#d7e1f5;
+      --txt:#0f172a;--muted:#475569;--accent:#2563eb;--accent2:#3b82f6;
+    }
+    *{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    body{margin:0;color:var(--txt);background:radial-gradient(900px 500px at 10% -20%, var(--bg2) 0%, var(--bg) 100%)}
+    .wrap{max-width:1120px;margin:0 auto;padding:16px}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0}
+    .logo{font-weight:900;letter-spacing:.3px}
+    .nav a,.toggle{color:var(--txt);text-decoration:none;padding:9px 12px;border-radius:10px;border:1px solid var(--stroke);background:var(--card)}
+    .btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;font-weight:700;cursor:pointer;padding:11px 14px;border-radius:10px;text-decoration:none;display:inline-block}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .tab{background:var(--card);border:1px solid var(--stroke);color:var(--txt);text-decoration:none;padding:8px 12px;border-radius:999px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:stretch;margin-top:12px}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px;backdrop-filter:blur(8px);box-shadow:0 12px 24px rgba(0,0,0,.08)}
+    h1{font-size:clamp(1.5rem,3vw,2.4rem);margin:0 0 8px}
+    h2{margin:0 0 8px}
+    p{margin:0;color:var(--muted);line-height:1.5}
+    .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+    .kpi{background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:10px;text-align:center}
+    .kpi b{display:block;font-size:1.1rem;color:var(--txt)}
+    .list{display:grid;gap:10px;margin-top:12px}
+    .item{background:var(--card);border:1px solid var(--stroke);padding:10px;border-radius:12px}
+    .item b{color:var(--txt)}
+    .features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+    .feature{background:var(--card);border:1px solid var(--stroke);border-radius:14px;padding:14px}
+    .feature h3{margin:0 0 6px;font-size:1rem}
+    .cta{margin-top:16px;text-align:center}
+    .footer{margin-top:20px;border-top:1px solid var(--stroke);padding:14px 0;color:var(--muted);text-align:center}
+    .tag{display:inline-block;font-size:.78rem;color:#166534;background:#dcfce7;border:1px solid #86efac;padding:4px 8px;border-radius:999px;margin-bottom:8px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.kpis,.features{grid-template-columns:1fr}.nav{flex-wrap:wrap}.nav .actions{width:100%;display:flex;gap:8px;flex-wrap:wrap}.nav .actions a,.toggle{flex:1;text-align:center}}
+  </style>
+  <link rel="stylesheet" href="/css/coursera-modern.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <div class="logo">SAFIO EDU</div>
+      <div class="actions" style="display:flex;gap:8px;align-items:center;">
+        <a href="planner.html">Emploi du temps</a>
+        <a href="chemistry-lab.html">Lab chimie</a>
+        <button class="toggle" onclick="toggleTheme()" id="themeBtn">Mode sombre</button>
+        <a class="btn" href="planner.html">Commencer</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <span class="tag">Plateforme d'étude</span>
+        <h1>Bienvenue sur votre plateforme d’étude</h1>
+        <p>SAFIO EDU vous aide à planifier les révisions, travailler les fonctions, renforcer la physique et suivre vos progrès chaque semaine.</p>
+
+        <div class="tabs">
+          <a class="tab" href="planner.html">Emploi du temps</a>
+          <a class="tab" href="index.html">Étude de fonction</a>
+          <a class="tab" href="pc1.html">Physique</a>
+          <a class="tab" href="chemistry-lab.html">Lab chimie</a>
+        </div>
+
+        <div class="kpis">
+          <div class="kpi"><b>Révisions</b><span>Plan clair par jour</span></div>
+          <div class="kpi"><b>Fonctions</b><span>Méthodes guidées</span></div>
+          <div class="kpi"><b>Physique</b><span>Exercices ciblés</span></div>
+        </div>
+        <div class="cta"><a class="btn" href="planner.html">Accéder à mon planning</a></div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top:0">Pourquoi SAFIO EDU ?</h2>
+        <div class="list">
+          <div class="item"><b>Organisation</b><br><small>Ton emploi du temps intelligent s'adapte à ta classe et tes priorités.</small></div>
+          <div class="item"><b>Progression</b><br><small>Tu travailles les fonctions et la physique avec une approche structurée.</small></div>
+          <div class="item"><b>Performance</b><br><small>Révision la veille et mode examen pour viser de meilleures notes.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article id="fonctions" class="feature">
+        <h3>Étude de fonction</h3>
+        <p>Domaines, variations, dérivées et représentation graphique pour maîtriser les exercices clés.</p>
+      </article>
+      <article id="physique" class="feature">
+        <h3>Physique</h3>
+        <p>Mécanique, électricité, énergie et exercices de raisonnement pour préparer les compositions.</p>
+      </article>
+      <article id="chimie" class="feature">
+        <h3>Laboratoire de chimie</h3>
+        <p>Experiences par niveau, reactions en solution, chauffage, precipites et journal pedagogique.</p>
+      </article>
+      <article class="feature">
+        <h3>Emploi du temps intelligent</h3>
+        <p>Répartition automatique avec pauses, équilibre hebdomadaire et export PDF.</p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      © 2026 <a href="https://socaf.onrender.com" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;font-weight:700;">SOCAF TDY INDUSTRIAL</a> — SAFIO EDU
+    </footer>
+  </div>
+  <script>
+    function applyTheme(theme){
+      document.body.classList.toggle('theme-light', theme === 'light');
+      const btn = document.getElementById('themeBtn');
+      if (btn) btn.textContent = theme === 'light' ? 'Mode clair' : 'Mode sombre';
+    }
+    function toggleTheme(){
+      const next = document.body.classList.contains('theme-light') ? 'dark' : 'light';
+      localStorage.setItem('safio-theme', next);
+      applyTheme(next);
+    }
+    applyTheme(localStorage.getItem('safio-theme') || 'dark');
+  </script>
+</body>
+</html>

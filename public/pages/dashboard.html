@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAFIO EDU | Dashboard</title>
+  <link rel="stylesheet" href="/css/smart-platform.css" />
+</head>
+<body class="smart-platform">
+  <main class="smart-shell">
+    <header class="smart-topbar fade-up">
+      <div class="brand-wrap">
+        <div class="brand-title" id="dashboardTitle">Dashboard SAFIO</div>
+        <div class="brand-sub" id="dashboardSubtitle">Planning hebdo, revisions, notifications et suivi de progression.</div>
+      </div>
+      <nav class="nav-chips">
+        <a class="nav-chip" href="/emploi.html" id="emploiLink">Planning IA</a>
+        <a class="nav-chip" href="/pages/academic-programs.html">Programmes</a>
+        <a class="nav-chip" href="/fonction.html">Fonctions</a>
+        <a class="nav-chip" href="/pc1.html">Physique</a>
+        <a class="nav-chip" href="/chemistry-lab.html">Lab Chimie</a>
+        <a class="nav-chip" href="/index.html">Accueil</a>
+      </nav>
+    </header>
+
+    <section class="smart-grid smart-kpis fade-up fade-delay-1">
+      <article class="kpi-box"><div class="kpi-label">Heures de revision</div><div class="kpi-value" id="kpiHours">- h</div></article>
+      <article class="kpi-box"><div class="kpi-label">Jours equilibres</div><div class="kpi-value" id="kpiBalanced">-</div></article>
+      <article class="kpi-box"><div class="kpi-label">Streak</div><div class="kpi-value" id="kpiStreak">0 jours</div></article>
+      <article class="kpi-box"><div class="kpi-label">Badge actif</div><div class="kpi-value" id="kpiBadge">-</div></article>
+    </section>
+
+    <section class="smart-grid grid-main-side">
+      <div class="smart-grid">
+        <article class="smart-card fade-up fade-delay-1" id="viewerCard" style="display:none;">
+          <h2 class="card-title">Suivi enfant</h2>
+          <p class="card-sub">Choisis l enfant a suivre depuis le compte parent.</p>
+          <div class="smart-form-grid" style="margin-top:10px;">
+            <div>
+              <label class="smart-label" for="studentSelector">Eleve relie</label>
+              <select class="smart-select" id="studentSelector"></select>
+            </div>
+          </div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-1" id="profileCard"></article>
+        <article class="smart-card fade-up fade-delay-2" id="accountCard"></article>
+        <article class="smart-card fade-up fade-delay-2" id="programCard"></article>
+
+        <article class="smart-card fade-up fade-delay-3">
+          <h2 class="card-title">Planning hebdomadaire</h2>
+          <p class="card-sub">Cours, revisions programmees, alertes et suivi des seances.</p>
+          <div id="revisionLegend" class="revision-legend" style="margin-top:10px;"></div>
+          <div class="table-shell" id="weeklyTableWrap" style="margin-top:10px;"></div>
+          <div class="btn-row" style="margin-top:10px;">
+            <button class="smart-btn" id="generateBtn" type="button">Regenerer mon planning</button>
+            <a class="smart-btn ghost" href="/emploi.html" id="editLink" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;">Ouvrir l editeur complet</a>
+            <button class="smart-btn ghost" id="downloadPdfBtn" type="button">Telecharger PDF</button>
+            <button class="smart-btn red" id="logoutBtn" type="button">Deconnexion</button>
+          </div>
+          <div id="messageBox" class="status-box status-info" style="display:none;"></div>
+        </article>
+      </div>
+
+      <aside class="smart-grid">
+        <article class="smart-card fade-up fade-delay-2">
+          <h3 class="card-title">Progression</h3>
+          <p class="card-sub">Heures, regularite et poids des matieres principales.</p>
+          <div id="progressPanel" class="progress-list"></div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-3">
+          <h3 class="card-title">Notifications</h3>
+          <p class="card-sub">Le parent peut aussi confirmer les seances pour l enfant relie.</p>
+          <div id="noticePanel" class="notice-list"></div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-4">
+          <h3 class="card-title">Devoirs et difficultes</h3>
+          <p class="card-sub">Liste des devoirs, zones faibles et matieres a surveiller.</p>
+          <div id="detailsPanel" class="notice-list"></div>
+        </article>
+
+        <article class="smart-card fade-up fade-delay-4">
+          <h3 class="card-title">Gamification</h3>
+          <p class="card-sub">XP, streak et badge de la semaine.</p>
+          <div id="gamePanel" class="streak-box" style="margin-top:10px;"></div>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="/js/dashboard.js"></script>
+</body>
+</html>

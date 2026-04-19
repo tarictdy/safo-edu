@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAFIO EDU | Chemistry Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/chemistry-lab/chemistry-lab.css" />
+</head>
+<body class="chemistry-lab-page">
+  <main class="lab-shell">
+    <header class="lab-hero">
+      <div class="lab-hero__copy">
+        <span class="lab-kicker">Physique-Chimie</span>
+        <h1>Laboratoire bac a sable</h1>
+        <p>Assets SVG servis par le backend, catalogue pedago centralise, sandbox runtime cote front et moteur de reaction connecte a l API.</p>
+      </div>
+      <nav class="lab-hero__nav">
+        <a href="/chemistry-lab-free.html">Mode libre</a>
+        <a href="/index.html">Accueil</a>
+        <a href="/pages/dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+
+    <section class="lab-grid">
+      <aside class="lab-panel lab-panel--catalog">
+        <div id="searchBar"></div>
+        <div id="tutorialPanel" class="panel-stack"></div>
+        <div id="curriculumPanel" class="panel-stack"></div>
+        <div id="catalogPanel" class="panel-stack"></div>
+      </aside>
+
+      <section class="lab-stage">
+        <div class="lab-stage__head">
+          <div>
+            <h2>Zone de travail</h2>
+            <p id="boardStatus">Glisse un instrument dans le sandbox ou charge un preset.</p>
+          </div>
+          <div id="presetPanel" class="preset-strip"></div>
+        </div>
+        <div id="sandboxBoard" class="sandbox-board"></div>
+      </section>
+
+      <aside class="lab-panel lab-panel--actions">
+        <div id="itemInspector"></div>
+        <div id="actionPanel" class="panel-stack"></div>
+        <div id="guidePanel" class="panel-stack"></div>
+        <div id="experimentJournal"></div>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="/js/chemistry-lab/app.js"></script>
+</body>
+</html>

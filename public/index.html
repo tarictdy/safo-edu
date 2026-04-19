@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAFIO EDU - Plateforme Educative Intelligente</title>
+  <meta name="description" content="SAFIO EDU - La plateforme educative intelligente qui revolutionne votre apprentissage avec des outils de revision, etude de fonctions et physique." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/safio-design.css" />
+  <style>
+    /* Page Specific Styles */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 102, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 102, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, black 70%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, black 70%, transparent 100%);
+    }
+
+    .hero-glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.5;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .hero-glow-orb-1 {
+      width: 400px;
+      height: 400px;
+      background: var(--safio-blue);
+      top: -100px;
+      left: -100px;
+    }
+
+    .hero-glow-orb-2 {
+      width: 300px;
+      height: 300px;
+      background: var(--safio-pink);
+      top: 20%;
+      right: -50px;
+      animation-delay: -2s;
+    }
+
+    .hero-glow-orb-3 {
+      width: 250px;
+      height: 250px;
+      background: var(--safio-blue);
+      bottom: 10%;
+      left: 30%;
+      animation-delay: -4s;
+    }
+
+    .hero-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 100px 0 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: var(--space-2xl);
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background: var(--gradient-soft);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--safio-blue);
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--safio-pink);
+      border-radius: 50%;
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero-title-gradient {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-xl);
+      max-width: 540px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: var(--space-xl);
+    }
+
+    .hero-stat {
+      text-align: left;
+    }
+
+    .hero-stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-stat-label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card-stack {
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .hero-float-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-lg), var(--shadow-glow-mixed);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-float-card-1 {
+      transform: rotate(-3deg);
+    }
+
+    .hero-float-card-2 {
+      position: absolute;
+      top: 40px;
+      right: -30px;
+      width: 200px;
+      animation-delay: -1s;
+      transform: rotate(5deg);
+    }
+
+    .hero-float-card-3 {
+      position: absolute;
+      bottom: 20px;
+      left: -40px;
+      width: 180px;
+      animation-delay: -3s;
+      transform: rotate(-5deg);
+    }
+
+    .float-card-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+
+    .float-card-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-primary);
+      border-radius: var(--radius-md);
+      color: white;
+      font-size: 1.25rem;
+    }
+
+    .float-card-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .float-card-progress {
+      height: 6px;
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-top: var(--space-sm);
+    }
+
+    .float-card-progress-fill {
+      height: 100%;
+      background: var(--gradient-primary);
+      border-radius: inherit;
+      animation: shimmer 2s infinite;
+    }
+
+    /* Features Section */
+    .features-section {
+      padding: var(--space-3xl) 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto var(--space-2xl);
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-xs) var(--space-md);
+      background: var(--gradient-soft);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--safio-pink);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-md);
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      margin-bottom: var(--space-md);
+    }
+
+    .section-description {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      transition: all var(--transition-base);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transition: transform var(--transition-base);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--border-glow);
+      box-shadow: var(--shadow-lg), var(--shadow-glow-mixed);
+    }
+
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-soft);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-md);
+      font-size: 1.5rem;
+    }
+
+    .feature-card:nth-child(1) .feature-icon { color: var(--safio-blue); }
+    .feature-card:nth-child(2) .feature-icon { color: var(--safio-pink); }
+    .feature-card:nth-child(3) .feature-icon { color: #10B981; }
+    .feature-card:nth-child(4) .feature-icon { color: #F59E0B; }
+    .feature-card:nth-child(5) .feature-icon { color: #8B5CF6; }
+    .feature-card:nth-child(6) .feature-icon { color: #EC4899; }
+
+    .feature-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+    }
+
+    .feature-description {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Tools Section */
+    .tools-section {
+      padding: var(--space-3xl) 0;
+      background: var(--bg-secondary);
+      position: relative;
+    }
+
+    .tools-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 50% 80% at 20% 40%, rgba(0, 102, 255, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 80% at 80% 60%, rgba(255, 51, 153, 0.06) 0%, transparent 60%);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+      position: relative;
+    }
+
+    .tool-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--space-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      transition: all var(--transition-base);
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg), var(--shadow-glow-mixed);
+    }
+
+    .tool-icon-wrap {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-primary);
+      border-radius: var(--radius-lg);
+      font-size: 2rem;
+      color: white;
+      box-shadow: var(--shadow-glow-mixed);
+    }
+
+    .tool-content h3 {
+      font-size: 1.25rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-content p {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-md);
+      font-size: 0.95rem;
+    }
+
+    .tool-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      color: var(--safio-blue);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .tool-link:hover {
+      color: var(--safio-pink);
+    }
+
+    .tool-link svg {
+      transition: transform var(--transition-fast);
+    }
+
+    .tool-link:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+      padding: var(--space-3xl) 0;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      position: relative;
+    }
+
+    .testimonial-quote {
+      position: absolute;
+      top: var(--space-md);
+      left: var(--space-md);
+      font-size: 3rem;
+      line-height: 1;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0.3;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-lg);
+      padding-top: var(--space-lg);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-role {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: var(--space-3xl) 0;
+    }
+
+    .cta-card {
+      background: var(--gradient-primary);
+      border-radius: var(--radius-xl);
+      padding: var(--space-3xl);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+    }
+
+    .cta-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-title {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      color: white;
+      margin-bottom: var(--space-md);
+    }
+
+    .cta-description {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto var(--space-xl);
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+
+    .cta-btn-white {
+      background: white;
+      color: var(--safio-blue);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      transition: all var(--transition-fast);
+    }
+
+    .cta-btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      color: var(--safio-blue);
+    }
+
+    .cta-btn-outline {
+      background: transparent;
+      color: white;
+      padding: var(--space-md) var(--space-xl);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      transition: all var(--transition-fast);
+    }
+
+    .cta-btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: white;
+      color: white;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: var(--space-3xl) 0;
+      background: var(--bg-secondary);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .faq-item:hover {
+      border-color: var(--border-glow);
+    }
+
+    .faq-question {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+    }
+
+    .faq-question::before {
+      content: '?';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 24px;
+      height: 24px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .faq-answer {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      padding-left: 32px;
+    }
+
+    /* Footer */
+    .main-footer {
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border-color);
+      padding: var(--space-2xl) 0 var(--space-lg);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+
+    .footer-brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: var(--space-md);
+    }
+
+    .footer-description {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: var(--space-lg);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: var(--space-sm);
+    }
+
+    .footer-social-link {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .footer-social-link:hover {
+      background: var(--gradient-primary);
+      border-color: transparent;
+      color: white;
+    }
+
+    .footer-column h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+      color: var(--text-primary);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .footer-link {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-link:hover {
+      color: var(--safio-blue);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-copyright a {
+      color: var(--safio-pink);
+      font-weight: 600;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-social {
+        justify-content: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+      }
+
+      .tool-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .tool-icon-wrap {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="safio-loading" id="loadingScreen">
+    <div class="safio-spinner safio-spinner-lg"></div>
+    <div class="safio-loading-logo">SAFIO EDU</div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="hero-section">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow-orb hero-glow-orb-1"></div>
+    <div class="hero-glow-orb hero-glow-orb-2"></div>
+    <div class="hero-glow-orb hero-glow-orb-3"></div>
+
+    <nav class="safio-container" style="padding-top: var(--space-md); padding-bottom: var(--space-md); position: relative; z-index: 10;">
+      <div class="safio-nav">
+        <a href="index.html" class="safio-logo">SAFIO EDU</a>
+          <div class="safio-nav-links">
+            <a href="emploi.html" class="safio-nav-link">Emploi du temps</a>
+            <a href="fonction.html" class="safio-nav-link">Fonctions</a>
+            <a href="pc1.html" class="safio-nav-link">Physique</a>
+            <a href="chemistry-lab.html" class="safio-nav-link">Lab chimie</a>
+            <a href="apropos.html" class="safio-nav-link">A propos</a>
+            <a href="pages/login.html" class="safio-btn safio-btn-ghost">Connexion</a>
+            <a href="pages/register.html" class="safio-btn safio-btn-primary">Inscription</a>
+            <button class="safio-theme-toggle" onclick="toggleTheme()" id="themeBtn" aria-label="Changer le theme">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="theme-icon-dark">
+              <path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="safio-container">
+        <div class="hero-grid">
+          <div class="animate-fade-in-up">
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              Plateforme Educative Nouvelle Generation
+            </div>
+            <h1 class="hero-title">
+              Revolutionnez votre <span class="hero-title-gradient">apprentissage</span> avec SAFIO EDU
+            </h1>
+            <p class="hero-description">
+              La plateforme intelligente qui combine planning personnalise, outils mathematiques avances et suivi de progression pour maximiser votre reussite scolaire.
+            </p>
+            <div class="hero-cta">
+              <a href="pages/register.html" class="safio-btn safio-btn-primary">
+                Commencer gratuitement
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="pages/login.html" class="safio-btn safio-btn-secondary">
+                Se connecter
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hero-stat-value">500+</div>
+                <div class="hero-stat-label">Eleves actifs</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-value">98%</div>
+                <div class="hero-stat-label">Taux de reussite</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-value">24/7</div>
+                <div class="hero-stat-label">Disponibilite</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual animate-fade-in-right delay-200">
+            <div class="hero-card-stack">
+              <div class="hero-float-card hero-float-card-1">
+                <div class="float-card-header">
+                  <div class="float-card-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                      <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                      <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                  </div>
+                  <span class="float-card-title">Planning Hebdomadaire</span>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-md);">
+                  Votre semaine est organisee intelligemment avec des pauses optimisees.
+                </p>
+                <div style="display: grid; gap: var(--space-sm);">
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                    <span style="color: var(--text-muted);">Mathematiques</span>
+                    <span style="color: var(--safio-blue); font-weight: 600;">85%</span>
+                  </div>
+                  <div class="float-card-progress">
+                    <div class="float-card-progress-fill" style="width: 85%;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                    <span style="color: var(--text-muted);">Physique</span>
+                    <span style="color: var(--safio-pink); font-weight: 600;">72%</span>
+                  </div>
+                  <div class="float-card-progress">
+                    <div class="float-card-progress-fill" style="width: 72%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-float-card hero-float-card-2">
+                <div style="text-align: center;">
+                  <div style="font-size: 2rem; margin-bottom: var(--space-xs);">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--safio-pink)" stroke-width="2">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                  </div>
+                  <div style="font-weight: 700; font-size: 0.9rem;">Streak: 7 jours</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Continue comme ca !</div>
+                </div>
+              </div>
+
+              <div class="hero-float-card hero-float-card-3">
+                <div style="display: flex; align-items: center; gap: var(--space-sm);">
+                  <div style="width: 32px; height: 32px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; font-size: 0.85rem;">+250 XP</div>
+                    <div style="font-size: 0.7rem; color: var(--text-muted);">Niveau 12</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="safio-container">
+      <div class="section-header animate-fade-in-up">
+        <span class="section-tag">Fonctionnalites</span>
+        <h2 class="section-title">Tout ce dont vous avez besoin pour reussir</h2>
+        <p class="section-description">
+          Des outils puissants concus pour optimiser votre apprentissage et vous accompagner vers l'excellence academique.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card animate-fade-in-up delay-100">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Planning Intelligent</h3>
+          <p class="feature-description">Generez automatiquement votre emploi du temps selon vos matieres, vos difficultes et vos disponibilites.</p>
+        </div>
+
+        <div class="feature-card animate-fade-in-up delay-200">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Etude de Fonctions</h3>
+          <p class="feature-description">Analysez les fonctions mathematiques avec domaines, variations, derivees et representations graphiques.</p>
+        </div>
+
+        <div class="feature-card animate-fade-in-up delay-300">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Physique Interactive</h3>
+          <p class="feature-description">Mecanique, electricite et energie avec des exercices de raisonnement pour preparer vos compositions.</p>
+        </div>
+
+        <div class="feature-card animate-fade-in-up delay-400">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 20V10"/>
+              <path d="M12 20V4"/>
+              <path d="M6 20v-6"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Suivi de Progression</h3>
+          <p class="feature-description">Visualisez vos performances, identifiez vos points faibles et celebrez vos progres avec la gamification.</p>
+        </div>
+
+        <div class="feature-card animate-fade-in-up delay-500">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+              <path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Espace Parent</h3>
+          <p class="feature-description">Les parents suivent le planning, les devoirs, les difficultes et confirment les seances d'etude.</p>
+        </div>
+
+        <div class="feature-card animate-fade-in-up delay-600">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Notifications Smart</h3>
+          <p class="feature-description">Recevez des rappels personnalises par SMS ou Telegram pour ne jamais manquer une revision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="tools-section">
+    <div class="safio-container">
+      <div class="section-header animate-fade-in-up">
+        <span class="section-tag">Outils</span>
+        <h2 class="section-title">Des outils puissants a votre disposition</h2>
+        <p class="section-description">
+          Accedez a des ressources pedagogiques conçues par des experts pour chaque matiere.
+        </p>
+      </div>
+
+      <div class="tools-grid">
+        <a href="emploi.html" class="tool-card animate-fade-in-left delay-100">
+          <div class="tool-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div class="tool-content">
+            <h3>Emploi du Temps IA</h3>
+            <p>Generez votre planning hebdomadaire intelligent avec repartition automatique, pauses optimisees et export PDF.</p>
+            <span class="tool-link">
+              Acceder a l'outil
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="fonction.html" class="tool-card animate-fade-in-right delay-100">
+          <div class="tool-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <div class="tool-content">
+            <h3>Etude de Fonction</h3>
+            <p>Domaines de definition, tableaux de variations, derivees et traceur graphique pour maitriser les exercices.</p>
+            <span class="tool-link">
+              Acceder a l'outil
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="pc1.html" class="tool-card animate-fade-in-left delay-200">
+          <div class="tool-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="4"/>
+              <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/>
+              <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/>
+              <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/>
+              <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/>
+            </svg>
+          </div>
+          <div class="tool-content">
+            <h3>Module Physique</h3>
+            <p>Mecanique, electricite, energie avec exercices de raisonnement et simulations interactives.</p>
+            <span class="tool-link">
+              Acceder a l'outil
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="chemistry-lab.html" class="tool-card animate-fade-in-right delay-200">
+          <div class="tool-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 3v6.5L5 18a3 3 0 002.76 3h8.48A3 3 0 0019 18l-5-8.5V3"/>
+              <path d="M8 3h8"/>
+              <path d="M8 14h8"/>
+            </svg>
+          </div>
+          <div class="tool-content">
+            <h3>Laboratoire de Chimie</h3>
+            <p>Experiences par niveau, reactions en solution, chauffage, precipites et journal pedagogique dans un sandbox SVG.</p>
+            <span class="tool-link">
+              Ouvrir le labo
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="pages/dashboard.html" class="tool-card animate-fade-in-right delay-200">
+          <div class="tool-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+          </div>
+          <div class="tool-content">
+            <h3>Dashboard Personnel</h3>
+            <p>Tableau de bord complet avec KPIs, progression, notifications et gestion du profil.</p>
+            <span class="tool-link">
+              Acceder au dashboard
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="safio-container">
+      <div class="section-header animate-fade-in-up">
+        <span class="section-tag">Temoignages</span>
+        <h2 class="section-title">Ce que disent nos utilisateurs</h2>
+        <p class="section-description">
+          Decouvrez comment SAFIO EDU aide les eleves a atteindre leurs objectifs academiques.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-fade-in-up delay-100">
+          <span class="testimonial-quote">"</span>
+          <p class="testimonial-text">
+            Grace a SAFIO EDU, j'ai pu organiser mes revisions de maniere efficace. Mon emploi du temps automatique m'a fait gagner un temps precieux.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div>
+              <div class="testimonial-name">Aminata K.</div>
+              <div class="testimonial-role">Terminale S, Abidjan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-fade-in-up delay-200">
+          <span class="testimonial-quote">"</span>
+          <p class="testimonial-text">
+            Le traceur de fonction m'a vraiment aide a comprendre les mathematiques. Je visualise maintenant les concepts beaucoup plus facilement.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">KM</div>
+            <div>
+              <div class="testimonial-name">Kouame M.</div>
+              <div class="testimonial-role">1ere C, Bouake</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-fade-in-up delay-300">
+          <span class="testimonial-quote">"</span>
+          <p class="testimonial-text">
+            En tant que parent, je peux enfin suivre les progres de mon fils. Les notifications et le suivi du planning sont tres pratiques.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ST</div>
+            <div>
+              <div class="testimonial-name">Sylvie T.</div>
+              <div class="testimonial-role">Parent d'eleve</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="safio-container">
+      <div class="section-header animate-fade-in-up">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Questions frequentes</h2>
+        <p class="section-description">
+          Trouvez rapidement les reponses a vos questions sur SAFIO EDU.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item animate-fade-in-up delay-100">
+          <div class="faq-question">SAFIO EDU est-il gratuit ?</div>
+          <p class="faq-answer">Oui, SAFIO EDU est entierement gratuit pour tous les eleves et parents. Nous fonctionnons grace aux dons et au soutien de la communaute.</p>
+        </div>
+
+        <div class="faq-item animate-fade-in-up delay-200">
+          <div class="faq-question">Comment fonctionne le planning IA ?</div>
+          <p class="faq-answer">Notre algorithme analyse vos matieres, vos difficultes et vos disponibilites pour generer un emploi du temps optimise avec des pauses regulieres.</p>
+        </div>
+
+        <div class="faq-item animate-fade-in-up delay-300">
+          <div class="faq-question">Les parents peuvent-ils suivre leurs enfants ?</div>
+          <p class="faq-answer">Absolument. Les parents creent un compte separe et relient le matricule de leur enfant pour suivre le planning, les devoirs et les difficultes.</p>
+        </div>
+
+        <div class="faq-item animate-fade-in-up delay-400">
+          <div class="faq-question">Quelles classes sont supportees ?</div>
+          <p class="faq-answer">SAFIO EDU supporte les classes de la 6eme a la Terminale, avec des contenus adaptes pour chaque niveau du systeme educatif ivoirien.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="safio-container">
+      <div class="cta-card animate-scale-in">
+        <h2 class="cta-title">Pret a transformer votre apprentissage ?</h2>
+        <p class="cta-description">
+          Rejoignez des centaines d'eleves qui utilisent deja SAFIO EDU pour exceller dans leurs etudes.
+        </p>
+        <div class="cta-buttons">
+          <a href="pages/register.html" class="cta-btn-white">Creer mon compte gratuit</a>
+          <a href="apropos.html" class="cta-btn-outline">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="safio-container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-brand">SAFIO EDU</div>
+          <p class="footer-description">
+            Plateforme educative intelligente developpee par SOCAF TDY INDUSTRIAL pour accompagner les eleves vers la reussite.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.198 2.433a2.242 2.242 0 00-1.022.215l-16.5 6.75a2.25 2.25 0 00.162 4.198l3.645 1.458 1.458 4.374a2.25 2.25 0 003.758.675l1.875-1.875 3.675 2.94a2.25 2.25 0 003.555-1.125l3.375-15.75a2.25 2.25 0 00-2.981-2.635l-.008.003-.006.002zm-3.855 4.317l-8.443 6.69-.75 2.25-1.125-3.375 10.318-5.565z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Plateforme</h4>
+          <div class="footer-links">
+            <a href="emploi.html" class="footer-link">Emploi du temps</a>
+            <a href="fonction.html" class="footer-link">Etude de fonction</a>
+            <a href="pc1.html" class="footer-link">Physique</a>
+            <a href="chemistry-lab.html" class="footer-link">Lab chimie</a>
+            <a href="pages/dashboard.html" class="footer-link">Dashboard</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Compte</h4>
+          <div class="footer-links">
+            <a href="pages/register.html" class="footer-link">Inscription eleve</a>
+            <a href="pages/register-parent.html" class="footer-link">Inscription parent</a>
+            <a href="pages/login.html" class="footer-link">Connexion</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>A propos</h4>
+          <div class="footer-links">
+            <a href="apropos.html" class="footer-link">Notre equipe</a>
+            <a href="soutien.html" class="footer-link">Nous soutenir</a>
+            <a href="mailto:contact@safio-edu.com" class="footer-link">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 <a href="https://socaf.onrender.com" target="_blank" rel="noopener noreferrer">SOCAF TDY INDUSTRIAL</a> - SAFIO EDU. Tous droits reserves.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme Management
+    function applyTheme(theme) {
+      document.body.classList.toggle('theme-light', theme === 'light');
+      const btn = document.getElementById('themeBtn');
+      if (btn) {
+        const icon = btn.querySelector('svg');
+        if (icon) {
+          if (theme === 'light') {
+            icon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+          } else {
+            icon.innerHTML = '<path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>';
+          }
+        }
+      }
+    }
+
+    function toggleTheme() {
+      const next = document.body.classList.contains('theme-light') ? 'dark' : 'light';
+      localStorage.setItem('safio-theme', next);
+      applyTheme(next);
+    }
+
+    // Initialize theme
+    applyTheme(localStorage.getItem('safio-theme') || 'dark');
+
+    // Loading Screen
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loading = document.getElementById('loadingScreen');
+        if (loading) {
+          loading.classList.add('hidden');
+        }
+      }, 800);
+    });
+
+    // Intersection Observer for Reveal Animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-fade-in-up, .animate-fade-in-left, .animate-fade-in-right, .animate-scale-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

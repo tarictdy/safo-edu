@@ -1,0 +1,61 @@
+@import url('/css/chemistry-lab/chemistry-lab-layout.css');
+@import url('/css/chemistry-lab/chemistry-lab-components.css');
+@import url('/css/chemistry-lab/chemistry-lab-effects.css');
+@import url('/css/chemistry-lab/chemistry-lab-animations.css');
+
+:root {
+  --lab-ink: #ecf9ff;
+  --lab-muted: #9cb7c9;
+  --lab-bg: #06131c;
+  --lab-bg-soft: rgba(8, 27, 40, 0.9);
+  --lab-panel: rgba(11, 32, 47, 0.92);
+  --lab-panel-strong: rgba(18, 44, 64, 0.96);
+  --lab-line: rgba(158, 218, 255, 0.18);
+  --lab-line-strong: rgba(158, 218, 255, 0.38);
+  --lab-cyan: #89d7ff;
+  --lab-cyan-strong: #41c4ff;
+  --lab-amber: #ffb54a;
+  --lab-amber-soft: rgba(255, 181, 74, 0.18);
+  --lab-emerald: #6ff1ca;
+  --lab-rose: #ff7b98;
+  --lab-shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+  --lab-font-display: 'Space Grotesk', sans-serif;
+  --lab-font-text: 'IBM Plex Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--lab-font-text);
+  background:
+    radial-gradient(circle at top left, rgba(75, 163, 255, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(255, 181, 74, 0.16), transparent 22%),
+    linear-gradient(160deg, #041018 0%, #071a26 45%, #031018 100%);
+  color: var(--lab-ink);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(137, 215, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(137, 215, 255, 0.045) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.35;
+}
+
+a {
+  color: inherit;
+}

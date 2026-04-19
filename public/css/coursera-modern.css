@@ -1,0 +1,22 @@
+:root{
+  --brand:#0056d2;
+  --brand-2:#0a66ff;
+  --bg:#f5f7fb;
+  --surface:#ffffff;
+  --text:#1f2937;
+  --muted:#526079;
+  --border:#d8e0ef;
+}
+*{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+body{background:var(--bg)!important;color:var(--text)!important}
+.wrap,.container,.main{max-width:1180px}
+.card,.feature,.item,.kpi,.container,.panel,form{background:var(--surface)!important;border:1px solid var(--border)!important;box-shadow:0 8px 24px rgba(20,44,90,.08)!important}
+.nav a,.tab,button,.btn,.theme-btn,.toggle{border:1px solid var(--border)!important;background:#fff!important;color:#1e3a8a!important}
+.btn,button[type="submit"],.primary{background:var(--brand)!important;color:#fff!important;border-color:var(--brand)!important}
+.btn:hover,button[type="submit"]:hover{background:var(--brand-2)!important}
+input,select,textarea{background:#fff!important;color:var(--text)!important;border:1px solid var(--border)!important}
+small,p,.subtitle,.muted{color:var(--muted)!important}
+.logo{font-weight:800;letter-spacing:.2px}
+.tag,.chip{background:#e8f0ff!important;color:#164194!important;border:1px solid #bfd3ff!important}
+a{color:#0b4db8}
+.footer{background:transparent!important}

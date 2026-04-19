@@ -1,0 +1,210 @@
+/* =============================
+   RESET & BASE
+============================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+body{
+    background:#eef1f5;
+    color:#2c3e50;
+    padding:20px;
+}
+
+/* TITRES */
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#1f2d3d;
+    font-size:2rem;
+    font-weight:700;
+}
+
+h3{
+    color:#34495e;
+    margin-bottom:15px;
+    font-size:1.3rem;
+}
+
+h4{
+    margin-top:10px;
+    margin-bottom:8px;
+    color:#2c3e50;
+}
+
+/* =============================
+   CONTAINER
+============================= */
+.container{
+    background:#ffffff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+    transition:0.3s;
+}
+
+.container:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 25px rgba(0,0,0,0.12);
+}
+
+/* =============================
+   SELECT / INPUT / BOUTONS
+============================= */
+select{
+    width:100%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #c4cdd6;
+    background:#f8f9fb;
+    margin-top:8px;
+    margin-bottom:12px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+select:focus{
+    border-color:#3498db;
+    box-shadow:0 0 4px rgba(52,152,219,0.4);
+}
+
+button{
+    display:block;
+    width:100%;
+    background:#3498db;
+    color:white;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#2575b8;
+}
+
+/* =============================
+   TABLEAU
+============================= */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th{
+    background:#3498db;
+    color:white;
+    font-size:15px;
+    padding:12px;
+    border:1px solid #d6e2ef;
+}
+
+td{
+    background:white;
+    border:1px solid #e0e6ed;
+    padding:8px;
+    text-align:center;
+    transition:0.2s;
+}
+
+td:hover{
+    background:#f1f4f8;
+}
+
+/* Cases horaires fixes */
+.coursFixe{
+    background:#7f8c8d !important;
+    color:white;
+    font-weight:bold;
+}
+
+/* =============================
+   MATIÈRES (couleurs automatiques)
+============================= */
+[class^="matiere-"]{
+    color:white;
+    font-weight:bold;
+}
+
+/* Dégradés personnalisés par matière */
+.matiere-Français{
+    background:#e74c3c !important;
+}
+.matiere-Math{
+    background:#2ecc71 !important;
+}
+.matiere-Histoire{
+    background:#2980b9 !important;
+}
+.matiere-Geo{
+    background:#f1c40f !important;
+    color:#2c3e50 !important;
+}
+.matiere-Anglais{
+    background:#9b59b6 !important;
+}
+.matiere-SVT{
+    background:#16a085 !important;
+}
+.matiere-Physique{
+    background:#d35400 !important;
+}
+.matiere-HG{
+    background:#1abc9c !important;
+}
+.matiere-Philosophie{
+    background:#8e44ad !important;
+}
+
+/* =============================
+   LÉGENDE
+============================= */
+.legend{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.legend div{
+    padding:6px 12px;
+    border-radius:6px;
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media(max-width:768px){
+    body{
+        padding:10px;
+    }
+
+    h2{
+        font-size:1.6rem;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+    th, td{
+        padding:7px;
+    }
+
+    button{
+        font-size:16px;
+    }
+}

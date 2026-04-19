@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Terminale D – Champ électrique</title>
+
+<style>
+/* ===== STYLE GENERAL ===== */
+body{
+  margin:0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:#eef2f6;
+  color:#222;
+}
+
+header{
+  background:#0b5ed7;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+main{
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap:15px;
+  padding:15px;
+}
+
+/* ===== PANNEAU DE CONTROLE ===== */
+.panel{
+  background:white;
+  border-radius:8px;
+  padding:15px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.panel h3{
+  margin-top:0;
+  color:#0b5ed7;
+}
+
+label{
+  display:block;
+  margin-top:10px;
+  font-size:14px;
+}
+
+input{
+  width:100%;
+  padding:6px;
+  margin-top:4px;
+  font-size:14px;
+}
+
+button{
+  margin-top:15px;
+  width:100%;
+  padding:10px;
+  background:#198754;
+  color:white;
+  border:none;
+  border-radius:5px;
+  font-size:15px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#157347;
+}
+
+/* ===== ZONE SIMULATION ===== */
+.simulation{
+  background:white;
+  border-radius:8px;
+  padding:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+canvas{
+  width:100%;
+  border:1px solid #ccc;
+}
+
+/* ===== INFOS ===== */
+.info{
+  margin-top:10px;
+  background:#f8f9fa;
+  padding:10px;
+  border-radius:5px;
+  font-size:14px;
+}
+</style>
+  <link rel="stylesheet" href="/css/coursera-modern.css" />
+</head>
+
+<body>
+
+<header>
+  <h2>Terminale D – Champ électrique entre deux plaques</h2>
+  <p>Programme ivoirien | Simulation pédagogique</p>
+</header>
+
+<main>
+
+<!-- ===== CONTROLES ===== -->
+<div class="panel">
+  <h3>Données de l’expérience</h3>
+
+  <label>Distance entre plaques d (m)</label>
+  <input id="d" placeholder="0.02">
+
+  <label>Tension appliquée U (V)</label>
+  <input id="U" placeholder="200">
+
+  <label>Masse de l’électron m (kg)</label>
+  <input id="m" placeholder="9.1e-31">
+
+  <label>Vitesse horizontale initiale v₀ (m/s)</label>
+  <input id="v0" placeholder="2e6">
+
+  <label>Distance plaques → écran L (m)</label>
+  <input id="L" placeholder="0.2">
+
+  <button onclick="demarrer()">Démarrer l’expérience</button>
+
+  <div class="info" id="resultats"></div>
+</div>
+
+<!-- ===== SIMULATION ===== -->
+<div class="simulation">
+  <canvas id="canvas" width="800" height="350"></canvas>
+</div>
+
+</main>
+
+<script>
+// ===== CONSTANTES =====
+const q = -1.6e-19; // charge de l’électron
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+let x, y, vx, vy, ay, anim;
+
+// ===== UTILITAIRE =====
+function val(id, def){
+  const v = parseFloat(document.getElementById(id).value);
+  return isNaN(v) ? def : v;
+}
+
+// ===== DEMARRAGE =====
+function demarrer(){
+  cancelAnimationFrame(anim);
+
+  // données élève (avec valeurs par défaut)
+  const d  = val("d", 0.02);
+  const U  = val("U", 200);
+  const m  = val("m", 9.1e-31);
+  const v0 = val("v0", 2e6);
+  const L  = val("L", 0.2);
+
+  // physique
+  const E = U / d;
+  ay = (q * E) / m;
+
+  // affichage pédagogique
+  document.getElementById("resultats").innerHTML =
+    `<b>Champ électrique :</b> E = ${E.toExponential(2)} V/m<br>
+     <b>Accélération verticale :</b> a = ${ay.toExponential(2)} m/s²<br>
+     <b>Nature du mouvement :</b> MRU (x) + MRUV (y)`;
+
+  // état initial
+  x = 80;
+  y = canvas.height/2;
+  vx = 2;
+  vy = 0;
+
+  animation();
+}
+
+// ===== ANIMATION =====
+function animation(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  // plaques
+  ctx.fillStyle="#bbb";
+  ctx.fillRect(250,20,10,310);
+  ctx.fillRect(400,20,10,310);
+
+  // écran
+  ctx.fillStyle="#999";
+  ctx.fillRect(700,20,6,310);
+
+  // évolution physique (échelle pédagogique)
+  vy += ay * 1e-15;
+  x += vx;
+  y += vy;
+
+  // électron
+  ctx.beginPath();
+  ctx.arc(x,y,5,0,Math.PI*2);
+  ctx.fillStyle="red";
+  ctx.fill();
+
+  if(x < 700 && y > 0 && y < canvas.height){
+    anim = requestAnimationFrame(animation);
+  }
+}
+</script>
+
+</body>
+</html>
